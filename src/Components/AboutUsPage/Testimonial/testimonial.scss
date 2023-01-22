@@ -1,0 +1,80 @@
+@import "../../../styles/variables.scss";
+
+.comments {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  img {
+    width: 380px;
+    height: 180px;
+    border-radius: 2px;
+  }
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  h2 {
+    font-weight: 700;
+    font-size: 24px;
+    color: $textColor;
+    padding-left: 15%;
+    margin-bottom: 50px;
+  }
+
+  .comments-slider {
+    transition: ease-out 600ms;
+    display: flex;
+    padding-left: 15%;
+    gap: 55px;
+  }
+  .comments-slider-slide_slide {
+    position: relative;
+    background-color: $headerBG;
+    padding: 38px 25px 25px 25px;
+    border-radius: 3px;
+    user-select: none;
+    width: 1000px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    gap: 20px;
+    transition: all 1s ease;
+  }
+  .active_slide {
+    opacity: 1;
+  }
+  .comments-slider-slide_slide::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    height: 50px;
+    width: 50px;
+    top: -25px;
+    left: 50px;
+    background-color: $headerBG;
+    rotate: 45deg;
+    transition: 0.5s ease;
+  }
+  .slide-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+    .slider-costumer-name {
+      font-weight: 700;
+      font-size: 24px;
+    }
+    span {
+      color: $carCardFontColor;
+    }
+    .slider-costumer-title {
+      margin-bottom: 25px;
+    }
+    p {
+      font-weight: 600;
+      font-size: 18px;
+      color: $textColor;
+    }
+  }
+}

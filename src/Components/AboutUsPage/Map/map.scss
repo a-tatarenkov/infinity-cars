@@ -1,0 +1,63 @@
+@import "../../../styles/variables.scss";
+
+.about_us_map {
+  padding: 100px 60px;
+  background-image: url(../../../assets/bg-image-touch.png);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  &-contact {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      text-align: left;
+      width: 80%;
+      font-weight: 700;
+      font-size: 36px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      height: 100%;
+      justify-content: space-evenly;
+      label {
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+      input {
+        height: 45px;
+        background-color: $searchPanelBG;
+        border: none;
+        border-radius: 2px;
+        padding-left: 10px;
+      }
+      input::placeholder {
+        font-family: "Lato";
+      }
+      textarea::placeholder {
+        font-family: "Lato";
+      }
+      textarea {
+        padding: 10px;
+        background-color: $searchPanelBG;
+        resize: none;
+        border: none;
+        border-radius: 2px;
+      }
+      input:last-of-type {
+        margin-top: 35px;
+        background-color: $carCardFontColor;
+        cursor: pointer;
+        transition: 0.5s ease-out;
+      }
+      input:last-of-type:hover {
+        background-color: #57b3ff;
+      }
+    }
+  }
+}

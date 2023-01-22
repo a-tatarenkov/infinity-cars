@@ -1,0 +1,9 @@
+@import "../../../styles/variables.scss";
+
+.cars_banner {
+  width: 100%;
+  padding: 105px 0 50px 100px;
+  background-color: $headerBG;
+  font-weight: 600;
+  font-size: 30px;
+}

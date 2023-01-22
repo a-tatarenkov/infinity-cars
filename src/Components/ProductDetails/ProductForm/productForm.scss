@@ -1,0 +1,83 @@
+@import "../../../styles/variables.scss";
+
+.full_car_form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  h3 {
+    font-size: 24px;
+    line-height: 29px;
+    color: $textColor;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    .form_top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      width: 100%;
+      .input_box_left {
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+
+        input {
+          height: 40px;
+          background-color: $searchPanelBG;
+          color: $tableFontColorTD;
+          border: none;
+          border-radius: 3px;
+          padding-left: 10px;
+        }
+        label {
+          font-weight: 500;
+          font-size: 16px;
+        }
+      }
+      .input_box_right {
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        input {
+          height: 40px;
+          background-color: $searchPanelBG;
+          color: $tableFontColorTD;
+          border: none;
+          border-radius: 3px;
+          padding-left: 10px;
+        }
+        label {
+          font-weight: 500;
+          font-size: 16px;
+        }
+        select {
+          height: 40px;
+          background-color: $searchPanelBG;
+          border: none;
+        }
+      }
+    }
+    label:last-of-type {
+      margin-bottom: 7px;
+    }
+    textarea {
+      padding: 10px;
+      font-family: "Lato";
+      background-color: $searchPanelBG;
+      border: none;
+      resize: none;
+      border-radius: 3px;
+    }
+    .submit_input {
+      height: 40px;
+      border: none;
+      border-radius: 3px;
+      background-color: $carCardFontColor;
+      margin-top: 30px;
+    }
+  }
+}

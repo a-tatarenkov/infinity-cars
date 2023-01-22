@@ -1,0 +1,71 @@
+@import "../../../styles/variables.scss";
+
+.tiny_panel_view {
+  display: grid;
+  width: 760px;
+  gap: 10px;
+  grid-auto-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(6, 1fr) 120px;
+  color: white;
+
+  &-search {
+    grid-column: 1/8;
+    grid-row: 1/2;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    padding: 2px 10px;
+  }
+
+  &-results {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+  }
+  &-select {
+    grid-column: 4/7;
+    grid-row: 2/3;
+    width: 90%;
+    display: flex;
+    align-content: center;
+  }
+  &-buttons {
+    grid-column: 7/8;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .grid-button,
+  .flex-button {
+    height: 50px;
+    width: 50px;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    transition: 0.3s ease-in;
+    border-radius: 3px;
+    background-color: transparent;
+    border: 1px solid $carCardFontColor;
+  }
+
+  .grid-button {
+    background-image: url(../../../assets/grid.png);
+  }
+  .flex-button {
+    background-image: url(../../../assets/flex.png);
+  }
+  .active-btn.grid-button {
+    background-color: $carCardFontColor;
+    background-image: url(../../../assets/gr_active.png);
+  }
+  .active-btn.flex-button {
+    background-color: $carCardFontColor;
+    background-image: url(../../../assets/fl_active.png);
+  }
+}

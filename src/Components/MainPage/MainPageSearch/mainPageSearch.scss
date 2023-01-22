@@ -1,0 +1,128 @@
+@import '../../../styles/variables.scss';
+
+.main_search_panel {
+  position: relative;
+  z-index: 2;
+  background-color: $carDetailsDealerBG;
+  width: 1000px;
+  height: 200px;
+  height: max-content;
+  margin: 0 auto;
+  color: white;
+  transform: translateY(-50%);
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(auto-fit, minmax(1fr, 1fr));
+  gap: 10px;
+  padding: 15px;
+  border-radius: 5px;
+
+  &-radio {
+    grid-column: 1/9;
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // gap: 20px;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 24px;
+    label {
+      width: 100px;
+      color: $carCardFontColor;
+      opacity: 0.5;
+      text-align: center;
+      padding: 5px;
+      transition: all 0.7s ease;
+      border-bottom: 2px solid transparent;
+    }
+    .active-label {
+      opacity: 1;
+      border-bottom: 2px solid $carCardFontColor;
+    }
+    input {
+      display: none;
+    }
+  }
+
+  &-search {
+    grid-column: 1/5;
+    grid-row: 2/3;
+    &-inner {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 2px 10px;
+      height: 55px;
+    }
+  }
+  &-brand {
+    grid-column: 5/7;
+    grid-row: 2/3;
+    &-inner {
+      width: 100%;
+      border-radius: 4px;
+      background: $searchPanelBG;
+      // height: 50px;
+    }
+  }
+  &-model {
+    grid-column: 7/9;
+    grid-row: 2/3;
+    &-inner {
+      width: 100%;
+      border-radius: 4px;
+      background: $searchPanelBG;
+      // height: 50px;
+    }
+  }
+  &-location {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    &-inner {
+      width: 100%;
+      border-radius: 4px;
+      background: $searchPanelBG;
+      // height: 50px;
+    }
+  }
+  &-range {
+    grid-column: 4/8;
+    grid-row: 3/4;
+    width: 90%;
+    align-self: center;
+    justify-self: center;
+    &-inner {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      &-price {
+        min-width: 120px;
+        display: flex;
+        font-weight: 600;
+        font-size: 16px;
+        text-align: center;
+        gap: 5px;
+        flex-direction: column;
+      }
+    }
+  }
+  &-button {
+    grid-column: 8/9;
+    grid-row: 3/4;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      width: 100%;
+      background: $carCardFontColor;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  }
+}

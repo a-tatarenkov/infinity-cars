@@ -1,0 +1,23 @@
+.car_list {
+  color: white;
+  // padding: 20px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 760px;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.new_cars_main {
+  display: grid;
+  // padding-top: 55px;
+
+  .grid-box {
+    display: flex;
+    padding: 50px 100px;
+    justify-content: space-between;
+  }
+}

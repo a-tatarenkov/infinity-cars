@@ -1,0 +1,47 @@
+@import "../../../styles/variables.scss";
+
+.services {
+  padding: 70px 220px;
+  background-color: $bodyColor;
+  color: $textColor;
+  img {
+    height: 50px;
+    width: 50px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  &-wrapper {
+    display: flex;
+    padding-top: 30px;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 60px;
+    &-item {
+      a {
+        position: absolute;
+        display: block;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        height: 100%;
+      }
+      font-size: 18px;
+      position: relative;
+      display: flex;
+      width: 300px;
+      height: 140px;
+      border: 1px solid $carCardFontColor;
+      border-radius: 3px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: 0.5s ease;
+    }
+    &-item:hover {
+      border: 1px solid #75caff;
+    }
+  }
+}

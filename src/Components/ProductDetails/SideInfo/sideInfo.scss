@@ -1,0 +1,92 @@
+@import "../../../styles/variables.scss";
+
+.side_info_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  margin-bottom: 50px;
+  &-price {
+    font-size: 24px;
+    color: $carCardFontColor;
+    width: 100%;
+    border: 1px solid $carCardFontColor;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 60px;
+    font-weight: 700;
+  }
+  &-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    padding: 25px;
+    background-color: $carDetailsDealerBG;
+    border-radius: 5px;
+
+    table {
+      width: 100%;
+      padding-bottom: 15px;
+      border-bottom-style: solid;
+      border-width: 1px;
+      border-image: linear-gradient(
+          to left,
+          rgba(196, 196, 196, 0) 0%,
+          rgb(196, 196, 196) 50%,
+          rgba(196, 196, 196, 0) 100%
+        )
+        100% 0 100% 0/0 0 1px 0 stretch;
+      thead tr th {
+        text-align: left;
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 20px;
+      }
+    }
+    tbody tr td {
+      padding-bottom: 10px;
+    }
+    tr td:first-of-type {
+      font-size: 14px;
+      color: $tableFontColorTD;
+    }
+    tr td:last-of-type {
+      font-size: 18px;
+      font-weight: 400;
+      text-align: right;
+    }
+    .full_car_rating {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .compare_cars_button {
+      button {
+        display: flex;
+        height: 40px;
+        border-radius: 3px;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        width: 100%;
+        border: 1px solid white;
+        background-color: transparent;
+        cursor: pointer;
+        img {
+          height: 30px;
+          width: 30px;
+        }
+      }
+      .red:hover {
+        background-color: #da4d4d;
+        transition: 0.5s ease-in-out;
+      }
+      .green:hover {
+        background-color: #2a5c2b;
+        transition: 0.5s ease-in-out;
+      }
+    }
+  }
+}

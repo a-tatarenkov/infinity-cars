@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+@import "../../styles/variables.scss";
+
+.App {
+  background-color: inherit;
+  margin: 0 auto;
+  width: 1440px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+
+* {
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  margin: 0 auto;
+  font-family: "Lato", sans-serif;
+  background-color: $bodyColor;
+  color: white;
+}

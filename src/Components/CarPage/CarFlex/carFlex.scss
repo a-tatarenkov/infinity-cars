@@ -1,0 +1,214 @@
+@import "../../../styles/variables.scss";
+
+.car_result {
+  position: relative;
+  height: 220px;
+  padding: 15px;
+  min-width: 760px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid $carCardBorder;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease;
+  color: $carCardFontColor;
+  cursor: pointer;
+  a {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(131, 131, 131, 0.19);
+  }
+  &:hover button {
+    opacity: 1;
+  }
+
+  &-image {
+    height: 100%;
+    width: 40%;
+    position: relative;
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+    .add_car {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+
+      gap: 15px;
+      height: 50px;
+      width: 120px;
+      border-radius: 3px;
+      border: none;
+      top: 50%;
+      left: 50%;
+      background-color: #2a5c2b;
+      transform: translate(-50%, -50%);
+      transition: 0.8s ease-in-out;
+      z-index: 3;
+      opacity: 0;
+      cursor: pointer;
+      img {
+        max-height: 30px;
+        transition: 0.5s ease;
+        max-width: 30px;
+      }
+      span {
+        color: white;
+        max-width: 58px;
+      }
+    }
+    .delete_car {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+
+      gap: 15px;
+      height: 50px;
+      width: 120px;
+      border-radius: 3px;
+      border: none;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      left: 50%;
+      background-color: #da4d4d;
+      z-index: 3;
+      span {
+        max-width: 58px;
+        color: white;
+      }
+
+      img {
+        rotate: 135deg;
+        max-height: 30px;
+        transition: 0.5s ease;
+        max-width: 30px;
+      }
+    }
+  }
+
+  &-info {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-left: 10px;
+    &-condition {
+      display: block;
+      border: 1px solid $carCardFontColor;
+      padding: 4px;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+    h3 {
+      margin: 0;
+      margin-top: 10px;
+      color: white;
+    }
+
+    &-price {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 7px;
+      color: $carCardFontColor;
+    }
+    &-location {
+      margin-top: 7px;
+      font-weight: 500;
+    }
+    &-rating {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-top: 1px solid #989898;
+      width: 100%;
+      margin-top: 5px;
+      padding-top: 5px;
+    }
+
+    &-list {
+      width: 100%;
+      display: flex;
+      padding-top: 5px;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-left: 25px;
+      padding-right: 20px;
+      box-sizing: border-box;
+      font-weight: 400;
+      font-size: 15px;
+      list-style: none;
+      .year,
+      .wheel-config,
+      .fuel-type,
+      .seats {
+        position: relative;
+      }
+
+      .year::before,
+      .wheel-config::before,
+      .fuel-type::before,
+      .seats::before {
+        content: "";
+        display: block;
+        height: 20px;
+        width: 20px;
+        left: -25px;
+        top: -2px;
+        position: absolute;
+        background-position: center;
+        background-size: contain;
+      }
+      .year::before {
+        background-image: url(../../../assets/year.png);
+      }
+      .wheel-config::before {
+        background-image: url(../../../assets/wheel.png);
+      }
+      .fuel-type::before {
+        background-image: url(../../../assets/gasoline.png);
+      }
+      .fuel-type.electric::before {
+        background-image: url(../../../assets/electric.png);
+      }
+      .seats::before {
+        background-image: url(../../../assets/seats.png);
+      }
+    }
+  }
+}
+
+.car_result-enter {
+  opacity: 0;
+}
+.car_result-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.car_result-exit {
+  opacity: 1;
+}
+.car_result-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}

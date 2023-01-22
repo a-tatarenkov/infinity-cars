@@ -1,0 +1,83 @@
+header {
+  width: 100%;
+  height: 55px;
+  background-color: #12232e;
+  color: white;
+  padding: 0;
+  padding: 0 100px 0 200px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header ul li {
+  display: flex;
+  align-items: center;
+}
+header .active-header {
+  justify-content: space-evenly;
+}
+nav {
+  width: 80%;
+}
+.header-links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 80px;
+}
+.header-logo {
+  display: block;
+  width: 120px;
+  height: 40px;
+  background-image: url(../../assets/logo.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.active-header {
+  width: 20%;
+  display: flex;
+}
+.login-button {
+  border: none;
+  position: relative;
+  cursor: pointer;
+  background-color: inherit;
+}
+.login-button:before {
+  position: absolute;
+  left: -23px;
+  bottom: 0px;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-image: url(../../assets/userLogin.png);
+  background-position: center;
+  background-size: contain;
+}
+
+.lang-selection {
+  border: none;
+  outline: none;
+  background-color: inherit;
+}
+.lang-selection-icon {
+  position: relative;
+}
+.lang-selection-icon:before {
+  position: absolute;
+  left: -23px;
+  bottom: 1px;
+  content: "";
+
+  height: 20px;
+  width: 20px;
+  background-image: url(../../assets//globe.png);
+  background-position: center;
+  background-size: contain;
+}
+
+.css-k70774-MuiInputBase-root-MuiInput-root-MuiSelect-root:before{
+  border-bottom: none!important;
+}

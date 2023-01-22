@@ -1,0 +1,26 @@
+@import "../../../styles/variables.scss";
+
+.brands_list {
+  display: flex;
+  &-list {
+    display: flex;
+    // gap: 30px;
+    padding: 50px;
+    width: 100%;
+    justify-content: space-evenly;
+    img {
+      height: 100px;
+      width: 100px;
+    }
+    &-item {
+      position: relative;
+      a {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}

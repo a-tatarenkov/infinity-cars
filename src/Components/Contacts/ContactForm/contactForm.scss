@@ -1,0 +1,115 @@
+.get-in-touch-form {
+  color: white;
+  width: 100%;
+  padding-top: 55px;
+  display: grid;
+  grid-template-rows: 50px repeat(8, 1fr);
+  grid-template-columns: 120px repeat(9, 1fr) 80px;
+  background-image: url(../../../assets/bg-image-touch.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.text-info {
+  grid-column: 2/13;
+  grid-row: 2/3;
+  font-size: 36px;
+}
+.form-container {
+  grid-column: 2/6;
+  grid-row: 3/9;
+}
+.our-contacts {
+  grid-column: 7/11;
+  grid-row: 3/9;
+  background-color: #12232e;
+}
+.form-container form {
+  display: flex;
+  font-size: 18px;
+  flex-direction: column;
+}
+.form-container form input {
+  padding-left: 15px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  background-color: #12232e;
+  height: 48px;
+  border: none;
+  border-radius: 5px;
+}
+.form-container form input::placeholder {
+  color: rgb(198, 198, 198);
+}
+.form-container form input:last-of-type {
+  padding: 0;
+  margin-top: 30px;
+  font-size: 15px;
+  background-color: #007cc7;
+}
+.form-container form textarea {
+  font-family: inherit;
+  margin-top: 5px;
+  background-color: #12232e;
+  padding-left: 15px;
+  padding-top: 10px;
+  resize: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.our-contacts {
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 55px 75px 50px 75px;
+  display: flex;
+  /* gap: 20px; */
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.our-contacts div {
+  padding: 50px 0;
+}
+.our-contacts ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.our-contacts ul li:nth-child(odd) {
+  position: relative;
+  width: max-content;
+}
+.contacts-middle {
+  border-bottom: 1px solid #004a77;
+  border-top: 1px solid #004a77;
+}
+.our-contacts ul li:nth-child(odd)::before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  top: 4px;
+  left: -25px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.phone-logo:before {
+  background-image: url(../../../assets/phone.png);
+}
+.email-logo:before {
+  background-image: url(../../../assets/email.png);
+}
+.address-logo:before {
+  background-image: url(../../../assets/local.png);
+}
+.our-contacts ul li:nth-child(even) {
+  color: #4da8da;
+  margin-top: 10px;
+}
+.contacts-top,
+.contacts-middle {
+  width: 50%;
+}

@@ -1,0 +1,1221 @@
+{
+  "cars": [
+    {
+      "brand": "Tesla",
+      "model": "Model 3",
+      "condition": false,
+      "top": true,
+      "label": "Best Price",
+      "price": 40009,
+      "location": "USA, California",
+      "year": 2022,
+      "color": "Red",
+      "engine": "Electric",
+      "seats": "5 people",
+      "body": "Sedan",
+      "logo": "https://drive.google.com/uc?id=12mbNI1__pRBJNuvvtAtdnXGf2ZC92TfO",
+      "transmission": "Automatic",
+      "rating": [4.5, 4.3, 4.4, 5.3, 4.5],
+      "dealer": {
+        "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
+        "name": "Alfredo Gouse",
+        "position": "Dealer",
+        "phone": "240-865-3730",
+        "email": "alfred.g@mail.com"
+      },
+      "src": [
+        "https://drive.google.com/uc?id=1EGe_-Vk7BYS8fyZpc6UPF-8IU0j-qNeM",
+        "https://drive.google.com/uc?id=1vDRcG2G-RK_aoFVrcIxuzwAlYgL7skLh",
+        "https://drive.google.com/uc?id=1QC--IZRaQ0J6HGbRbkkWsttczy8YJfSq",
+        "https://drive.google.com/uc?id=1qsS4PLJKZw7bKKhfH1CyaRXcdeo7a2tx",
+        "https://drive.google.com/uc?id=1zHhEslCbTbFwILn9aYyk_4coJu3Eue0v",
+        "https://drive.google.com/uc?id=1w0hAPxr5tZcKLXREO1OxMg1EgNHuUy0e",
+        "https://drive.google.com/uc?id=1EnWXZyW-w-vkMRAd4blk_D6zSAyxtNGf",
+        "https://drive.google.com/uc?id=1coSJZNEUJulpi9C9-MrEzQozHXLdjrEp"
+      ],
+      "details": {
+        "Car Details": {
+          "Brand": "Tesla",
+          "Model": "Model 3",
+          "Condition": "Used",
+          "Year": "2022",
+          "Body Type": "Sedan",
+          "Seats": "5 people",
+          "Exterior Color": "Red"
+        },
+        "Engine": {
+          "Fuel Type": "Electric",
+          "Mileage": "16340 km",
+          "Transmission": "Automatic",
+          "Drivetrain": "AWD",
+          "Power": "283 hp (211 kW)"
+        },
+        "Battery and Charging": {
+          "Battery Capacity": "75 kWh",
+          "Charge Port": "Type 2",
+          "Charge Time (0->Full)": "330 min"
+        },
+        "Dimension": {
+          "Length": "4694 mm",
+          "Width": "1849 mm",
+          "Height": "1443 mm",
+          "Cargo Volume": "542 L"
+        },
+        "Futures": {
+          "Power Steering": true,
+          "AC": true,
+          "Alarm": true,
+          "Bluetooth": true,
+          "Heated Seats": true,
+          "WiFi": true,
+          "Cruise Control": true,
+          "Front Parking Sensor": true,
+          "Rear Parking Sensor": true,
+          "Roof Rack": true,
+          "Power Windows": true,
+          "Sunroof": true,
+          "USB Port": true,
+          "Sound System": true,
+          "Memory Seat": true
+        }
+      },
+      "id": 1000,
+      "driveUnit": "All-wheel Drive",
+      "description": "The Tesla Model 3 is a compact executive sedan that is battery powered and produced by Tesla.Limited production of the Model 3 began in mid-2017, with the first production vehicle rolling off the assembly line on July 7, 2017. \n      The official launch and delivery of the first 30 cars took place on July 28 The base Model 3 delivers an EPA-rated all-electric range of 272 miles (438 km) and the Long Range version delivers 358 miles (576 km). \n      According to Tesla, the Model 3 carries full self-driving hardware, with periodic software updates adding functionality. The Model 3 was marketed as being more people than previous models by Tesla. \n      Since early 2020, the Model 3 is the bestselling electric car in world history, and, in June 2021, became the first electric car to pass the 1 million global sales milestone. The Model 3 has been the world's top selling plug-in electric car (PEV) for three years running, from 2018 to 2020. \n      It has also been the bestselling PEV in the United States for three consecutive years, 2018 to 2020, the top selling PEV in Europe in 2019, and the bestselling PEV in China in 2020."
+    },
+    {
+      "brand": "Tesla",
+      "model": "Model S",
+      "condition": true,
+      "top": true,
+      "label": "Best Price",
+      "price": 99999,
+      "location": "USA, Florida",
+      "year": 2022,
+      "color": "Red",
+      "engine": "Electric",
+      "seats": "5 people",
+      "body": "Sedan",
+      "logo": "https://drive.google.com/uc?id=12mbNI1__pRBJNuvvtAtdnXGf2ZC92TfO",
+      "transmission": "Automatic",
+      "rating": [4.5, 4.3, 4.4, 5.3, 4.5],
+      "dealer": {
+        "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
+        "name": "Alfredo Gouse",
+        "position": "Dealer",
+        "phone": "240-865-3730",
+        "email": "alfred.g@mail.com"
+      },
+      "src": [
+        "https://drive.google.com/uc?id=1a2Zvfd-EdNUj2myqwSFWk9djpAbepo7q",
+        "https://drive.google.com/uc?id=1RsAxCfs2RuwQ9nOjIG4LakpwR8ala-XJ",
+        "https://drive.google.com/uc?id=1QDCinwaqF0h5tHTOvbDA3nubyWKI78h8",
+        "https://drive.google.com/uc?id=1Hs0x2Up39DcFJ0qosE5_KY-H-79QeN1b",
+        "https://drive.google.com/uc?id=166pHXZdHWFFYhEuXbRKrSsDRgCMuKvm0",
+        "https://drive.google.com/uc?id=1PdcgLy346GsHuVEphlTFTfWRJUg2Tvyn",
+        "https://drive.google.com/uc?id=1z2-r4_tVyjaPPeGRFEXChuDY7zVBc5Wa"
+      ],
+      "details": {
+        "Car Details": {
+          "Brand": "Tesla",
+          "Model": "Model S Plaid ",
+          "Condition": "New",
+          "Year": "2022",
+          "Body Type": "Sedan",
+          "Seats": "5 people",
+          "Exterior Color": "Red"
+        },
+        "Engine": {
+          "Fuel Type": "Electric",
+          "Mileage": "40 km",
+          "Transmission": "Automatic",
+          "Drivetrain": "AWD",
+          "Power": "1083 hp (911 kW)"
+        },
+        "Battery and Charging": {
+          "Battery Capacity": "100 kWh",
+          "Charge Port": "Type 3",
+          "Charge Time (0->Full)": "30 min"
+        },
+        "Dimension": {
+          "Length": "4980 mm",
+          "Width": "1964 mm",
+          "Height": "1440 mm",
+          "Cargo Volume": "542 L"
+        },
+        "Futures": {
+          "Power Steering": true,
+          "AC": true,
+          "Alarm": true,
+          "Bluetooth": true,
+          "Heated Seats": true,
+          "WiFi": true,
+          "Cruise Control": true,
+          "Front Parking Sensor": true,
+          "Rear Parking Sensor": true,
+          "Roof Rack": true,
+          "Power Windows": true,
+          "Sunroof": true,
+          "USB Port": true,
+          "Sound System": true,
+          "Memory Seat": true
+        }
+      },
+      "id": 1001,
+      "driveUnit": "All-wheel Drive",
+      "description": "Development of the Model S began prior to 2007, under the codename \"WhiteStar\". The Model S was officially announced on June 30, 2008, and a prototype vehicle was unveiled in March 2009. The Model S debuted on June 22, 2012. A revised, dual-motor, all-wheel-drive version, known as the 60D, debuted on October 9, 2014. The 60D was followed by the 70D, which made dual-motor and all-wheel drive the standard, followed by the 85D, P85D, and P90D. Along with these updates, Tesla offered the Autopilot driving assistance system. In April 2016, the Model S was updated with a new front hood design. In October of the same year, hardware became standard that supports Tesla's Full Self Driving (FSD) capability. As part of the update, integrated standard cameras around the car were added. In February 2017 the Tesla Model S P100D debuted, which included a revised motor and was the first electric vehicle to have an EPA estimated range exceeding 300 miles (483 km). A refresh of the Tesla Model S, codenamed \"Palladium\", was introduced in June 2021, offering a new \"Plaid\" performance model, along with a revised interior, powertrain, and suspension."
+    },
+    {
+      "brand": "Tesla",
+      "model": "Model Y",
+      "condition": false,
+      "top": true,
+      "label": "Sale!",
+      "price": 75888,
+      "location": "USA, Florida",
+      "year": 2020,
+      "color": "White",
+      "engine": "Electric",
+      "seats": "5 people",
+      "body": "Sedan",
+      "logo": "https://drive.google.com/uc?id=12mbNI1__pRBJNuvvtAtdnXGf2ZC92TfO",
+      "transmission": "Automatic",
+      "rating": [4.5, 4.3, 4.4, 5.3, 4.5],
+      "dealer": {
+        "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
+        "name": "Alfredo Gouse",
+        "position": "Dealer",
+        "phone": "240-865-3730",
+        "email": "alfred.g@mail.com"
+      },
+      "src": [
+        "https://drive.google.com/uc?id=1QPS31i-JLYHwUfIul-GJeiA9T3h80reg",
+        "https://drive.google.com/uc?id=1AcEiOOVPLUj5mKmA4_k7mUVEVYzW53E6",
+        "https://drive.google.com/uc?id=1OzHasYgvesrud8GEl45ARr6BIC5_WJRo",
+        "https://drive.google.com/uc?id=1QkGwZlv9LxVeyiLiOSfsNBReAzbK3VFA",
+        "https://drive.google.com/uc?id=1rcvA2QhrFuazO41Vw-40yWObN4yDbkMf"
+      ],
+      "details": {
+        "Car Details": {
+          "Brand": "Tesla",
+          "Model": "Model Y P75D",
+          "Condition": "New",
+          "Year": "2020",
+          "Body Type": "Sedan",
+          "Seats": "5 people",
+          "Exterior Color": "White"
+        },
+        "Engine": {
+          "Fuel Type": "Electric",
+          "Mileage": "30 km",
+          "Transmission": "Automatic",
+          "Drivetrain": "AWD",
+          "Power": "383 hp (291 kW)"
+        },
+        "Battery and Charging": {
+          "Battery Capacity": "75 kWh",
+          "Charge Port": "Type 2",
+          "Charge Time (0->Full)": "120 min"
+        },
+        "Dimension": {
+          "Length": "4750  mm",
+          "Width": "1920  mm",
+          "Height": "1623 mm",
+          "Cargo Volume": "542 L"
+        },
+        "Futures": {
+          "Power Steering": true,
+          "AC": true,
+          "Alarm": true,
+          "Bluetooth": true,
+          "Heated Seats": true,
+          "WiFi": true,
+          "Cruise Control": true,
+          "Front Parking Sensor": true,
+          "Rear Parking Sensor": true,
+          "Roof Rack": true,
+          "Power Windows": true,
+          "Sunroof": true,
+          "USB Port": true,
+          "Sound System": true,
+          "Memory Seat": true
+        }
+      },
+      "id": 1002,
+      "driveUnit": "All-wheel Drive",
+      "description": "The Tesla Model Y is a battery electric compact crossover manufactured by Tesla, Inc. Unveiled in March 2019, it started production at its Fremont plant in January 2020, and started deliveries on March 13, 2020. The Model Y is based on the Model 3 sedan platform. It shares an estimated 75 percent of its parts with the Tesla Model 3, which includes a similar interior and exterior design and electric powertrain. The Model Y fills a smaller and less expensive segment than the mid-sized Tesla Model X. Like the Model X, the Model Y offers optional third-row seats for a seven-passenger seating capacity."
+    },
+    {
+      "brand": "Tesla",
+      "model": "Model X",
+      "condition": true,
+      "top": true,
+      "label": "Best Price",
+      "price": 99999,
+      "location": "USA, Texas",
+      "year": 2022,
+      "color": "White",
+      "engine": "Electric",
+      "seats": "7 people",
+      "body": "SUV",
+      "logo": "https://drive.google.com/uc?id=12mbNI1__pRBJNuvvtAtdnXGf2ZC92TfO",
+      "transmission": "Automatic",
+      "rating": [5, 4, 4, 5, 5],
+      "dealer": {
+        "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
+        "name": "Alfredo Gouse",
+        "position": "Dealer",
+        "phone": "240-865-3730",
+        "email": "alfred.g@mail.com"
+      },
+      "src": [
+        "https://drive.google.com/uc?id=1Rp0AVPfZTJkTIMkuhNYD9iJRxx7sj2iV",
+        "https://drive.google.com/uc?id=1X4YQxBvoUMj10Biy2Db22WN9Qs5La5cG",
+        "https://drive.google.com/uc?id=197hnB1xGmLsCAfUXJXCYmyFrcGyutuDq",
+        "https://drive.google.com/uc?id=1bAB4xwcVnyY-F1fa2lSTXp014CtUNf-t",
+        "https://drive.google.com/uc?id=1dOR8ow5BiHET3W3WZGe9gTtbBzuRvox9"
+      ],
+      "details": {
+        "Car Details": {
+          "Brand": "Tesla",
+          "Model": "Model X P100D",
+          "Condition": "New",
+          "Year": "2022",
+          "Body Type": "SUV",
+          "Seats": "7 people",
+          "Exterior Color": "White"
+        },
+        "Engine": {
+          "Fuel Type": "Electric",
+          "Mileage": "20 km",
+          "Transmission": "Automatic",
+          "Drivetrain": "AWD",
+          "Power": "683 hp (411 kW)"
+        },
+        "Battery and Charging": {
+          "Battery Capacity": "100 kWh",
+          "Charge Port": "Type 3",
+          "Charge Time (0->Full)": "130 min"
+        },
+        "Dimension": {
+          "Length": "5036  mm",
+          "Width": "1999 mm",
+          "Height": "1643 mm",
+          "Cargo Volume": "942 L"
+        },
+        "Futures": {
+          "Power Steering": true,
+          "AC": true,
+          "Alarm": true,
+          "Bluetooth": true,
+          "Heated Seats": true,
+          "WiFi": true,
+          "Cruise Control": true,
+          "Front Parking Sensor": true,
+          "Rear Parking Sensor": true,
+          "Roof Rack": true,
+          "Power Windows": true,
+          "Sunroof": true,
+          "USB Port": true,
+          "Sound System": true,
+          "Memory Seat": true
+        }
+      },
+      "id": 1003,
+      "driveUnit": "All-wheel Drive",
+      "description": "The Model X has an EPA size class as an SUV, and shares around 30 percent of its content with the Model S, half of the originally planned 60 percent, and weighs about 10 percent more. Both the Model X and Model S are produced at the Tesla Factory in Fremont, California. The prototype was unveiled at Tesla's design studios in Hawthorne, California on February 9, 2012. First deliveries of the Model X began in September 2015. After one full year on the market, in 2016, the Model X ranked seventh among the world's best-selling plug-in cars."
+    },
+    {
+      "brand": "Audi",
+      "model": "S5 Sportback",
+      "condition": true,
+      "top": true,
+      "label": "New",
+      "price": 61295,
+      "location": "USA, Florida",
+      "year": 2022,
+      "engine": "Gasoline",
+      "seats": "5 people",
+      "color": "Grey",
+      "logo": "https://drive.google.com/uc?id=1SYVJVJZoa7OoqbR3K5m0TuNlUc-wad1q",
+      "body": "Sedan",
+      "transmission": "Automatic",
+
+      "rating": [4.5, 3.3, 3.4, 3.3, 5, 3, 4.3, 3.4, 4.3, 3, 5, 4.5],
+      "dealer": {
+        "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
+        "name": "Alfredo Gouse",
+        "position": "Dealer",
+        "phone": "240-865-3730",
+        "email": "alfred.g@mail.com"
+      },
+      "src": [
+        "https://drive.google.com/uc?id=1r9JbTy8kzEEuv2YtnVjuuU5S9WHxj9WF",
+        "https://drive.google.com/uc?id=1N8hkTNnX5IbQRcQgaDparnl0vuIKT2gP",
+        "https://drive.google.com/uc?id=1IjjwNd3xtchuNXRcEm0Zb_vSYfQ1Q7Qx",
+        "https://drive.google.com/uc?id=1VZAD87RUtjpdVhxB9ahF2yqPp1PBvZgU",
+        "https://drive.google.com/uc?id=1pe2jQ3DMaVMGKBIda5Aiy3TxPhyOmlzp",
+        "https://drive.google.com/uc?id=19n4lp-8MpUm8GD28ik4DyriFZ7SapgDJ"
+      ],
+      "details": {
+        "Car Details": {
+          "Brand": "Audi",
+          "Model": "S5 Quattro",
+          "Condition": "New",
+          "Year": "2022",
+          "Body Type": "Sedan",
+          "Seats": "5 people",
+          "Exterior Color": "Grey"
+        },
+        "Battery and Charging": {
+          "Battery Capacity": "-",
+          "Charge Port": "-",
+          "Charge Time (0->Full)": "-"
+        },
+        "Engine": {
+          "Fuel Type": "Gasoline",
+          "Mileage": "0 km",
+          "Transmission": "Automatic",
+          "Drivetrain": "AWD",
+          "Power": "349 hp (260 kW)"
+        },
+        "Dimension": {
+          "Length": "4757 mm",
+          "Width": "1841 mm",
+          "Height": "1384 mm",
+          "Cargo Volume": "600 L"
+        },
+        "Futures": {
+          "Power Steering": true,
+          "AC": true,
+          "Alarm": true,
+          "Bluetooth": true,
+          "Heated Seats": true,
+          "WiFi": true,
+          "Cruise Control": true,
+          "Front Parking Sensor": true,
+          "Rear Parking Sensor": true,
+          "Roof Rack": true,
+          "Power Windows": true,
+          "Sunroof": true,
+          "USB Port": true,
+          "Sound System": true,
+          "Memory Seat": true
+        }
+      },
+      "id": 1004,
+      "driveUnit": "All-wheel Drive",
+      "description": "The 2022 Audi S5 Sportback looks great, goes fast, and carves corners as well as today's best sports sedans, but its anodyne driving persona lacks some of the charm and drama we look for in a performance car. Under the hood is a perky 349-hp turbocharged V-6 that sends its power through an eight-speed automatic down to the ground through standard Quattro all-wheel drive. Handling is lithe, and the S5 Sportback is easy to hustle down a twisty road.  Displacing 3.0 liters, the turbo V-6 is more powerful and torquier than the supercharged engine that came in the last-generation S5. It accelerates rapidly from a stop, and overtaking other drivers on the highway is effortless. While it trails the Mercedes-AMG C43's 4.1-second zero-to- 60 mph time, the last S5 model we tested still managed an impressive 4.3-second sprint. The EPA estimates the 2022 S5 Sportback will earn 21/30mpg city/highway. While we haven't tested a 2022 S5 Sportback on our real-world highway fuel-economy route, the last one we evaluated returned 33 mpg during that test."
+    },
+    {
+      "brand": "Ford",
+      "model": "Raptor",
+      "condition": false,
+      "top": true,
+      "label": "Sale!!!",
+      "price": 78375,
+      "color": "Red",
+      "logo": "https://drive.google.com/uc?id=1kxEabmT01Ll5CQtqXuK0WTlILmc-eNsG",
+
+      "location": "USA, Florida",
+      "year": 2021,
+      "engine": "Gasoline",
+      "transmission": "Automatic",
+
+      "seats": "5 people",
+      "body": "Pickup",
+      "rating": [4.5, 5, 3, 3, 3, 3, 3, 4.3, 3.6, 3.3, 3, 5, 4.5],
+      "dealer": {
+        "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
+        "name": "Alfredo Gouse",
+        "position": "Dealer",
+        "phone": "240-865-3730",
+        "email": "alfred.g@mail.com"
+      },
+      "details": {
+        "Car Details": {
+          "Brand": "Ford",
+          "Model": "F150 Raptor",
+          "Condition": "New",
+          "Year": "2022",
+          "Body Type": "Pickup",
+          "Seats": "5 people",
+          "Exterior Color": "Red"
+        },
+        "Engine": {
+          "Fuel Type": "Gasoline",
+          "Mileage": "100 km",
+          "Transmission": "Automatic",
+          "Drivetrain": "AWD",
+          "Power": "450 hp (335 kW)"
+        },
+        "Battery and Charging": {
+          "Battery Capacity": "-",
+          "Charge Port": "-",
+          "Charge Time (0->Full)": "-"
+        },
+        "Dimension": {
+          "Length": "5908 mm",
+          "Width": "2204 mm",
+          "Height": "2049 mm",
+          "Cargo Volume": "3000 L"
+        },
+        "Futures": {
+          "Power Steering": true,
+          "AC": true,
+          "Alarm": true,
+          "Bluetooth": true,
+          "Heated Seats": true,
+          "WiFi": false,
+          "Cruise Control": true,
+          "Front Parking Sensor": true,
+          "Rear Parking Sensor": true,
+          "Roof Rack": false,
+          "Power Windows": true,
+          "Sunroof": false,
+          "USB Port": true,
+          "Sound System": true,
+          "Memory Seat": true
+        }
+      },
+      "src": [
+        "https://drive.google.com/uc?id=1K0bA3B_WR0Y3opum-CNc-Q92AgESFlt1",
+        "https://drive.google.com/uc?id=1sV8Y7-b8g2MSku893TWmXZI7BV-nROcR",
+        "https://drive.google.com/uc?id=1IIBVUssYLZ69StIdpe5qJyV0Si4d67GW",
+        "https://drive.google.com/uc?id=140MsFaXxUxq-XPJ4P_828qIdYzmNuVlH",
+        "https://drive.google.com/uc?id=1Tfe-QQEGs5nHGS-qh51GBhhImOr2ju7K",
+        "https://drive.google.com/uc?id=1g7l41rZqzHv_yk3FPL7RB1CfE8_FhA3r",
+        "https://drive.google.com/uc?id=1FYqLwTfF0iKkwJOD6wn63Et6q6TxZTzk"
+      ],
+      "id": 1005,
+      "driveUnit": "Four-wheel Drive",
+      "description": "For the 2019 model year, Ford introduced the Ford Ranger Raptor, derived from the global Ranger T6 mid-size pickup truck. Slotted above the Wildtrak appearance package, the Raptor is fitted with suspension and chassis upgrades to improve its off-road capability. In line with its F-150 namesake, the Raptor is fitted with a widened track and a raised ride height.The Ranger Raptor is fitted with a 2.0L EcoBlue biturbo diesel engine, producing 210 hp. Shared with globally-marketed versions of the Ford Transit and the Ford Everest, the engine is coupled to a 10-speed automatic transmission (shared with the F-150, including the Raptor). Similar to F-150 Raptor, the four-wheel drive system of the Ranger Raptor is adaptable to terrain.While not wide enough to require clearance lights, the Ranger Raptor adopts several design elements of its F-150 counterpart, including gray six-spoke wheels, a FORD-lettered grille, and large Raptor decals on the sides of the cargo bed."
+    },
+    {
+      "brand": "Jeep",
+      "model": "Rubicon Wrangler",
+      "condition": true,
+      "top": false,
+      "price": 32432,
+      "location": "USA, Florida",
+      "year": 2021,
+      "color": "Blue",
+      "logo": "https://drive.google.com/uc?id=1wmGGZaZ_xsLI-GfZirVDbotv8x1E3bss",
+
+      "engine": "Gasoline",
+      "seats": "5 people",
+      "transmission": "Automatic",
+
+      "body": "SUV",
+      "rating": [4.5, 5, 3, 5.0, 3.3, 2.4, 5.3, 2.6, 5.3, 4, 5, 4.5],
+      "dealer": {
+        "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
+        "name": "Alfredo Gouse",
+        "position": "Dealer",
+        "phone": "240-865-3730",
+        "email": "alfred.g@mail.com"
+      },
+      "src": [
+        "https://drive.google.com/uc?id=1WwcMKwgSNV9AIcMdm_T17ZXQf5wgkR-m",
+        "https://drive.google.com/uc?id=1LEp_F9Ol-A-A3f0hd-WmBkEF3-hbmEDK",
+        "https://drive.google.com/uc?id=1m0SBuJAgqZto8MZMiCxuxXaVQSofSe0d",
+        "https://drive.google.com/uc?id=18B4w5EvLq_RkLl508WdmdRF5ya766wko",
+        "https://drive.google.com/uc?id=11Pfw-a6OB6799o-NGN2_hWJP6zKGhjgt",
+        "https://drive.google.com/uc?id=1uEldSsdrKZj2iNb6IUgBTeUjxhF4ldua"
+      ],
+      "details": {
+        "Car Details": {
+          "Brand": "Jeep",
+          "Model": "Rubicon 392",
+          "Condition": "New",
+          "Year": "2023",
+          "Body Type": "SUV",
+          "Seats": "5 people",
+          "Exterior Color": "Blue"
+        },
+        "Engine": {
+          "Fuel Type": "Gasoline",
+          "Mileage": "0 km",
+          "Transmission": "Automatic",
+          "Drivetrain": "AWD",
+          "Power": "470 hp (350 kW)"
+        },
+        "Battery and Charging": {
+          "Battery Capacity": "-",
+          "Charge Port": "-",
+          "Charge Time (0->Full)": "-"
+        },
+        "Dimension": {
+          "Length": "4957 mm",
+          "Width": "1941 mm",
+          "Height": "1884 mm",
+          "Cargo Volume": "600 L"
+        },
+        "Futures": {
+          "Power Steering": true,
+          "AC": true,
+          "Alarm": true,
+          "Bluetooth": true,
+          "Heated Seats": true,
+          "WiFi": false,
+          "Cruise Control": true,
+          "Front Parking Sensor": true,
+          "Rear Parking Sensor": true,
+          "Roof Rack": false,
+          "Power Windows": true,
+          "Sunroof": false,
+          "USB Port": true,
+          "Sound System": true,
+          "Memory Seat": false
+        }
+      },
+      "id": 1006,
+      "driveUnit": "Rear-wheel Drive",
+      "description": "Have you ever wanted something so badly that you were willing to go to extraordinary lengths to make it happen? That's exactly what tens of thousands (maybe more) of Jeep Wrangler owners have been doing for nearly four decades to get the Wrangler of their dreams. What is that dream Wrangler, you ask? It's one with a V-8 engine under the hood. Jeep has never offered it as an option from its factory … until now. In grand fashion, Jeep chose not just any V-8 engine for its new 2022 Wrangler Rubicon 392, instead they grabbed the largest displacement engine in their catalog, the 6.4-liter HEMI V-8, and stuffed it between the Wrangler's fenders. When paired with the legendary off-road hardware of Jeep's Rubicon package, and the company's new Xtreme Recon package, it's not difficult to see how the Wrangler Rubicon 392 found itself on the top of our leaderboard, eventually taking home the title of the 2022 Four Wheeler SUV of the Year."
+    },
+    {
+      "brand": "Toyota",
+      "model": "Supra",
+      "condition": true,
+      "top": false,
+      "price": 46432,
+      "color": "Grey",
+      "logo": "https://drive.google.com/uc?id=1oTQwStgnFzHC2l2rA2gbN5MTVvUeWUvL",
+
+      "location": "USA, Texas",
+      "year": 2021,
+      "engine": "Gasoline",
+      "seats": "2 people",
+      "transmission": "Manual",
+
+      "body": "Coupe",
+      "rating": [1.5, 1.4, 3, 5.0, 4.6, 5.3, 3.5],
+      "dealer": {
+        "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
+        "name": "Alfredo Gouse",
+        "position": "Dealer",
+        "phone": "240-865-3730",
+        "email": "alfred.g@mail.com"
+      },
+      "src": [
+        "https://drive.google.com/uc?id=1cby6r0as-RNSTfcJR7Fzbz-XTAbyZ-7a",
+        "https://drive.google.com/uc?id=1ro_dsANQH8VvtpvBihTHLwoatyAbIjw_",
+        "https://drive.google.com/uc?id=1XVX1CbAEIMeP3PsZ1DDrQx9QbsnT0KnI",
+        "https://drive.google.com/uc?id=1DTUitFgasacqghoiKEndWqId7jSiRxcf",
+        "https://drive.google.com/uc?id=1ZS0Y1wPbXj2YhJZ7waGvez3sW-7jhXg6",
+        "https://drive.google.com/uc?id=147E3Abz9uI4E4UhWr9ZDvcUUjwNim58u",
+        "https://drive.google.com/uc?id=1cN0Tfyltwc4w_8kCV-1u3_ClPQLc3CyL"
+      ],
+      "details": {
+        "Car Details": {
+          "Brand": "Toyota",
+          "Model": "GR Supra",
+          "Condition": "New",
+          "Year": "2022",
+          "Body Type": "Coupe",
+          "Seats": "2 people",
+          "Exterior Color": "Grey"
+        },
+        "Engine": {
+          "Fuel Type": "Gasoline",
+          "Mileage": "0 km",
+          "Transmission": "Automatic",
+          "Drivetrain": "AWD",
+          "Power": "382 hp (320 kW)"
+        },
+        "Battery and Charging": {
+          "Battery Capacity": "-",
+          "Charge Port": "-",
+          "Charge Time (0->Full)": "-"
+        },
+        "Dimension": {
+          "Length": "4457 mm",
+          "Width": "1841 mm",
+          "Height": "1384 mm",
+          "Cargo Volume": "250 L"
+        },
+        "Futures": {
+          "Power Steering": true,
+          "AC": true,
+          "Alarm": true,
+          "Bluetooth": true,
+          "Heated Seats": false,
+          "WiFi": false,
+          "Cruise Control": false,
+          "Front Parking Sensor": true,
+          "Rear Parking Sensor": false,
+          "Roof Rack": false,
+          "Power Windows": true,
+          "Sunroof": false,
+          "USB Port": true,
+          "Sound System": true,
+          "Memory Seat": true
+        }
+      },
+      "id": 1007,
+      "driveUnit": "Rear-wheel Drive",
+      "description": "The initial four generations of the Supra were produced from 1978 to 2002. The fifth generation has been produced since March 2019 and went on sale in May 2019. The styling of the original Supra was derived from the Toyota Celica, but it was both longer and wider.Starting in mid-1986, the A70 Supra became a separate model from the Celica. In turn, Toyota also stopped using the prefix Celica and named the car Supra. Owing to the similarity and past of the Celica's name, it is frequently mistaken for the Supra, and vice versa. The first, second and third generations of the Supra were assembled at the Tahara plant in Tahara, Aichi, while the fourth generation was assembled at the Motomachi plant in Toyota City. The 5th generation of the Supra is assembled alongside the G29 BMW Z4 in Graz, Austria by Magna Steyr."
+    },
+    {
+      "brand": "Ford",
+      "model": "Bronco",
+      "condition": true,
+      "top": true,
+      "label": "New SALE!!!",
+      "price": 53089,
+      "location": "USA, Florida",
+      "transmission": "Manual",
+      "logo": "https://drive.google.com/uc?id=1kxEabmT01Ll5CQtqXuK0WTlILmc-eNsG",
+
+      "year": 2019,
+      "engine": "Gasoline",
+      "seats": "4 people",
+      "color": "Grey",
+
+      "body": "SUV",
+      "rating": [5, 4.6, 4, 3, 1, 1, 5.0, 4.8, 5.0, 5.0, 5, 3.5],
+      "dealer": {
+        "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
+        "name": "Alfredo Gouse",
+        "position": "Dealer",
+        "phone": "240-865-3730",
+        "email": "alfred.g@mail.com"
+      },
+      "details": {
+        "Car Details": {
+          "Brand": "Ford",
+          "Model": "BRONCO",
+          "Condition": "New",
+          "Year": "2022",
+          "Body Type": "SUV",
+          "Seats": "5 people",
+          "Exterior Color": "Grey"
+        },
+        "Engine": {
+          "Fuel Type": "Gasoline",
+          "Mileage": "100 km",
+          "Transmission": "Automatic",
+          "Drivetrain": "AWD",
+          "Power": "450 hp (335 kW)"
+        },
+        "Battery and Charging": {
+          "Battery Capacity": "-",
+          "Charge Port": "-",
+          "Charge Time (0->Full)": "-"
+        },
+        "Dimension": {
+          "Length": "5052 mm",
+          "Width": "2164 mm",
+          "Height": "2049 mm",
+          "Cargo Volume": "4000 L"
+        },
+        "Futures": {
+          "Power Steering": true,
+          "AC": true,
+          "Alarm": true,
+          "Bluetooth": true,
+          "Heated Seats": true,
+          "WiFi": false,
+          "Cruise Control": false,
+          "Front Parking Sensor": false,
+          "Rear Parking Sensor": false,
+          "Roof Rack": false,
+          "Power Windows": true,
+          "Sunroof": false,
+          "USB Port": true,
+          "Sound System": true,
+          "Memory Seat": true
+        }
+      },
+      "src": [
+        "https://drive.google.com/uc?id=11KvuUSFmgiSnazAtqw7znWxytCj2zIvn",
+        "https://drive.google.com/uc?id=1QWl64OILggyrkZ7p06NuaRfJIvNWhmsH",
+        "https://drive.google.com/uc?id=1W6KZxD35IYOicEu_9MR62KVUk0iZU5kj",
+        "https://drive.google.com/uc?id=1GxGCz9TnwvHgXYfIR2FDmKaCJZ85B_Xk",
+        "https://drive.google.com/uc?id=1i93wDoFBvUoKO5KXxEG2LGo8QS0QcZfY",
+        "https://drive.google.com/uc?id=1Xy3XGogFzg1xiGbew_NcFwnVYdMUsbE4",
+        "https://drive.google.com/uc?id=1hke8mWYlpu9H1MbRKMZ5LX9QXb25yHDr"
+      ],
+      "id": 1008,
+      "driveUnit": "Four-wheel Drive",
+      "description": "Whether it’s crunching through dense forest trails or quietly idling up to a Wendy’s drive-thru window, the four-wheel-drive Ford Bronco is arguably the most exciting off-roader since the Jeep Wrangler. The Bronco comes in both two- and four-door body styles, and it was designed to do everything a Wrangler can—and it does that and more. Yes, you can remove the doors on the Bronco just like you can on a Wrangler but only the Ford retains its mirrors. Both brands’ SUVs cater to the big muddy but the Bronco suffers from noticeably less road noise when traveling the highways between puddles. It has more base horsepower too, with output ranging between a 300-hp turbocharged 2.3-liter inline-four and a 330-hp twin-turbo 2.7-liter V-6. If you’re after more than that, feast your eyes on the swollen fenders of the 418-hp Bronco Raptor, reviewed separately. With a dizzying array of models, trims, and optional equipment the Bronco offers vast configurability that allows it to fit a wide range of needs—even for those die-hards (like us) who want to shift gears with the help of a clutch pedal."
+    },
+    {
+      "brand": "Aston Martin",
+      "model": "DB 11",
+      "condition": false,
+      "top": true,
+      "label": "New",
+      "price": 83089,
+      "location": "USA, New York",
+      "transmission": "Automatic",
+      "logo": "https://drive.google.com/uc?id=18zXtXtwqGsuYDuVdUQFQnw7pk7MUHVIa",
+
+      "year": 2016,
+      "engine": "Gasoline",
+      "seats": "2 people",
+      "color": "Grey",
+
+      "body": "Coupe",
+      "rating": [5, 4.6, 4, 3, 1, 1, 5.0, 4.8, 5.0, 5.0, 5, 3.5],
+      "dealer": {
+        "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
+        "name": "Alfredo Gouse",
+        "position": "Dealer",
+        "phone": "240-865-3730",
+        "email": "alfred.g@mail.com"
+      },
+      "details": {
+        "Car Details": {
+          "Brand": "Aston Martin",
+          "Model": "DB 11",
+          "Condition": "Used",
+          "Year": "2016",
+          "Body Type": "Coupe",
+          "Seats": "2 people",
+          "Exterior Color": "Grey"
+        },
+        "Engine": {
+          "Fuel Type": "Gasoline",
+          "Mileage": "11100 km",
+          "Transmission": "Automatic",
+          "Drivetrain": "AWD",
+          "Power": "600 hp (447 kW)"
+        },
+        "Battery and Charging": {
+          "Battery Capacity": "-",
+          "Charge Port": "-",
+          "Charge Time (0->Full)": "-"
+        },
+        "Dimension": {
+          "Length": "4739 mm",
+          "Width": "2060 mm",
+          "Height": "1279 mm",
+          "Cargo Volume": "300 L"
+        },
+        "Futures": {
+          "Power Steering": true,
+          "AC": true,
+          "Alarm": true,
+          "Bluetooth": true,
+          "Heated Seats": false,
+          "WiFi": false,
+          "Cruise Control": true,
+          "Front Parking Sensor": true,
+          "Rear Parking Sensor": true,
+          "Roof Rack": true,
+          "Power Windows": true,
+          "Sunroof": false,
+          "USB Port": true,
+          "Sound System": true,
+          "Memory Seat": true
+        }
+      },
+      "src": [
+        "https://drive.google.com/uc?id=1RmOQ8eVaC2w2I3Brft8lgDScX_JBJHHa",
+        "https://drive.google.com/uc?id=1ChXnjDmiLNDBH2Hwlfp7HdDnMQAGXXnj",
+        "https://drive.google.com/uc?id=1LLf_7PAlZnVvXZFFOlWjwUydfn4noIFU",
+        "https://drive.google.com/uc?id=14CgKxSw7n89gS5NeAEYoEn5g0F8MRVVL",
+        "https://drive.google.com/uc?id=1gz4eS4mI47L5MxJUmlI4PkI8DVHLHQwM"
+      ],
+      "id": 1009,
+      "driveUnit": "Four-wheel Drive",
+      "description": "The Aston Martin DB11 is a grand tourer produced by British luxury car manufacturer Aston Martin since 2016. It debuted at the Geneva Motor Show in March 2016 as a replacement to the DB9. It is the first model launched in Aston Martin's 'second century' plan and the company's tie-up with Daimler AG"
+    },
+    {
+      "brand": "BMW",
+      "model": "M2",
+      "condition": true,
+      "top": true,
+      "label": "New",
+      "price": 93089,
+      "location": "USA, New York",
+      "transmission": "Automatic",
+      "logo": "https://drive.google.com/uc?id=1_S3PYtOfeDAHqXlUn3PMKF8yHXnM98sT",
+
+      "year": 2022,
+      "engine": "Gasoline",
+      "seats": "2 people",
+      "color": "Purple",
+
+      "body": "Coupe",
+      "rating": [5, 4.6, 4, 3, 1, 1, 5.0, 4.8, 5.0, 5.0, 5, 3.5],
+      "dealer": {
+        "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
+        "name": "Alfredo Gouse",
+        "position": "Dealer",
+        "phone": "240-865-3730",
+        "email": "alfred.g@mail.com"
+      },
+      "details": {
+        "Car Details": {
+          "Brand": "BMW",
+          "Model": "M2",
+          "Condition": "New",
+          "Year": "2022",
+          "Body Type": "Coupe",
+          "Seats": "2 people",
+          "Exterior Color": "Purple"
+        },
+        "Engine": {
+          "Fuel Type": "Gasoline",
+          "Mileage": "0 km",
+          "Transmission": "Automatic",
+          "Drivetrain": "AWD",
+          "Power": "600 hp (447 kW)"
+        },
+        "Battery and Charging": {
+          "Battery Capacity": "-",
+          "Charge Port": "-",
+          "Charge Time (0->Full)": "-"
+        },
+        "Dimension": {
+          "Length": "4739 mm",
+          "Width": "2060 mm",
+          "Height": "1279 mm",
+          "Cargo Volume": "300 L"
+        },
+        "Futures": {
+          "Power Steering": true,
+          "AC": true,
+          "Alarm": true,
+          "Bluetooth": true,
+          "Heated Seats": true,
+          "WiFi": true,
+          "Cruise Control": true,
+          "Front Parking Sensor": true,
+          "Rear Parking Sensor": true,
+          "Roof Rack": true,
+          "Power Windows": true,
+          "Sunroof": false,
+          "USB Port": true,
+          "Sound System": true,
+          "Memory Seat": true
+        }
+      },
+      "src": [
+        "https://drive.google.com/uc?id=1JNONkzstvoYBVDuojDMxP9mBpLxykC0t",
+        "https://drive.google.com/uc?id=1Q_9Wf3vwb2JzGhAlq2WULj39tTxjl_zX",
+        "https://drive.google.com/uc?id=1yaNYu0nvp8Zo7WnuJD5tAdXzZjCtdFjm",
+        "https://drive.google.com/uc?id=1502iIvlCoJc4OiU0Wf7TD7wPS1jljHI_",
+        "https://drive.google.com/uc?id=1s_5dF_W31ouBsMB-6fsIM7betkrEguEq",
+        "https://drive.google.com/uc?id=1FwCUbQCI67OnDuWTDm01ZOcPu-UbnHub"
+      ],
+      "id": 1010,
+      "driveUnit": "Four-wheel Drive",
+      "description": "The 2 Series was first launched as a 2-door coupe and convertible, both based on a rear-wheel drive platform. A year later, the Active Tourer 5-seat compact MPV body style was added, based on the unrelated front-wheel drive platform shared with the Mini Hatch (F55/56/57). This was followed by a 7-seat version called the Gran Tourer. In 2019, the Gran Coupe fastback sedan joined the 2 Series family as a front-wheel drive vehicle based on the 1 Series hatchback and has been marketed as a 4-door coupe. In 2021, BMW released the second-generation 2-door coupe, rear-wheel drive 2 Series in July 2021."
+    },
+    {
+      "brand": "Land Rover",
+      "model": "Defender",
+      "condition": true,
+      "top": true,
+      "label": "New",
+      "price": 79089,
+      "location": "USA, Florida",
+      "transmission": "Automatic",
+      "logo": "https://drive.google.com/uc?id=1ThXIZvmJiR3q5Ari1Yub_itBnfHsEoml",
+
+      "year": 2022,
+      "engine": "Gasoline",
+      "seats": "5 people",
+      "color": "Navy",
+
+      "body": "SUV",
+      "rating": [5, 4.6, 4, 3, 1, 1, 5.0, 4.8, 5.0, 5.0, 5, 3.5],
+      "dealer": {
+        "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
+        "name": "Alfredo Gouse",
+        "position": "Dealer",
+        "phone": "240-865-3730",
+        "email": "alfred.g@mail.com"
+      },
+      "details": {
+        "Car Details": {
+          "Brand": "Land Rover",
+          "Model": "Defender",
+          "Condition": "New",
+          "Year": "2022",
+          "Body Type": "SUV",
+          "Seats": "2 people",
+          "Exterior Color": "Purple"
+        },
+        "Engine": {
+          "Fuel Type": "Gasoline",
+          "Mileage": "0 km",
+          "Transmission": "Automatic",
+          "Drivetrain": "AWD",
+          "Power": "300 hp (247 kW)"
+        },
+        "Battery and Charging": {
+          "Battery Capacity": "-",
+          "Charge Port": "-",
+          "Charge Time (0->Full)": "-"
+        },
+        "Dimension": {
+          "Length": "4739 mm",
+          "Width": "2060 mm",
+          "Height": "1879 mm",
+          "Cargo Volume": "900 L"
+        },
+        "Futures": {
+          "Power Steering": true,
+          "AC": true,
+          "Alarm": true,
+          "Bluetooth": true,
+          "Heated Seats": true,
+          "WiFi": true,
+          "Cruise Control": true,
+          "Front Parking Sensor": true,
+          "Rear Parking Sensor": true,
+          "Roof Rack": false,
+          "Power Windows": true,
+          "Sunroof": false,
+          "USB Port": true,
+          "Sound System": true,
+          "Memory Seat": true
+        }
+      },
+      "src": [
+        "https://drive.google.com/uc?id=1IQnuIL1plFeY0F3DER4nEN76dT_AqHAR",
+        "https://drive.google.com/uc?id=1m-lYoukYKAlSvaq6lMtzgxc94Cmc45yu",
+        "https://drive.google.com/uc?id=1tw0lmmw_N0LBBiQL-J2tnvvqvYiB14gw",
+        "https://drive.google.com/uc?id=16EY9wEaBar26RkkEQ9ZTqOUjbw0JwI1h"
+      ],
+      "id": 1011,
+      "driveUnit": "Four-wheel Drive",
+      "description": "The Land Rover Defender (initially introduced as the Land Rover 110 / One Ten, and in 1984 joined by the Land Rover 90 / Ninety, plus the new, extra-length Land Rover 127 in 1985) is a series of British off-road cars and pickup trucks. They consistently have four-wheel drive, and were developed in the 1980s from the original Land Rover series which was launched at the Amsterdam Motor Show in April 1948. Following the 1989 introduction of the Land Rover Discovery, the term 'Land Rover' became the name of a broader marque, and thus no longer worked as the name of a specific model; thus in 1990 Land Rover renamed the 90 and 110 as Defender 90 and Defender 110 respectively. The 127 became the Defender 130."
+    },
+    {
+      "brand": "Ford",
+      "model": "Mustang",
+      "condition": true,
+      "top": true,
+      "label": "New",
+      "price": 43089,
+      "location": "USA,  Florida",
+      "transmission": "Automatic",
+      "logo": "https://drive.google.com/uc?id=1kxEabmT01Ll5CQtqXuK0WTlILmc-eNsG",
+
+      "year": 2022,
+      "engine": "Gasoline",
+      "seats": "2 people",
+      "color": "Deep Blue",
+
+      "body": "Coupe",
+      "rating": [5, 4.6, 4, 3, 1, 1, 5.0, 4.8, 5.0, 5.0, 5, 3.5],
+      "dealer": {
+        "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
+        "name": "Alfredo Gouse",
+        "position": "Dealer",
+        "phone": "240-865-3730",
+        "email": "alfred.g@mail.com"
+      },
+      "details": {
+        "Car Details": {
+          "Brand": "Ford",
+          "Model": "Mustang",
+          "Condition": "New",
+          "Year": "2022",
+          "Body Type": "Coupe",
+          "Seats": "2 people",
+          "Exterior Color": "Deep Blue"
+        },
+        "Engine": {
+          "Fuel Type": "Gasoline",
+          "Mileage": "0 km",
+          "Transmission": "Automatic",
+          "Drivetrain": "AWD",
+          "Power": "600 hp (447 kW)"
+        },
+        "Battery and Charging": {
+          "Battery Capacity": "-",
+          "Charge Port": "-",
+          "Charge Time (0->Full)": "-"
+        },
+        "Dimension": {
+          "Length": "4739 mm",
+          "Width": "2060 mm",
+          "Height": "1379 mm",
+          "Cargo Volume": "300 L"
+        },
+        "Futures": {
+          "Power Steering": true,
+          "AC": true,
+          "Alarm": true,
+          "Bluetooth": true,
+          "Heated Seats": true,
+          "WiFi": true,
+          "Cruise Control": true,
+          "Front Parking Sensor": true,
+          "Rear Parking Sensor": true,
+          "Roof Rack": false,
+          "Power Windows": true,
+          "Sunroof": false,
+          "USB Port": true,
+          "Sound System": true,
+          "Memory Seat": true
+        }
+      },
+      "src": [
+        "https://drive.google.com/uc?id=1zV4yhucdGzOXa9_EB62WIrljtuzWbd2N",
+        "https://drive.google.com/uc?id=12UjA3HUtvT52H_3wTstHHMOXgjZdntms",
+        "https://drive.google.com/uc?id=1XOAg89A4SCOBc5p0M-o1kGIEBH7kQxtp",
+        "https://drive.google.com/uc?id=1Ag_24Y7u6IMy4F2zoDwtLzvm7i_jHXti",
+        "https://drive.google.com/uc?id=1o8Ivb_TMhnPRQmV42qMrfCdjOZcdpe1B"
+      ],
+      "id": 1012,
+      "driveUnit": "Four-wheel Drive",
+      "description": "The Ford Mustang is a series of American automobiles manufactured by Ford. In continuous production since 1964, the Mustang is currently the longest-produced Ford car nameplate. Currently in its sixth generation, it is the fifth-best selling Ford car nameplate. The namesake of the \"pony car\" automobile segment, the Mustang was developed as a highly styled line of sporty coupes and convertibles derived from existing model lines, initially distinguished by \"long hood, short deck\" proportions.Originally predicted to sell 100,000 vehicles yearly, the 1965 Mustang became the most successful vehicle launch since the 1927 Model A. Introduced on April 17, 1964 (16 days after the Plymouth Barracuda), over 400,000 units in its first year; the one-millionth Mustang was sold within two years of its launch. In August 2018, Ford produced the 10-millionth Mustang; matching the first 1965 Mustang, the vehicle was a 2019 Wimbledon White convertible with a V8 engine."
+    },
+    {
+      "brand": "Volvo",
+      "model": "XC 40",
+      "condition": true,
+      "top": true,
+      "label": "New",
+      "price": 55777,
+      "location": "USA,  North Carolina",
+      "transmission": "Automatic",
+      "logo": "https://drive.google.com/uc?id=1e4ASlKCIDXpwbS088ixxxSYk36jqjVJE",
+
+      "year": 2022,
+      "engine": "Electric",
+      "seats": "5 people",
+      "color": "Navy",
+
+      "body": "SUV",
+      "rating": [5, 4.6, 4, 3, 1, 1, 5.0, 4.8, 5.0, 5.0, 5, 3.5],
+      "dealer": {
+        "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
+        "name": "Alfredo Gouse",
+        "position": "Dealer",
+        "phone": "240-865-3730",
+        "email": "alfred.g@mail.com"
+      },
+      "details": {
+        "Car Details": {
+          "Brand": "Volvo",
+          "Model": "XC 40",
+          "Condition": "New",
+          "Year": "2022",
+          "Body Type": "SUV",
+          "Seats": "5 people",
+          "Exterior Color": "Navy"
+        },
+        "Engine": {
+          "Fuel Type": "Electric",
+          "Mileage": "0 km",
+          "Transmission": "Automatic",
+          "Drivetrain": "AWD",
+          "Power": "200 hp (147 kW)"
+        },
+        "Battery and Charging": {
+          "Battery Capacity": "55 kW",
+          "Charge Port": "Type 1",
+          "Charge Time (0->Full)": "300 min"
+        },
+        "Dimension": {
+          "Length": "4739 mm",
+          "Width": "2060 mm",
+          "Height": "1979 mm",
+          "Cargo Volume": "700 L"
+        },
+        "Futures": {
+          "Power Steering": true,
+          "AC": true,
+          "Alarm": true,
+          "Bluetooth": true,
+          "Heated Seats": true,
+          "WiFi": true,
+          "Cruise Control": true,
+          "Front Parking Sensor": true,
+          "Rear Parking Sensor": true,
+          "Roof Rack": false,
+          "Power Windows": true,
+          "Sunroof": false,
+          "USB Port": true,
+          "Sound System": true,
+          "Memory Seat": true
+        }
+      },
+      "src": [
+        "https://drive.google.com/uc?id=1oatSS6TvyGx2RRiC6CDQfKnIPiihfPqn",
+        "https://drive.google.com/uc?id=1iI6T3x9fP3l0FrpLtPZ8ehGrZu3uK0BL",
+        "https://drive.google.com/uc?id=1tW7OtpXhq4UeDwu1S48SaU0tPCZEtEV-",
+        "https://drive.google.com/uc?id=1MJBoszEnaIvkdL5icjO0D0COKHXO9cB0"
+      ],
+      "id": 1013,
+      "driveUnit": "Forward-wheel Drive",
+      "description": "The Volvo XC40 is a subcompact luxury crossover SUV manufactured by Volvo Cars. It was unveiled on 21 September 2017 as the smallest SUV model from Volvo, below the XC60. Orders started in September of 2017, and manufacturing began in November 2017. It was introduced with conventional petrol and diesel engines, with a plug-in hybrid model being introduced in 2019, and a battery electric vehicle model was released in 2020 as the XC40 Recharge. A version of the battery electric model with a sloping rear roof was released in 2021 as the C40 Recharge."
+    }
+  ],
+  "reviews": [
+    {
+      "text": "THE BEST PLACE/PEOPLE TO GET A CAR FROM!! I’ve never met car salesman that actually seems like they care about making sure you leave happy and not just caring about the money they’re making!!  Highly recommended!",
+      "name": "Courtney Poarch",
+      "id": "review001",
+      "photo": "https://drive.google.com/uc?id=1h2LVPKIttRGL9szneLMcIXl09YjuZeQt"
+    },
+    {
+      "text": "By far the best experience I’ve had buying a car. Dwayne is a great guy and truly cares about people instead of just trying to sell cars. Would recommend them to anyone!",
+      "name": "Caleb Dillard",
+      "id": "review002",
+      "photo": "https://drive.google.com/uc?id=1-RSm6Zowvt87N-qivJVSpASPSPPeG4I0"
+    },
+    {
+      "text": "The best place to buy or sale your car around. Dwayne is an awesome guy and he genuinely cares about his customers. I would highly recommend Autohunt Company over any other car lot around.",
+      "name": "Kolten Farr",
+      "id": "review003",
+      "photo": "https://drive.google.com/uc?id=1I96W5CLENGqQAtmOGvot-NtcMy_O0zU5"
+    },
+    {
+      "text": "Everybody go check out Autohunt Company! They made our experience super easy and made us feel very welcomed. Dwayne showed my family the upmost respect.",
+      "name": "Heather Lingerfelt",
+      "id": "review004",
+      "photo": "https://drive.google.com/uc?id=1ovCSu70KouPeZkotHWTittOpSFqyRlAZ"
+    },
+    {
+      "text": "I had an amazing experience. Jason and the staff at Carolina car company are great very professional didn't pull me around in circles got my loan done in less than an hour it blew my mind i will definitely return in the future. THANK YOU!!",
+      "name": "Peter Walls",
+      "id": "review005",
+      "photo": "https://drive.google.com/uc?id=1Lye2STz0kN7RTP4ovR57LhwkXlGZl2AJ"
+    },
+    {
+      "text": "Hands down nicest people you will ever meet. They will do anything in the world to help you even if you don't buy a car from them. Best prices around as well",
+      "name": "John Henderson",
+      "id": "review006",
+      "photo": "https://drive.google.com/uc?id=1nzoSMaX5_1-4HyfuHnrVddIS2PW4pDGy"
+    }
+  ],
+  "news": [
+    {
+      "title": "Shelby Centennial Edition",
+      "image": "https://drive.google.com/uc?id=1jgjjfM_BPJ7is7XSm3aGK-a-MkbzySwV",
+      "text": "Shelby American is commemorating the 100th anniversary of its founder's birth in the most Carroll Shelby way it can. That means a hot-rod version of the 2023 Mustang GT, supercharged to make 750 horsepower, barking exhaust fumes out of the Borla cat-back exhaust system. Fittingly, Shelby American is only planning to make 100 of the centennial edition. Unfortunately they've all sold out in the four days since a prototype was displayed in Gardena, California.The Shelby American team isn't being too strict with this one. Want a fastback? Sure. Convertible? You got it. Manual transmission? Sign here. Automatic transmission? If you say so. What it won't stand for is non-stock Mustang colors, the Mach 1, or the California Special. Basically, as long as the badging reads \"GT\" and the title says 2023, you're in the clear.",
+      "id": "news01",
+      "tags": ["Ford", "Mustang"]
+    },
+    {
+      "title": "Tesla Selling Cheaper",
+      "image": "https://drive.google.com/uc?id=1VMGrEm52WPT9QJP1Xj9bJ2D_amEFyVSP",
+      "text": "Tesla's pulling a page from In-N-Out Burger's playbook and giving Model Y buyers the chance to order a cheaper variant off a proverbial secret menu. Though the automaker's website currently restricts Model Y orders to those of the $54,380 Long Range or $58,380 Performance variants, Tesla's list of online inventory shows that a number of its stores are stocked with salable base Model Y EVs that wear a starting price $2000 less than that of the Long Range model. (As of this writing, however, it seems most of these entry-level Ys in inventory include at least $2000 worth of optional 20-inch wheels and tires, thus effectively negating the base model's cost savings over its Long Range counterpart.) Unlike the prior entry-level rear-drive Model Y, which Tesla stopped producing in 2021, this new base-level Model Y comes standard with a dual-motor all-wheel-drive system. It also packs a greater EPA-rated range relative to its single-motor forebear. With up to 279 miles of driving range on a full charge, the cheapest Model Y variant betters the old Standard Range model's range by 35 miles. That said, it falls short of the Model Y Long Range and Performance's figures by up to 51 and 24 miles, respectively.",
+      "id": "news02",
+      "tags": ["Tesla", "Model Y", "Electric", "Sale"]
+    },
+    {
+      "title": "Best-selling BMW M",
+      "image": "https://drive.google.com/uc?id=16KkT2AlVejKF7aympkITQE2SUi-SnQsQ",
+      "text": "BMW M sold a whopping 177,257 cars last year, which was an 8.4 per cent increase over 2021 “despite the continuing challenging conditions in the area of logistics and supply chains”. You will have heard of these CHALLENGING CONDITIONS.However, what might challenge your perception is the car BMW M sold the most. Also known as the most popular BMW M car. Which last year was… drumroll please… the BMW i4 M50. Weren't expecting that, were you? A sure sign then, that customers have fully embraced BMW M’s march into electromobility, or just a sign that the M50 is a really very fast car with a BMW and M badge? Think you know the answer to that. And it is really very fast. There’s a twin-motor setup – one e-motor on the front axle, one on the back – powered by a 83.9kWh battery able to propel the four-door saloon from 0-62mph in just 3.9s. That’s exactly how long it takes the 503bhp BMW M3 to hit 62mph too.",
+      "id": "news03",
+      "tags": ["Sale", "BMW", "M2"]
+    },
+    {
+      "title": "A Small Affordable Electric Pickup Truck?",
+      "image": "https://drive.google.com/uc?id=1Jyhow7hZrFOQz8j2YdC0bcP32vPiS5YQ",
+      "text": "Back in March 2020, General Motors CEO Mary Barra announced an array of all-new, all-electric vehicles were actively in development. Now, nearly two years later, GM has revealed an in-house design studio devoted to the development of next-gen Ultium EVs, one of which might be a compact all-electric pickup that's being actively worked on. A group of media including Automotive News were reportedly invited to a General Motors \"affordable EV design studio\" in Warren, Michigan, where it revealed a \"baby pickup\" said to be smaller than the compact Ford Maverick, among a room full of conceptual clay models. GM did not release any public images or details of the studio nor truck, but Auto News says marketing materials showed the pickup being used for recreational activities, like going to the beach to surf. Michael Pevovar, the director of the affordable EV design studio, told reporters that the vehicles in development, including the new tiny pickup, are \"to get a reaction\" to what does and doesn't work for vehicles being considered for production, according to Auto News. Pevovar further elaborated that the concept could get bigger if it's determined to be too small, given the flexibility of the scalable Ultium battery-based platform.  ",
+      "id": "news04",
+      "tags": ["Ford", "Electric", "GM", "Pickup"]
+    }
+  ]
+}
