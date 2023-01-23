@@ -15,7 +15,13 @@
       "body": "Sedan",
       "logo": "https://drive.google.com/uc?id=12mbNI1__pRBJNuvvtAtdnXGf2ZC92TfO",
       "transmission": "Automatic",
-      "rating": [4.5, 4.3, 4.4, 5.3, 4.5],
+      "rating": [
+        4.5,
+        4.3,
+        4.4,
+        5.3,
+        4.5
+      ],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -79,7 +85,7 @@
           "Memory Seat": true
         }
       },
-      "id": 1000,
+      "id": "166ff707-326d-45c9-b98d-3272396a081e",
       "driveUnit": "All-wheel Drive",
       "description": "The Tesla Model 3 is a compact executive sedan that is battery powered and produced by Tesla.Limited production of the Model 3 began in mid-2017, with the first production vehicle rolling off the assembly line on July 7, 2017. \n      The official launch and delivery of the first 30 cars took place on July 28 The base Model 3 delivers an EPA-rated all-electric range of 272 miles (438 km) and the Long Range version delivers 358 miles (576 km). \n      According to Tesla, the Model 3 carries full self-driving hardware, with periodic software updates adding functionality. The Model 3 was marketed as being more people than previous models by Tesla. \n      Since early 2020, the Model 3 is the bestselling electric car in world history, and, in June 2021, became the first electric car to pass the 1 million global sales milestone. The Model 3 has been the world's top selling plug-in electric car (PEV) for three years running, from 2018 to 2020. \n      It has also been the bestselling PEV in the United States for three consecutive years, 2018 to 2020, the top selling PEV in Europe in 2019, and the bestselling PEV in China in 2020."
     },
@@ -98,7 +104,13 @@
       "body": "Sedan",
       "logo": "https://drive.google.com/uc?id=12mbNI1__pRBJNuvvtAtdnXGf2ZC92TfO",
       "transmission": "Automatic",
-      "rating": [4.5, 4.3, 4.4, 5.3, 4.5],
+      "rating": [
+        4.5,
+        4.3,
+        4.4,
+        5.3,
+        4.5
+      ],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -180,7 +192,13 @@
       "body": "Sedan",
       "logo": "https://drive.google.com/uc?id=12mbNI1__pRBJNuvvtAtdnXGf2ZC92TfO",
       "transmission": "Automatic",
-      "rating": [4.5, 4.3, 4.4, 5.3, 4.5],
+      "rating": [
+        4.5,
+        4.3,
+        4.4,
+        5.3,
+        4.5
+      ],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -260,7 +278,13 @@
       "body": "SUV",
       "logo": "https://drive.google.com/uc?id=12mbNI1__pRBJNuvvtAtdnXGf2ZC92TfO",
       "transmission": "Automatic",
-      "rating": [5, 4, 4, 5, 5],
+      "rating": [
+        5,
+        4,
+        4,
+        5,
+        5
+      ],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -340,8 +364,20 @@
       "logo": "https://drive.google.com/uc?id=1SYVJVJZoa7OoqbR3K5m0TuNlUc-wad1q",
       "body": "Sedan",
       "transmission": "Automatic",
-
-      "rating": [4.5, 3.3, 3.4, 3.3, 5, 3, 4.3, 3.4, 4.3, 3, 5, 4.5],
+      "rating": [
+        4.5,
+        3.3,
+        3.4,
+        3.3,
+        5,
+        3,
+        4.3,
+        3.4,
+        4.3,
+        3,
+        5,
+        4.5
+      ],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -416,15 +452,27 @@
       "price": 78375,
       "color": "Red",
       "logo": "https://drive.google.com/uc?id=1kxEabmT01Ll5CQtqXuK0WTlILmc-eNsG",
-
       "location": "USA, Florida",
       "year": 2021,
       "engine": "Gasoline",
       "transmission": "Automatic",
-
       "seats": "5 people",
       "body": "Pickup",
-      "rating": [4.5, 5, 3, 3, 3, 3, 3, 4.3, 3.6, 3.3, 3, 5, 4.5],
+      "rating": [
+        4.5,
+        5,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4.3,
+        3.6,
+        3.3,
+        3,
+        5,
+        4.5
+      ],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -501,13 +549,24 @@
       "year": 2021,
       "color": "Blue",
       "logo": "https://drive.google.com/uc?id=1wmGGZaZ_xsLI-GfZirVDbotv8x1E3bss",
-
       "engine": "Gasoline",
       "seats": "5 people",
       "transmission": "Automatic",
-
       "body": "SUV",
-      "rating": [4.5, 5, 3, 5.0, 3.3, 2.4, 5.3, 2.6, 5.3, 4, 5, 4.5],
+      "rating": [
+        4.5,
+        5,
+        3,
+        5,
+        3.3,
+        2.4,
+        5.3,
+        2.6,
+        5.3,
+        4,
+        5,
+        4.5
+      ],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -581,15 +640,21 @@
       "price": 46432,
       "color": "Grey",
       "logo": "https://drive.google.com/uc?id=1oTQwStgnFzHC2l2rA2gbN5MTVvUeWUvL",
-
       "location": "USA, Texas",
       "year": 2021,
       "engine": "Gasoline",
       "seats": "2 people",
       "transmission": "Manual",
-
       "body": "Coupe",
-      "rating": [1.5, 1.4, 3, 5.0, 4.6, 5.3, 3.5],
+      "rating": [
+        1.5,
+        1.4,
+        3,
+        5,
+        4.6,
+        5.3,
+        3.5
+      ],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -666,14 +731,25 @@
       "location": "USA, Florida",
       "transmission": "Manual",
       "logo": "https://drive.google.com/uc?id=1kxEabmT01Ll5CQtqXuK0WTlILmc-eNsG",
-
       "year": 2019,
       "engine": "Gasoline",
       "seats": "4 people",
       "color": "Grey",
-
       "body": "SUV",
-      "rating": [5, 4.6, 4, 3, 1, 1, 5.0, 4.8, 5.0, 5.0, 5, 3.5],
+      "rating": [
+        5,
+        4.6,
+        4,
+        3,
+        1,
+        1,
+        5,
+        4.8,
+        5,
+        5,
+        5,
+        3.5
+      ],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -750,14 +826,25 @@
       "location": "USA, New York",
       "transmission": "Automatic",
       "logo": "https://drive.google.com/uc?id=18zXtXtwqGsuYDuVdUQFQnw7pk7MUHVIa",
-
       "year": 2016,
       "engine": "Gasoline",
       "seats": "2 people",
       "color": "Grey",
-
       "body": "Coupe",
-      "rating": [5, 4.6, 4, 3, 1, 1, 5.0, 4.8, 5.0, 5.0, 5, 3.5],
+      "rating": [
+        5,
+        4.6,
+        4,
+        3,
+        1,
+        1,
+        5,
+        4.8,
+        5,
+        5,
+        5,
+        3.5
+      ],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -832,14 +919,25 @@
       "location": "USA, New York",
       "transmission": "Automatic",
       "logo": "https://drive.google.com/uc?id=1_S3PYtOfeDAHqXlUn3PMKF8yHXnM98sT",
-
       "year": 2022,
       "engine": "Gasoline",
       "seats": "2 people",
       "color": "Purple",
-
       "body": "Coupe",
-      "rating": [5, 4.6, 4, 3, 1, 1, 5.0, 4.8, 5.0, 5.0, 5, 3.5],
+      "rating": [
+        5,
+        4.6,
+        4,
+        3,
+        1,
+        1,
+        5,
+        4.8,
+        5,
+        5,
+        5,
+        3.5
+      ],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -915,14 +1013,25 @@
       "location": "USA, Florida",
       "transmission": "Automatic",
       "logo": "https://drive.google.com/uc?id=1ThXIZvmJiR3q5Ari1Yub_itBnfHsEoml",
-
       "year": 2022,
       "engine": "Gasoline",
       "seats": "5 people",
       "color": "Navy",
-
       "body": "SUV",
-      "rating": [5, 4.6, 4, 3, 1, 1, 5.0, 4.8, 5.0, 5.0, 5, 3.5],
+      "rating": [
+        5,
+        4.6,
+        4,
+        3,
+        1,
+        1,
+        5,
+        4.8,
+        5,
+        5,
+        5,
+        3.5
+      ],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -996,14 +1105,25 @@
       "location": "USA,  Florida",
       "transmission": "Automatic",
       "logo": "https://drive.google.com/uc?id=1kxEabmT01Ll5CQtqXuK0WTlILmc-eNsG",
-
       "year": 2022,
       "engine": "Gasoline",
       "seats": "2 people",
       "color": "Deep Blue",
-
       "body": "Coupe",
-      "rating": [5, 4.6, 4, 3, 1, 1, 5.0, 4.8, 5.0, 5.0, 5, 3.5],
+      "rating": [
+        5,
+        4.6,
+        4,
+        3,
+        1,
+        1,
+        5,
+        4.8,
+        5,
+        5,
+        5,
+        3.5
+      ],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -1078,14 +1198,25 @@
       "location": "USA,  North Carolina",
       "transmission": "Automatic",
       "logo": "https://drive.google.com/uc?id=1e4ASlKCIDXpwbS088ixxxSYk36jqjVJE",
-
       "year": 2022,
       "engine": "Electric",
       "seats": "5 people",
       "color": "Navy",
-
       "body": "SUV",
-      "rating": [5, 4.6, 4, 3, 1, 1, 5.0, 4.8, 5.0, 5.0, 5, 3.5],
+      "rating": [
+        5,
+        4.6,
+        4,
+        3,
+        1,
+        1,
+        5,
+        4.8,
+        5,
+        5,
+        5,
+        3.5
+      ],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -1194,28 +1325,75 @@
       "image": "https://drive.google.com/uc?id=1jgjjfM_BPJ7is7XSm3aGK-a-MkbzySwV",
       "text": "Shelby American is commemorating the 100th anniversary of its founder's birth in the most Carroll Shelby way it can. That means a hot-rod version of the 2023 Mustang GT, supercharged to make 750 horsepower, barking exhaust fumes out of the Borla cat-back exhaust system. Fittingly, Shelby American is only planning to make 100 of the centennial edition. Unfortunately they've all sold out in the four days since a prototype was displayed in Gardena, California.The Shelby American team isn't being too strict with this one. Want a fastback? Sure. Convertible? You got it. Manual transmission? Sign here. Automatic transmission? If you say so. What it won't stand for is non-stock Mustang colors, the Mach 1, or the California Special. Basically, as long as the badging reads \"GT\" and the title says 2023, you're in the clear.",
       "id": "news01",
-      "tags": ["Ford", "Mustang"]
+      "tags": [
+        "Ford",
+        "Mustang"
+      ]
     },
     {
       "title": "Tesla Selling Cheaper",
       "image": "https://drive.google.com/uc?id=1VMGrEm52WPT9QJP1Xj9bJ2D_amEFyVSP",
       "text": "Tesla's pulling a page from In-N-Out Burger's playbook and giving Model Y buyers the chance to order a cheaper variant off a proverbial secret menu. Though the automaker's website currently restricts Model Y orders to those of the $54,380 Long Range or $58,380 Performance variants, Tesla's list of online inventory shows that a number of its stores are stocked with salable base Model Y EVs that wear a starting price $2000 less than that of the Long Range model. (As of this writing, however, it seems most of these entry-level Ys in inventory include at least $2000 worth of optional 20-inch wheels and tires, thus effectively negating the base model's cost savings over its Long Range counterpart.) Unlike the prior entry-level rear-drive Model Y, which Tesla stopped producing in 2021, this new base-level Model Y comes standard with a dual-motor all-wheel-drive system. It also packs a greater EPA-rated range relative to its single-motor forebear. With up to 279 miles of driving range on a full charge, the cheapest Model Y variant betters the old Standard Range model's range by 35 miles. That said, it falls short of the Model Y Long Range and Performance's figures by up to 51 and 24 miles, respectively.",
       "id": "news02",
-      "tags": ["Tesla", "Model Y", "Electric", "Sale"]
+      "tags": [
+        "Tesla",
+        "Model Y",
+        "Electric",
+        "Sale"
+      ]
     },
     {
       "title": "Best-selling BMW M",
       "image": "https://drive.google.com/uc?id=16KkT2AlVejKF7aympkITQE2SUi-SnQsQ",
       "text": "BMW M sold a whopping 177,257 cars last year, which was an 8.4 per cent increase over 2021 “despite the continuing challenging conditions in the area of logistics and supply chains”. You will have heard of these CHALLENGING CONDITIONS.However, what might challenge your perception is the car BMW M sold the most. Also known as the most popular BMW M car. Which last year was… drumroll please… the BMW i4 M50. Weren't expecting that, were you? A sure sign then, that customers have fully embraced BMW M’s march into electromobility, or just a sign that the M50 is a really very fast car with a BMW and M badge? Think you know the answer to that. And it is really very fast. There’s a twin-motor setup – one e-motor on the front axle, one on the back – powered by a 83.9kWh battery able to propel the four-door saloon from 0-62mph in just 3.9s. That’s exactly how long it takes the 503bhp BMW M3 to hit 62mph too.",
       "id": "news03",
-      "tags": ["Sale", "BMW", "M2"]
+      "tags": [
+        "Sale",
+        "BMW",
+        "M2"
+      ]
     },
     {
       "title": "A Small Affordable Electric Pickup Truck?",
       "image": "https://drive.google.com/uc?id=1Jyhow7hZrFOQz8j2YdC0bcP32vPiS5YQ",
       "text": "Back in March 2020, General Motors CEO Mary Barra announced an array of all-new, all-electric vehicles were actively in development. Now, nearly two years later, GM has revealed an in-house design studio devoted to the development of next-gen Ultium EVs, one of which might be a compact all-electric pickup that's being actively worked on. A group of media including Automotive News were reportedly invited to a General Motors \"affordable EV design studio\" in Warren, Michigan, where it revealed a \"baby pickup\" said to be smaller than the compact Ford Maverick, among a room full of conceptual clay models. GM did not release any public images or details of the studio nor truck, but Auto News says marketing materials showed the pickup being used for recreational activities, like going to the beach to surf. Michael Pevovar, the director of the affordable EV design studio, told reporters that the vehicles in development, including the new tiny pickup, are \"to get a reaction\" to what does and doesn't work for vehicles being considered for production, according to Auto News. Pevovar further elaborated that the concept could get bigger if it's determined to be too small, given the flexibility of the scalable Ultium battery-based platform.  ",
       "id": "news04",
-      "tags": ["Ford", "Electric", "GM", "Pickup"]
+      "tags": [
+        "Ford",
+        "Electric",
+        "GM",
+        "Pickup"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "admin",
+      "login": "admin",
+      "password": "admin",
+      "isAdmin": true
+    },
+    {
+      "name": "Alex",
+      "login": "1234",
+      "password": "1234",
+      "isAdmin": false,
+      "id": "166ff707-326d-45c9-b98d-3272396a081e"
+    },
+    {
+      "name": "Viki",
+      "login": "2345",
+      "password": "2345",
+      "isAdmin": false,
+      "id": "e512810a-4255-446b-ab33-f9c37fe5b98b"
+    },
+    {
+      "name": "Zipa",
+      "login": "9999",
+      "password": "9999",
+      "isAdmin": false,
+      "id": "513ab3b9-2504-45df-89a7-8dc42a53870c"
     }
   ]
 }

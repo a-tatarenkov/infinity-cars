@@ -10,6 +10,11 @@ export const fetchComments = (request) => (dispatch) => {
   request("/reviews").then((comments) => dispatch(commentsFetched(comments)));
 };
 
+export const fetchUsers = (request) => (dispatch) => {
+  dispatch(usersFetching());
+  request("/users").then((users) => dispatch(usersFetched(users)));
+};
+
 export const fetchNews = (request) => (dispatch) => {
   dispatch(newsFetching());
   request("/news").then((news) => dispatch(newsFetched(news)));
@@ -129,6 +134,39 @@ export const fetchFilteredCars = (request, filters) => (dispatch) => {
   )
     .then((data) => dispatch(carsFetched(data)))
     .catch(() => dispatch(carsFetchingError()));
+};
+
+export const usersFetching = () => {
+  return {
+    type: "USERS_FETCHING",
+  };
+};
+
+export const usersFetched = (users) => {
+  return {
+    type: "USERS_FETCHED",
+    payload: users,
+  };
+};
+
+export const userCreated = (user) => {
+  return {
+    type: "USER_CREATED",
+    payload: user,
+  };
+};
+
+export const currentUserLogged = (user) => {
+  return {
+    type: "CURRENT_USER",
+    payload: user,
+  };
+};
+export const setLogged = (log) => {
+  return {
+    type: "SET_LOGGED",
+    payload: log,
+  };
 };
 
 export const carsFetching = () => {

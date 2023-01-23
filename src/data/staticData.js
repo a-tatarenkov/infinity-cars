@@ -1,6 +1,7 @@
 import bg1 from "../assets/background_main.png";
 import bg2 from "../assets/bg-image-touch.png";
 import bg3 from "../assets/tesla3.jpeg";
+import bg4 from '../assets/slider4.jpg'
 import about_us from "../assets/about_us.png";
 import meeting from "../assets/meeting.jpeg";
 
@@ -9,6 +10,7 @@ const staticData = {
     { image: bg1, description: "Find Your Dream Car" },
     { image: bg2, description: "Best Deals, Best Price" },
     { image: bg3, description: "Find Your Perfect Electric Car" },
+    { image: bg4, description: "Best Service from Out Team" }
   ],
   ourContacts: {
     phone: "240-865-3730",

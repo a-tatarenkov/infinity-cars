@@ -4,6 +4,7 @@ import ComparePage from "./ComparePage";
 import ProductDetailsPage from "./ProductDetailsPage";
 import AboutUsPage from "./AboutUsPage";
 import ContactsPage from "./ContactPage";
+import LoginPage from "./LoginPage";
 
 export {
   MainPage,
@@ -12,4 +13,5 @@ export {
   ProductDetailsPage,
   AboutUsPage,
   ContactsPage,
+  LoginPage
 };

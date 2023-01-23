@@ -44,7 +44,6 @@ const Header = () => {
           <li>
             <Link
               style={
-                window.location.pathname === "/car_search_results" &&
                 filteredData.filters.condition === true
                   ? { color: "#007cc7" }
                   : { color: "inherit" }
@@ -59,8 +58,7 @@ const Header = () => {
           <li>
             <Link
               style={
-                window.location.pathname === "/car_search_results" &&
-                filteredData.filters.condition === false
+                filteredData.filters.condition === false && window.location.pathname === '/car_search_results'
                   ? { color: "#007cc7" }
                   : { color: "inherit" }
               }
@@ -73,9 +71,10 @@ const Header = () => {
           <li>
             <NavLink
               style={({ isActive }) => ({
-                color: isActive ? "#007cc7" : "inherit",
+                color: isActive  ? "#007cc7" : "inherit",
               })}
               to="/compare"
+              onClick={() => dispatch(onFilterReset())}
             >
               Compare
             </NavLink>
@@ -90,7 +89,7 @@ const Header = () => {
       </nav>
       <ul className="active-header">
         <li>
-          <button className="login-button">Sign In</button>
+          <button className="login-button"><Link to={'/login'}>Sign In</Link></button>
         </li>
         <li className="lang-selection-icon">
           <select name="lang" id="language" className="lang-selection">

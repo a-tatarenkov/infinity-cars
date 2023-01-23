@@ -26,7 +26,6 @@ const CarList = () => {
     dispatch(fetchFilteredCars(request, filters));
     // eslint-disable-next-line
   }, [filters]);
-  console.log(filters.pagination);
 
   const elements = cars
     .slice(filters.pagination - 10, filters.pagination)

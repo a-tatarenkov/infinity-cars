@@ -26,38 +26,36 @@ import "./carFilter.scss";
 
 const FullCarFilter = () => {
   const filterData = createSelector(
-    (state) => state.data.data,
     (state) => state.filters,
-    (data, filters) => {
+    (state) => state.cars.cars,
+
+    (filters, cars) => {
       return {
-        data,
         filters: filters,
+        cars,
       };
     }
   );
- 
 
   const dispatch = useDispatch();
-  const { data, filters } = useSelector(filterData); 
+  const { filters, cars } = useSelector(filterData);
 
-
-  const brands = Array.from(new Set(data.map((item) => item.brand)));
-  const models = data
-  
+  const brands = Array.from(new Set(cars.map((item) => item.brand)));
+  const models = cars
     .filter((item) => item.brand === filters.brand)
     .map((item, index) => {
       return item.model;
     });
-  const years = Array.from(new Set(data.map((item) => item.year + "")));
-  const body = Array.from(new Set(data.map((item) => item.body)));
+  const years = Array.from(new Set(cars.map((item) => item.year + "")));
+  const body = Array.from(new Set(cars.map((item) => item.body)));
   const transmission = Array.from(
-    new Set(data.map((item) => item.transmission))
+    new Set(cars.map((item) => item.transmission))
   );
-  const fuel = Array.from(new Set(data.map((item) => item.engine)));
-  const driveTrain = Array.from(new Set(data.map((item) => item.driveUnit)));
-  const pax = Array.from(new Set(data.map((item) => item.seats)));
-  const color = Array.from(new Set(data.map((item) => item.color)));
-  const location = Array.from(new Set(data.map((item) => item.location)));
+  const fuel = Array.from(new Set(cars.map((item) => item.engine)));
+  const driveTrain = Array.from(new Set(cars.map((item) => item.driveUnit)));
+  const pax = Array.from(new Set(cars.map((item) => item.seats)));
+  const color = Array.from(new Set(cars.map((item) => item.color)));
+  const location = Array.from(new Set(cars.map((item) => item.location)));
 
   return (
     <aside className="filters">
