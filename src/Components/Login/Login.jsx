@@ -27,7 +27,7 @@ const Login = () => {
       id: uuidv4(),
     };
 
-    request("http://localhost:3001/users", "POST", JSON.stringify(newUser))
+    request("/users", "POST", JSON.stringify(newUser))
       .then((res) => console.log(res, "Отправка успешна"))
       .then(dispatch(userCreated(newUser)))
       .catch((err) => console.log(err));
