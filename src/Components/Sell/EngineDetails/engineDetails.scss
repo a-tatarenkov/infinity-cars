@@ -1,0 +1,44 @@
+@import "../../../styles/variables.scss";
+
+.engine_details {
+  background-color: $carDetailsDealerBG;
+  padding: 25px;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 20px repeat(2, 1fr);
+  gap: 40px;
+  border-radius: 3px;
+
+  h3 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    font-weight: 700;
+    font-size: 28px;
+  }
+
+  .fuel-select {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .drive-select {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .milage-select {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .engine-select {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  .transmission-select {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+  .power-select {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+}

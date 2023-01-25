@@ -27,35 +27,36 @@ import "./carFilter.scss";
 const FullCarFilter = () => {
   const filterData = createSelector(
     (state) => state.filters,
-    (state) => state.cars.cars,
+    (state) => state.data.data,
 
-    (filters, cars) => {
+    (filters, data) => {
       return {
         filters: filters,
-        cars,
+        data,
       };
     }
   );
 
   const dispatch = useDispatch();
-  const { filters, cars } = useSelector(filterData);
+  const { filters, data } = useSelector(filterData);
+  console.log(data);
 
-  const brands = Array.from(new Set(cars.map((item) => item.brand)));
-  const models = cars
+  const brands = Array.from(new Set(data.map((item) => item.brand)));
+  const models = data
     .filter((item) => item.brand === filters.brand)
-    .map((item, index) => {
+    .map((item) => {
       return item.model;
     });
-  const years = Array.from(new Set(cars.map((item) => item.year + "")));
-  const body = Array.from(new Set(cars.map((item) => item.body)));
+  const years = Array.from(new Set(data.map((item) => item.year + "")));
+  const body = Array.from(new Set(data.map((item) => item.body)));
   const transmission = Array.from(
-    new Set(cars.map((item) => item.transmission))
+    new Set(data.map((item) => item.transmission))
   );
-  const fuel = Array.from(new Set(cars.map((item) => item.engine)));
-  const driveTrain = Array.from(new Set(cars.map((item) => item.driveUnit)));
-  const pax = Array.from(new Set(cars.map((item) => item.seats)));
-  const color = Array.from(new Set(cars.map((item) => item.color)));
-  const location = Array.from(new Set(cars.map((item) => item.location)));
+  const fuel = Array.from(new Set(data.map((item) => item.engine)));
+  const driveTrain = Array.from(new Set(data.map((item) => item.driveUnit)));
+  const pax = Array.from(new Set(data.map((item) => item.seats)));
+  const color = Array.from(new Set(data.map((item) => item.color)));
+  const location = Array.from(new Set(data.map((item) => item.location)));
 
   return (
     <aside className="filters">
@@ -67,7 +68,7 @@ const FullCarFilter = () => {
       <div className="filters-model">
         <CheckBoxSelect
           data={models}
-          setData={(e, v) => {
+          setData={(_, v) => {
             dispatch(modelFilter(v));
             dispatch(onPaginationChange(10));
           }}
@@ -79,7 +80,7 @@ const FullCarFilter = () => {
       <div className="filters-year">
         <CheckBoxSelect
           data={years}
-          setData={(e, v) => {
+          setData={(_, v) => {
             dispatch(onPaginationChange(10));
             dispatch(yearFilter(v));
           }}
@@ -91,7 +92,7 @@ const FullCarFilter = () => {
       <div className="filters-bodyType">
         <CheckBoxSelect
           data={body}
-          setData={(e, v) => {
+          setData={(_, v) => {
             dispatch(bodyFilter(v));
             dispatch(onPaginationChange(10));
           }}
@@ -103,7 +104,7 @@ const FullCarFilter = () => {
       <div className="filters-transmission">
         <CheckBoxSelect
           data={transmission}
-          setData={(e, v) => {
+          setData={(_, v) => {
             dispatch(transmissionFilter(v));
             dispatch(onPaginationChange(10));
           }}
@@ -115,7 +116,7 @@ const FullCarFilter = () => {
       <div className="filters-fuel">
         <CheckBoxSelect
           data={fuel}
-          setData={(e, v) => {
+          setData={(_, v) => {
             dispatch(fuelFilter(v));
             dispatch(onPaginationChange(10));
           }}
@@ -127,7 +128,7 @@ const FullCarFilter = () => {
       <div className="filters-driveTrain">
         <CheckBoxSelect
           data={driveTrain}
-          setData={(e, v) => {
+          setData={(_, v) => {
             dispatch(driveTrainFilter(v));
             dispatch(onPaginationChange(10));
           }}
@@ -139,7 +140,7 @@ const FullCarFilter = () => {
       <div className="filters-pax">
         <CheckBoxSelect
           data={pax}
-          setData={(e, v) => {
+          setData={(_, v) => {
             dispatch(passengersFilter(v));
             dispatch(onPaginationChange(10));
           }}
@@ -151,7 +152,7 @@ const FullCarFilter = () => {
       <div className="filters-color">
         <CheckBoxSelect
           data={color}
-          setData={(e, v) => {
+          setData={(_, v) => {
             dispatch(colorFilter(v));
             dispatch(onPaginationChange(10));
           }}
@@ -163,7 +164,7 @@ const FullCarFilter = () => {
       <div className="filters-color">
         <CheckBoxSelect
           data={location}
-          setData={(e, v) => {
+          setData={(_, v) => {
             dispatch(locationFilter(v));
             dispatch(onPaginationChange(10));
           }}
@@ -246,7 +247,7 @@ const PriceRange = ({ price }) => {
   }, [price, dispatch]);
   const [priceRange, setPriceRange] = useState(price);
 
-  const handleChangePrice = (event, newValue) => {
+  const handleChangePrice = (_, newValue) => {
     setPriceRange(newValue);
   };
 
@@ -261,7 +262,7 @@ const PriceRange = ({ price }) => {
       <Slider
         value={priceRange}
         min={0}
-        max={100000}
+        max={300000}
         onChange={handleChangePrice}
         onMouseUp={() => dispatch(priceFilter(priceRange))}
         valueLabelDisplay="auto"

@@ -33,7 +33,7 @@ const Banner = () => {
       className="cars_banner"
       style={window.location.pathname === "/compare" ? style : null}
     >
-      <h2>{window.location.pathname !== '/compare' ? locationBanner(condition) : 'Compare Cars'}</h2>
+      <h2>{window.location.pathname !== '/compare' ? locationBanner(condition) : 'Compare'}</h2>
     </div>
   );
 };

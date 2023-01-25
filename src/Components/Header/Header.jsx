@@ -12,9 +12,11 @@ import Select from "@mui/material/Select";
 const Header = () => {
   const filtersData = createSelector(
     (state) => state.filters,
-    (filters) => {
+    state => state.users,
+    (filters, users) => {
       return {
         filters: filters,
+        users
       };
     }
   );
@@ -22,6 +24,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const filteredData = useSelector(filtersData);
 
+  console.log(filteredData.users);
   const style = {
     backgroundColor: "transparent",
     position: "absolute",
@@ -80,7 +83,9 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <Link to="/">Sell</Link>
+            <NavLink to="/sell"  style={({ isActive }) => ({
+                color: isActive  ? "#007cc7" : "inherit",
+              })}>Sell</NavLink>
           </li>
           <li>
             <ArticleSelect />
@@ -89,7 +94,9 @@ const Header = () => {
       </nav>
       <ul className="active-header">
         <li>
-          <button className="login-button"><Link to={'/login'}>Sign In</Link></button>
+          <button className="login-button"><Link to={filteredData.users.login ? '/admin' : '/login'}>
+              {filteredData.users.login ? filteredData.users.currentUser[0].name: "Sing In"}
+            </Link></button>
         </li>
         <li className="lang-selection-icon">
           <select name="lang" id="language" className="lang-selection">

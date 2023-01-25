@@ -20,6 +20,7 @@ import {
   priceFilter,
   locationFilter,
   termFilter,
+  fetchBrandsData
 } from "../../../actions";
 import { useHttp } from "../../../hooks/http.hook";
 import "./mainPageSearch.scss";
@@ -44,6 +45,8 @@ const MainPageSearch = () => {
 
   useEffect(() => {
     dispatch(fetchCars(request));
+    dispatch(fetchBrandsData(request));
+
     // eslint-disable-next-line
   }, []);
 
@@ -55,7 +58,7 @@ const MainPageSearch = () => {
       return item.model;
     });
 
-  const [priceRange, setPriceRange] = useState([0, 100000]);
+  const [priceRange, setPriceRange] = useState([0, 300000]);
 
   const handleChangePrice = (event, newValue) => {
     setPriceRange(newValue);
@@ -176,7 +179,7 @@ const MainPageSearch = () => {
           <Slider
             value={priceRange}
             min={0}
-            max={100000}
+            max={300000}
             onChange={handleChangePrice}
             valueLabelDisplay="auto"
           />

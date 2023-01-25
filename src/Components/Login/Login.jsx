@@ -1,215 +1,253 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import * as React from "react";
+import IconButton from "@mui/material/IconButton";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import InputLabel from "@mui/material/InputLabel";
+import InputAdornment from "@mui/material/InputAdornment";
+import FormControl from "@mui/material/FormControl";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import TextField from "@mui/material/TextField";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { createSelector } from "reselect";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+
+import "./login.scss";
+import logo from "../../assets/logo.png";
+import face from "../../assets/facebook.png";
+import yout from "../../assets/youtube.png";
+import inst from "../../assets/instagram.png";
 import {
-  fetchCars,
   fetchUsers,
   userCreated,
   currentUserLogged,
   setLogged,
 } from "../../actions";
 import { useHttp } from "../../hooks/http.hook";
-import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 
 const Login = () => {
-  const [userName, setUserName] = useState("");
-  const [userLogin, setUserLogin] = useState("");
-  const [userPassword, setUserPassword] = useState("");
-
-  const onSubmitHandler = (e) => {
-    e.preventDefault();
-    const newUser = {
-      name: userName,
-      login: userLogin,
-      password: userPassword,
-      isAdmin: false,
-      id: uuidv4(),
-    };
-
-    request("/users", "POST", JSON.stringify(newUser))
-      .then((res) => console.log(res, "Отправка успешна"))
-      .then(dispatch(userCreated(newUser)))
-      .catch((err) => console.log(err));
-
-    setUserName("");
-    setUserLogin("");
-    setUserPassword("");
-  };
-
   const users = createSelector(
     (state) => state.users,
-    (state) => state.cars.cars,
-    (users, cars) => {
+    (users) => {
       return {
         users,
-        cars,
       };
     }
   );
+  const navigate = useNavigate();
+  const [hasAccount, setHasAccount] = useState(false);
 
   const usersData = useSelector(users);
-  console.log(usersData.users);
+
   const dispatch = useDispatch();
   const { request } = useHttp();
 
   useEffect(() => {
     dispatch(fetchUsers(request));
-    dispatch(fetchCars(request));
     // eslint-disable-next-line
   }, []);
 
-  const style = {
-    padding: 200,
-    height: "max-content",
-    width: "100%",
-    background: "orange",
-    display: "flex",
-    gap: 40,
+  return (
+    <div className="login_page">
+      <div className="user_left">
+        <UserForm
+          onClick={setHasAccount}
+          hasAccount={hasAccount}
+          user={usersData.users.users}
+          navigate={navigate}
+        />
+      </div>
+      <div className="login_page_logo">
+        <div className="login_page_logo-inner">
+          <img src={logo} alt="logo" />
+          <p>{hasAccount ? "Login" : "Register"}</p>
+          <span>Welcome to Autohunt</span>
+          <ul>
+            <li>
+              <img src={face} alt="facebook" />
+            </li>
+            <li>
+              <img src={inst} alt="instagram" />
+            </li>
+            <li>
+              <img src={yout} alt="youtube" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const UserForm = (props) => {
+  const [showPassword, setShowPassword] = useState(false);
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [password, setPassword] = useState("");
+
+  const { request } = useHttp();
+  const dispatch = useDispatch();
+
+  const onCreateUser = (e) => {
+    e.preventDefault();
+    const newUser = {
+      name,
+      password,
+      email,
+      isAdmin: false,
+      phone,
+      id: uuidv4(),
+      photo: "https://drive.google.com/uc?id=1a0cLkSWfrV9_hgv6YZfSL0VrIvtYn1Df",
+    };
+
+    if (name.length < 3 && password.length < 3) {
+      return;
+    } else {
+      request("http://localhost:3001/users", "POST", JSON.stringify(newUser))
+        .then((res) => console.log(res, "User Created"))
+        .then(dispatch(userCreated(newUser)))
+        .catch((err) => console.log(err));
+
+      setName("");
+      setPassword("");
+      setEmail("");
+      setPhone("");
+    }
   };
 
   const onLogin = (e) => {
     e.preventDefault();
 
-    const loginUser = usersData.users.users.filter(
-      (item) => item.login === userLogin && item.password === userPassword
+    const loginUser = props.user.filter(
+      (item) => item.email === email && item.password === password
     );
-
     dispatch(currentUserLogged(loginUser));
-    loginUser.length !== 0
-      ? dispatch(setLogged(true))
-      : dispatch(setLogged(false));
-    setUserLogin("");
-    setUserPassword("");
-  };
 
-  const onLogOut = () => {
-    dispatch(currentUserLogged(null));
-    dispatch(setLogged(false));
-  };
+    if (loginUser.length !== 0) {
+      dispatch(setLogged(true));
 
-  const getUsersCars = () => {
-    if (usersData.users.login) {
-      const usersCar = usersData.cars.filter(
-        (item) => item.id === usersData.users.currentUser[0].id
-      );
-      return usersCar;
+      //
+      props.navigate("/admin");
+    } else {
+      dispatch(setLogged(false));
     }
-  };
 
-  const usersCar = getUsersCars();
+    setEmail("");
+    setPassword("");
+  };
 
   return (
-    <div style={style}>
+    <>
       <form
-        style={{ display: "flex", flexDirection: "column", width: 200 }}
-        onSubmit={(e) => onSubmitHandler(e)}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          width: 200,
+          gap: 15,
+        }}
+        onSubmit={(e) => {
+          props.hasAccount ? onLogin(e) : onCreateUser(e);
+        }}
       >
-        create user
-        <input
-          type="text"
-          placeholder="name"
-          style={{ color: "black" }}
-          value={userName}
-          onChange={(e) => setUserName(e.target.value)}
+        {props.hasAccount ? null : (
+          <>
+            Name
+            <TextField
+              sx={{ width: 500, background: "#152836" }}
+              id="outlined-name"
+              label="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </>
+        )}
+        Email
+        <TextField
+          sx={{ width: 500, background: "#152836" }}
+          id="outlined-email"
+          label="Email"
+          value={email}
+          type="email"
+          onChange={(e) => setEmail(e.target.value)}
         />
-        <input
-          type="text"
-          placeholder="login"
-          style={{ color: "black" }}
-          value={userLogin}
-          onChange={(e) => setUserLogin(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="password"
-          style={{ color: "black" }}
-          value={userPassword}
-          onChange={(e) => setUserPassword(e.target.value)}
-        />
-        <input type="submit" value="submit" style={{ color: "black" }} />
-      </form>
-
-      {(usersData.users.login && (
-        <div>
-          {`Hello  ${usersData.users.currentUser[0]?.name}`}
-          {usersData.users.currentUser[0].isAdmin ? (
-            <div>
-              car list here
-              <ul style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
-                {usersData.cars.map((item) => (
-                  <li key={item.src[0]} style={{ height: 100, width: 100 }}>
-                    <div>
-                      <img
-                        src={item.src[0]}
-                        alt=""
-                        style={{
-                          height: "50px",
-                          width: 100,
-                          objectFit: "cover",
-                        }}
-                      />
-                    </div>
-                    <p>
-                      {item.brand}: {item.model}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : (
-            <div>
-              <p>hello {usersData.users.currentUser[0]?.name}</p>
-              {usersCar ? (
-                <div>
-                  {usersCar.length !== 0 ? (
-                    <img
-                      src={usersCar[0]?.src[0]}
-                      alt=""
-                      style={{ height: 100, width: 100, objectFit: "cover" }}
-                    />
-                  ) : null}
-
-                  <div>
-                    {usersCar[0]?.brand}
-                    {usersCar[0]?.model}
-                  </div>
-                </div>
-              ) : null}
-            </div>
-          )}
-          <button
-            style={{ color: "black", padding: 30 }}
-            onClick={() => {
-              onLogOut();
-            }}
-          >
-            log out
-          </button>
-        </div>
-      )) || (
-        <form
-          style={{ display: "flex", flexDirection: "column", width: 200 }}
-          onSubmit={(e) => onLogin(e)}
+        {props.hasAccount ? null : (
+          <>
+            Phone
+            <TextField
+              sx={{ width: 500, background: "#152836" }}
+              id="outlined-phone"
+              label="Phone"
+              type={"number"}
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            />
+          </>
+        )}
+        Password
+        <FormControl
+          variant="outlined"
+          sx={{ width: 500, background: "#152836" }}
         >
-          <input
-            type="text"
-            placeholder="login"
-            style={{ color: "black" }}
-            value={userLogin}
-            onChange={(e) => setUserLogin(e.target.value)}
+          <InputLabel htmlFor="password">Password</InputLabel>
+          <OutlinedInput
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            type={showPassword ? "text" : "password"}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                  edge="end"
+                >
+                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            }
+            label="Password"
           />
-          <input
-            type="text"
-            placeholder="password"
-            style={{ color: "black" }}
-            value={userPassword}
-            onChange={(e) => setUserPassword(e.target.value)}
-          />
-          <input type="submit" value="submit" style={{ color: "black" }} />
-        </form>
-      )}
-    </div>
+        </FormControl>
+        <input
+          type="submit"
+          value={props.hasAccount ? "Login" : "Create My Account"}
+          style={{
+            background: "#152836",
+            color: "white",
+            border: "1px solid rgba(255, 255, 255, 0.23)",
+            borderRadius: 3,
+            width: 500,
+            height: 56,
+            textAlign: "center",
+            fontWeight: 600,
+            fontSize: 15,
+            marginTop: 25,
+            cursor: "pointer",
+          }}
+        />
+      </form>
+      <div className="login_active_link">
+        {props.hasAccount ? (
+          <>
+            Don’t have an account?{" "}
+            <button onClick={() => props.onClick(false)}>Create Account</button>
+          </>
+        ) : (
+          <>
+            Have an account already?{" "}
+            <button onClick={() => props.onClick(true)}>Login here</button>
+          </>
+        )}
+      </div>
+    </>
   );
 };
 

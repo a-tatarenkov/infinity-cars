@@ -27,6 +27,12 @@ const users = (state = initialState, action) => {
         ...state,
         users: [...state.users, action.payload],
       };
+
+    case "USER_DELETED":
+      return {
+        ...state,
+        users: state.users.filter((item) => item.id !== action.payload),
+      };
     case "USERS_FETCHED":
       return {
         ...state,

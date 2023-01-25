@@ -25,7 +25,7 @@ const ViewPanel = () => {
 
   const dispatch = useDispatch();
   const { filters, cars } = useSelector(filterData);
-
+console.log(filters);
   const buttonsData = [
     { name: "grid", clazz: "grid-button" },
     { name: "flex", clazz: "flex-button" },

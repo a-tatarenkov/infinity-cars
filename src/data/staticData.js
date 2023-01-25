@@ -30,6 +30,7 @@ const staticData = {
       zoom: 14,
     },
   },
+
 };
 
 export default staticData;

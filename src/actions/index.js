@@ -1,28 +1,43 @@
 export const fetchCars = (request) => (dispatch) => {
   dispatch(carsFetching());
-  request("/cars")
+  request("http://localhost:3001/cars")
     .then((cars) => dispatch(carsFetched(cars)))
     .catch(() => dispatch(carsFetchingError()));
 };
 
 export const fetchComments = (request) => (dispatch) => {
   dispatch(commentsFetching());
-  request("/reviews").then((comments) => dispatch(commentsFetched(comments)));
+  request("http://localhost:3001/reviews").then((comments) =>
+    dispatch(commentsFetched(comments))
+  );
 };
 
 export const fetchUsers = (request) => (dispatch) => {
   dispatch(usersFetching());
-  request("/users").then((users) => dispatch(usersFetched(users)));
+  request("http://localhost:3001/users").then((users) =>
+    dispatch(usersFetched(users))
+  );
 };
 
 export const fetchNews = (request) => (dispatch) => {
   dispatch(newsFetching());
-  request("/news").then((news) => dispatch(newsFetched(news)));
+  request("http://localhost:3001/news").then((news) =>
+    dispatch(newsFetched(news))
+  );
 };
 
 export const fetchCarsData = (request) => (dispatch) => {
   dispatch(carsFetchingData());
-  request("/cars").then((data) => dispatch(carsFetchedData(data)));
+  request("http://localhost:3001/cars").then((data) =>
+    dispatch(carsFetchedData(data))
+  );
+};
+
+export const fetchBrandsData = (request) => (dispatch) => {
+  dispatch(brandsFetching());
+  request("http://localhost:3001/sell").then((brand) =>
+    dispatch(brandsFetched(brand))
+  );
 };
 
 export const fetchFilteredCars = (request, filters) => (dispatch) => {
@@ -61,14 +76,14 @@ export const fetchFilteredCars = (request, filters) => (dispatch) => {
   const sortStr = sortString(onSortChange);
   dispatch(carsFetching());
   request(
-    `/cars?${sortStr}${brand ? `&brand=${brand}` : ""}${
+    `http://localhost:3001/cars?${brand ? `&brand=${brand}` : ""}${
       model.length === 0
         ? ""
         : `${model
             .map((item) => `&model=${item.title}&`)
             .join("")
             .slice(0, -1)}`
-    }${
+    }${term ? `q=${term}` : ""}${
       passengers.length === 0
         ? ""
         : `${passengers
@@ -130,7 +145,7 @@ export const fetchFilteredCars = (request, filters) => (dispatch) => {
             .map((item) => `&location=${item.title}&`)
             .join("")
             .slice(0, -1)}`
-    }${term ? `q=${term}` : ""}`
+    }${sortStr}`
   )
     .then((data) => dispatch(carsFetched(data)))
     .catch(() => dispatch(carsFetchingError()));
@@ -153,6 +168,20 @@ export const userCreated = (user) => {
   return {
     type: "USER_CREATED",
     payload: user,
+  };
+};
+
+export const carCreated = (car) => {
+  return {
+    type: "CAR_CREATED",
+    payload: car,
+  };
+};
+
+export const userDeleted = (id) => {
+  return {
+    type: "USER_DELETED",
+    payload: id,
   };
 };
 
@@ -198,6 +227,19 @@ export const newsFetched = (news) => {
   return {
     type: "NEWS_FETCHED",
     payload: news,
+  };
+};
+
+export const brandsFetching = () => {
+  return {
+    type: "BRANDS_FETCHING",
+  };
+};
+
+export const brandsFetched = (brand) => {
+  return {
+    type: "BRANDS_FETCHED",
+    payload: brand,
   };
 };
 
@@ -330,5 +372,120 @@ export const onSortFilter = (e) => ({
 });
 export const onPaginationChange = (e) => ({
   type: "ON_PAGINATION_CHANGE",
+  payload: e,
+});
+
+export const sellBrand = (e) => ({
+  type: "SELL_BRAND_SELECTED",
+  payload: e,
+});
+
+export const sellModel = (e) => ({
+  type: "SELL_MODEL_SELECTED",
+  payload: e,
+});
+
+export const sellBody = (e) => ({
+  type: "SELL_BODY_SELECTED",
+  payload: e,
+});
+
+export const sellTitle = (e) => ({
+  type: "SELL_TITLE_SELECTED",
+  payload: e,
+});
+
+export const sellYear = (e) => ({
+  type: "SELL_YEAR_SELECTED",
+  payload: e,
+});
+
+export const sellPax = (e) => ({
+  type: "SELL_PAX_SELECTED",
+  payload: e,
+});
+
+export const sellColor = (e) => ({
+  type: "SELL_COLOR_SELECTED",
+  payload: e,
+});
+
+export const sellCondition = (e) => ({
+  type: "SELL_CONDITION_SELECTED",
+  payload: e,
+});
+
+export const sellDescription = (e) => ({
+  type: "SELL_DESCRIPTION_SELECTED",
+  payload: e,
+});
+
+export const sellFuel = (e) => ({
+  type: "SELL_FUEL_SELECTED",
+  payload: e,
+});
+
+export const sellDriveTrain = (e) => ({
+  type: "SELL_DRIVETRAIN_SELECTED",
+  payload: e,
+});
+
+export const sellMilage = (e) => ({
+  type: "SELL_MILAGE_SELECTED",
+  payload: e,
+});
+
+export const sellEngineCapacity = (e) => ({
+  type: "SELL_ENGINE_CAPACITY_SELECTED",
+  payload: e,
+});
+
+export const sellTransmission = (e) => ({
+  type: "SELL_TRANSMISSION_SELECTED",
+  payload: e,
+});
+export const sellEnginePower = (e) => ({
+  type: "SELL_ENGINE_POWER_SELECTED",
+  payload: e,
+});
+
+export const sellLength = (e) => ({
+  type: "SELL_LENGTH_SELECTED",
+  payload: e,
+});
+export const sellWidth = (e) => ({
+  type: "SELL_WIDTH_SELECTED",
+  payload: e,
+});
+export const sellHeight = (e) => ({
+  type: "SELL_HEIGHT_SELECTED",
+  payload: e,
+});
+export const sellCargo = (e) => ({
+  type: "SELL_CARGO_SELECTED",
+  payload: e,
+});
+
+export const sellFutures = (e) => ({
+  type: "SELL_FUTURES_SELECTED",
+  payload: e,
+});
+export const sellLocation = (e) => ({
+  type: "SELL_LOCATION_SELECTED",
+  payload: e,
+});
+
+export const sellSetPrice = (e) => ({
+  type: "SELL_SET_PRICE_SELECTED",
+  payload: e,
+});
+
+export const sellImages = (e) => ({
+  type: "SELL_IMAGES_SELECTED",
+  payload: e,
+});
+
+export const sellCarId = (e) => ({
+  type: "SELL_ID_SELECTED",
   payload: e,
 });

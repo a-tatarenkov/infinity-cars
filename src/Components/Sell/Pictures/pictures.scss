@@ -1,0 +1,70 @@
+@import "../../../styles/variables.scss";
+
+.pictures {
+  padding: 25px;
+  background-color: $carDetailsDealerBG;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  h3 {
+    font-weight: 700;
+    font-size: 28px;
+  }
+  span {
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .image-select {
+    display: flex;
+    gap: 10px;
+    .image-loader {
+      display: none;
+    }
+    label {
+      display: block;
+      height: 150px;
+      width: 150px;
+      border-radius: 5px;
+      background-color: black;
+      cursor: pointer;
+      border: 1px dashed white;
+      background-image: url(../../../assets/plus.png);
+      background-position: center;
+      background-size: 40px;
+      background-repeat: no-repeat;
+    }
+    .image-list {
+      display: flex;
+      gap: 10px;
+      &-item {
+        position: relative;
+        img {
+          height: 150px;
+          width: 150px;
+          object-fit: cover;
+          border-radius: 5px;
+        }
+        .delete-image {
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 2;
+          height: 40px;
+          width: 40px;
+          border: none;
+          background-color: #da4d4d;
+          background-image: url(../../../assets/delete.png);
+          background-position: center;
+          background-size: contain;
+          transition: all 0.5 ease-in-out;
+          opacity: 0;
+          cursor: pointer;
+        }
+        &:hover .delete-image {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

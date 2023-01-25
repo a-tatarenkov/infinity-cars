@@ -6,6 +6,7 @@ import data from "../reducers/data";
 import comments from "../reducers/comments";
 import news from "../reducers/news";
 import users from "../reducers/users";
+import brands from "../reducers/brands";
 
 const stringMiddleware = () => (next) => (action) => {
   if (typeof action === "string") {
@@ -17,7 +18,7 @@ const stringMiddleware = () => (next) => (action) => {
 };
 
 const store = createStore(
-  combineReducers({ comments, filters, data, cars, news, users }),
+  combineReducers({ comments, filters, data, cars, news, users, brands }),
   compose(
     applyMiddleware(ReduxThunk, stringMiddleware),
     (window.__REDUX_DEVTOOLS_EXTENSION__ &&

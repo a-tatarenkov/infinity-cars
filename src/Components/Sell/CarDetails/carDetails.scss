@@ -1,0 +1,80 @@
+@import "../../../styles/variables.scss";
+
+.car_details {
+  background-color: #071620;
+  padding: 25px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-rows: 20px auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  border-radius: 3px;
+
+  h3 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    font-weight: 700;
+    font-size: 28px;
+    width: max-content;
+  }
+  .title-text {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .body-select {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .brand-select {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  .year-select {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .pass-select {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+  .condition-select {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    // justify-self: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .model-select {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+  .color-select {
+    grid-column: 3/4;
+    grid-row: 4/5;
+  }
+  .description-select {
+    grid-column: 1/4;
+    grid-row: 5/7;
+    border: none;
+    border-radius: 3px;
+    resize: none;
+    padding: 12px;
+    font-family: "Lato";
+    font-size: 20px;
+    background-color: $searchPanelBG;
+  }
+  .description-select::placeholder{
+    color: rgb(160, 160, 160);
+  }
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}

@@ -17,6 +17,12 @@ const cars = (state = initialState, action) => {
         carsLoadingStatus: "idle",
       };
 
+    case "CAR_CREATED":
+      return {
+        ...state,
+        cars: [...state.cars, action.payload],
+      };
+
     case "CARS_FETCHING_ERROR":
       return {
         ...state,

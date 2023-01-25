@@ -1,0 +1,41 @@
+@import "../../styles/variables.scss";
+
+.car_sell {
+  padding: 100px 120px 70px 120px;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    font-weight: 600;
+    font-size: 48px;
+  }
+  .post_car {
+    padding: 10px;
+    width: 60%;
+    margin: 20px auto;
+    background-color: $carCardFontColor;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .post_car:hover {
+    background-color: #419bd3;
+  }
+  .login_notice {
+    margin: 20px auto;
+    padding: 200px 0 200px 0;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 18px;
+    a {
+      margin-left: 10px;
+      color: $carCardFontColor;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+  }
+}

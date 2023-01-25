@@ -15,13 +15,7 @@
       "body": "Sedan",
       "logo": "https://drive.google.com/uc?id=12mbNI1__pRBJNuvvtAtdnXGf2ZC92TfO",
       "transmission": "Automatic",
-      "rating": [
-        4.5,
-        4.3,
-        4.4,
-        5.3,
-        4.5
-      ],
+      "rating": [4.5, 4.3, 4.4, 5.3, 4.5],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -54,7 +48,8 @@
           "Mileage": "16340 km",
           "Transmission": "Automatic",
           "Drivetrain": "AWD",
-          "Power": "283 hp (211 kW)"
+          "Power": "283 hp (211 kW)",
+          "Engine Capacity": "-"
         },
         "Battery and Charging": {
           "Battery Capacity": "75 kWh",
@@ -82,10 +77,12 @@
           "Sunroof": true,
           "USB Port": true,
           "Sound System": true,
-          "Memory Seat": true
+          "Memory Seat": true,
+          "Camera 360": true
         }
       },
-      "id": "166ff707-326d-45c9-b98d-3272396a081e",
+      "id": 1000,
+      "saleId": "6f334483-8740-42fc-8359-9fab55742286",
       "driveUnit": "All-wheel Drive",
       "description": "The Tesla Model 3 is a compact executive sedan that is battery powered and produced by Tesla.Limited production of the Model 3 began in mid-2017, with the first production vehicle rolling off the assembly line on July 7, 2017. \n      The official launch and delivery of the first 30 cars took place on July 28 The base Model 3 delivers an EPA-rated all-electric range of 272 miles (438 km) and the Long Range version delivers 358 miles (576 km). \n      According to Tesla, the Model 3 carries full self-driving hardware, with periodic software updates adding functionality. The Model 3 was marketed as being more people than previous models by Tesla. \n      Since early 2020, the Model 3 is the bestselling electric car in world history, and, in June 2021, became the first electric car to pass the 1 million global sales milestone. The Model 3 has been the world's top selling plug-in electric car (PEV) for three years running, from 2018 to 2020. \n      It has also been the bestselling PEV in the United States for three consecutive years, 2018 to 2020, the top selling PEV in Europe in 2019, and the bestselling PEV in China in 2020."
     },
@@ -104,13 +101,7 @@
       "body": "Sedan",
       "logo": "https://drive.google.com/uc?id=12mbNI1__pRBJNuvvtAtdnXGf2ZC92TfO",
       "transmission": "Automatic",
-      "rating": [
-        4.5,
-        4.3,
-        4.4,
-        5.3,
-        4.5
-      ],
+      "rating": [4.5, 4.3, 4.4, 5.3, 4.5],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -142,7 +133,8 @@
           "Mileage": "40 km",
           "Transmission": "Automatic",
           "Drivetrain": "AWD",
-          "Power": "1083 hp (911 kW)"
+          "Power": "1083 hp (911 kW)",
+          "Engine Capacity": "-"
         },
         "Battery and Charging": {
           "Battery Capacity": "100 kWh",
@@ -170,7 +162,8 @@
           "Sunroof": true,
           "USB Port": true,
           "Sound System": true,
-          "Memory Seat": true
+          "Memory Seat": true,
+          "Camera 360": true
         }
       },
       "id": 1001,
@@ -192,13 +185,7 @@
       "body": "Sedan",
       "logo": "https://drive.google.com/uc?id=12mbNI1__pRBJNuvvtAtdnXGf2ZC92TfO",
       "transmission": "Automatic",
-      "rating": [
-        4.5,
-        4.3,
-        4.4,
-        5.3,
-        4.5
-      ],
+      "rating": [4.5, 4.3, 4.4, 5.3, 4.5],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -228,7 +215,8 @@
           "Mileage": "30 km",
           "Transmission": "Automatic",
           "Drivetrain": "AWD",
-          "Power": "383 hp (291 kW)"
+          "Power": "383 hp (291 kW)",
+          "Engine Capacity": "-"
         },
         "Battery and Charging": {
           "Battery Capacity": "75 kWh",
@@ -256,7 +244,8 @@
           "Sunroof": true,
           "USB Port": true,
           "Sound System": true,
-          "Memory Seat": true
+          "Memory Seat": true,
+          "Camera 360": true
         }
       },
       "id": 1002,
@@ -278,13 +267,7 @@
       "body": "SUV",
       "logo": "https://drive.google.com/uc?id=12mbNI1__pRBJNuvvtAtdnXGf2ZC92TfO",
       "transmission": "Automatic",
-      "rating": [
-        5,
-        4,
-        4,
-        5,
-        5
-      ],
+      "rating": [5, 4, 4, 5, 5],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -314,7 +297,8 @@
           "Mileage": "20 km",
           "Transmission": "Automatic",
           "Drivetrain": "AWD",
-          "Power": "683 hp (411 kW)"
+          "Power": "683 hp (411 kW)",
+          "Engine Capacity": "-"
         },
         "Battery and Charging": {
           "Battery Capacity": "100 kWh",
@@ -342,7 +326,8 @@
           "Sunroof": true,
           "USB Port": true,
           "Sound System": true,
-          "Memory Seat": true
+          "Memory Seat": true,
+          "Camera 360": true
         }
       },
       "id": 1003,
@@ -364,20 +349,7 @@
       "logo": "https://drive.google.com/uc?id=1SYVJVJZoa7OoqbR3K5m0TuNlUc-wad1q",
       "body": "Sedan",
       "transmission": "Automatic",
-      "rating": [
-        4.5,
-        3.3,
-        3.4,
-        3.3,
-        5,
-        3,
-        4.3,
-        3.4,
-        4.3,
-        3,
-        5,
-        4.5
-      ],
+      "rating": [4.5, 3.3, 3.4, 3.3, 5, 3, 4.3, 3.4, 4.3, 3, 5, 4.5],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -413,7 +385,8 @@
           "Mileage": "0 km",
           "Transmission": "Automatic",
           "Drivetrain": "AWD",
-          "Power": "349 hp (260 kW)"
+          "Power": "349 hp (260 kW)",
+          "Engine Capacity": "3999 cc"
         },
         "Dimension": {
           "Length": "4757 mm",
@@ -436,7 +409,8 @@
           "Sunroof": true,
           "USB Port": true,
           "Sound System": true,
-          "Memory Seat": true
+          "Memory Seat": true,
+          "Camera 360": false
         }
       },
       "id": 1004,
@@ -458,21 +432,7 @@
       "transmission": "Automatic",
       "seats": "5 people",
       "body": "Pickup",
-      "rating": [
-        4.5,
-        5,
-        3,
-        3,
-        3,
-        3,
-        3,
-        4.3,
-        3.6,
-        3.3,
-        3,
-        5,
-        4.5
-      ],
+      "rating": [4.5, 5, 3, 3, 3, 3, 3, 4.3, 3.6, 3.3, 3, 5, 4.5],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -495,7 +455,8 @@
           "Mileage": "100 km",
           "Transmission": "Automatic",
           "Drivetrain": "AWD",
-          "Power": "450 hp (335 kW)"
+          "Power": "450 hp (335 kW)",
+          "Engine Capacity": "3499 cc"
         },
         "Battery and Charging": {
           "Battery Capacity": "-",
@@ -523,7 +484,8 @@
           "Sunroof": false,
           "USB Port": true,
           "Sound System": true,
-          "Memory Seat": true
+          "Memory Seat": true,
+          "Camera 360": true
         }
       },
       "src": [
@@ -553,20 +515,7 @@
       "seats": "5 people",
       "transmission": "Automatic",
       "body": "SUV",
-      "rating": [
-        4.5,
-        5,
-        3,
-        5,
-        3.3,
-        2.4,
-        5.3,
-        2.6,
-        5.3,
-        4,
-        5,
-        4.5
-      ],
+      "rating": [4.5, 5, 3, 5, 3.3, 2.4, 5.3, 2.6, 5.3, 4, 5, 4.5],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -597,7 +546,8 @@
           "Mileage": "0 km",
           "Transmission": "Automatic",
           "Drivetrain": "AWD",
-          "Power": "470 hp (350 kW)"
+          "Power": "470 hp (350 kW)",
+          "Engine Capacity": "3999 cc"
         },
         "Battery and Charging": {
           "Battery Capacity": "-",
@@ -625,7 +575,8 @@
           "Sunroof": false,
           "USB Port": true,
           "Sound System": true,
-          "Memory Seat": false
+          "Memory Seat": false,
+          "Camera 360": true
         }
       },
       "id": 1006,
@@ -646,15 +597,7 @@
       "seats": "2 people",
       "transmission": "Manual",
       "body": "Coupe",
-      "rating": [
-        1.5,
-        1.4,
-        3,
-        5,
-        4.6,
-        5.3,
-        3.5
-      ],
+      "rating": [1.5, 1.4, 3, 5, 4.6, 5.3, 3.5],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -686,7 +629,8 @@
           "Mileage": "0 km",
           "Transmission": "Automatic",
           "Drivetrain": "AWD",
-          "Power": "382 hp (320 kW)"
+          "Power": "382 hp (320 kW)",
+          "Engine Capacity": "3499 cc"
         },
         "Battery and Charging": {
           "Battery Capacity": "-",
@@ -714,7 +658,8 @@
           "Sunroof": false,
           "USB Port": true,
           "Sound System": true,
-          "Memory Seat": true
+          "Memory Seat": true,
+          "Camera 360": true
         }
       },
       "id": 1007,
@@ -736,20 +681,7 @@
       "seats": "4 people",
       "color": "Grey",
       "body": "SUV",
-      "rating": [
-        5,
-        4.6,
-        4,
-        3,
-        1,
-        1,
-        5,
-        4.8,
-        5,
-        5,
-        5,
-        3.5
-      ],
+      "rating": [5, 4.6, 4, 3, 1, 1, 5, 4.8, 5, 5, 5, 3.5],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -772,7 +704,8 @@
           "Mileage": "100 km",
           "Transmission": "Automatic",
           "Drivetrain": "AWD",
-          "Power": "450 hp (335 kW)"
+          "Power": "450 hp (335 kW)",
+          "Engine Capacity": "3999 cc"
         },
         "Battery and Charging": {
           "Battery Capacity": "-",
@@ -800,7 +733,8 @@
           "Sunroof": false,
           "USB Port": true,
           "Sound System": true,
-          "Memory Seat": true
+          "Memory Seat": true,
+          "Camera 360": true
         }
       },
       "src": [
@@ -831,20 +765,7 @@
       "seats": "2 people",
       "color": "Grey",
       "body": "Coupe",
-      "rating": [
-        5,
-        4.6,
-        4,
-        3,
-        1,
-        1,
-        5,
-        4.8,
-        5,
-        5,
-        5,
-        3.5
-      ],
+      "rating": [5, 4.6, 4, 3, 1, 1, 5, 4.8, 5, 5, 5, 3.5],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -867,7 +788,8 @@
           "Mileage": "11100 km",
           "Transmission": "Automatic",
           "Drivetrain": "AWD",
-          "Power": "600 hp (447 kW)"
+          "Power": "600 hp (447 kW)",
+          "Engine Capacity": "3999 cc"
         },
         "Battery and Charging": {
           "Battery Capacity": "-",
@@ -895,7 +817,8 @@
           "Sunroof": false,
           "USB Port": true,
           "Sound System": true,
-          "Memory Seat": true
+          "Memory Seat": true,
+          "Camera 360": true
         }
       },
       "src": [
@@ -924,20 +847,7 @@
       "seats": "2 people",
       "color": "Purple",
       "body": "Coupe",
-      "rating": [
-        5,
-        4.6,
-        4,
-        3,
-        1,
-        1,
-        5,
-        4.8,
-        5,
-        5,
-        5,
-        3.5
-      ],
+      "rating": [5, 4.6, 4, 3, 1, 1, 5, 4.8, 5, 5, 5, 3.5],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -960,7 +870,8 @@
           "Mileage": "0 km",
           "Transmission": "Automatic",
           "Drivetrain": "AWD",
-          "Power": "600 hp (447 kW)"
+          "Power": "600 hp (447 kW)",
+          "Engine Capacity": "4200 cc"
         },
         "Battery and Charging": {
           "Battery Capacity": "-",
@@ -988,7 +899,8 @@
           "Sunroof": false,
           "USB Port": true,
           "Sound System": true,
-          "Memory Seat": true
+          "Memory Seat": true,
+          "Camera 360": true
         }
       },
       "src": [
@@ -1018,20 +930,7 @@
       "seats": "5 people",
       "color": "Navy",
       "body": "SUV",
-      "rating": [
-        5,
-        4.6,
-        4,
-        3,
-        1,
-        1,
-        5,
-        4.8,
-        5,
-        5,
-        5,
-        3.5
-      ],
+      "rating": [5, 4.6, 4, 3, 1, 1, 5, 4.8, 5, 5, 5, 3.5],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -1054,7 +953,8 @@
           "Mileage": "0 km",
           "Transmission": "Automatic",
           "Drivetrain": "AWD",
-          "Power": "300 hp (247 kW)"
+          "Power": "300 hp (247 kW)",
+          "Engine Capacity": "2999 cc"
         },
         "Battery and Charging": {
           "Battery Capacity": "-",
@@ -1082,7 +982,8 @@
           "Sunroof": false,
           "USB Port": true,
           "Sound System": true,
-          "Memory Seat": true
+          "Memory Seat": true,
+          "Camera 360": true
         }
       },
       "src": [
@@ -1110,20 +1011,7 @@
       "seats": "2 people",
       "color": "Deep Blue",
       "body": "Coupe",
-      "rating": [
-        5,
-        4.6,
-        4,
-        3,
-        1,
-        1,
-        5,
-        4.8,
-        5,
-        5,
-        5,
-        3.5
-      ],
+      "rating": [5, 4.6, 4, 3, 1, 1, 5, 4.8, 5, 5, 5, 3.5],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -1146,7 +1034,8 @@
           "Mileage": "0 km",
           "Transmission": "Automatic",
           "Drivetrain": "AWD",
-          "Power": "600 hp (447 kW)"
+          "Power": "600 hp (447 kW)",
+          "Engine Capacity": "4999 cc"
         },
         "Battery and Charging": {
           "Battery Capacity": "-",
@@ -1174,7 +1063,8 @@
           "Sunroof": false,
           "USB Port": true,
           "Sound System": true,
-          "Memory Seat": true
+          "Memory Seat": true,
+          "Camera 360": true
         }
       },
       "src": [
@@ -1203,20 +1093,7 @@
       "seats": "5 people",
       "color": "Navy",
       "body": "SUV",
-      "rating": [
-        5,
-        4.6,
-        4,
-        3,
-        1,
-        1,
-        5,
-        4.8,
-        5,
-        5,
-        5,
-        3.5
-      ],
+      "rating": [5, 4.6, 4, 3, 1, 1, 5, 4.8, 5, 5, 5, 3.5],
       "dealer": {
         "dealerPhoto": "https://drive.google.com/uc?id=14Hcef7efE8WkgCX5u_z6Kg3DhZS7QJCr",
         "name": "Alfredo Gouse",
@@ -1239,7 +1116,8 @@
           "Mileage": "0 km",
           "Transmission": "Automatic",
           "Drivetrain": "AWD",
-          "Power": "200 hp (147 kW)"
+          "Power": "200 hp (147 kW)",
+          "Engine Capacity": "-"
         },
         "Battery and Charging": {
           "Battery Capacity": "55 kW",
@@ -1267,7 +1145,8 @@
           "Sunroof": false,
           "USB Port": true,
           "Sound System": true,
-          "Memory Seat": true
+          "Memory Seat": true,
+          "Camera 360": true
         }
       },
       "src": [
@@ -1319,81 +1198,327 @@
       "photo": "https://drive.google.com/uc?id=1nzoSMaX5_1-4HyfuHnrVddIS2PW4pDGy"
     }
   ],
+  "sell": {
+    "brands": {
+      "Audi": ["A3", "A4", "A5", "A6", "A7", "A8", "Q3", "Q5", "Q7", "Q8"],
+      "BMW": [
+        "M3",
+        "M4",
+        "M5",
+        "M6",
+        "M8",
+        "X1",
+        "X2",
+        "X3",
+        "X4",
+        "X5",
+        "Z3",
+        "Z4",
+        "X7"
+      ],
+      "Ford": [
+        "Mustang",
+        "F-150",
+        "Kuga",
+        "Expolorer",
+        "Ranger",
+        "F-250",
+        "Puma",
+        "Bronco",
+        "Escape",
+        "Fusion"
+      ],
+      "Honda": [
+        "Accord",
+        "Civic",
+        "CR-V",
+        "HR-V",
+        "Pilot",
+        "MN-V",
+        "S2000",
+        "Jazz",
+        "Crosstour"
+      ],
+      "Hyundai": [
+        "Kona",
+        "Tucson",
+        "Elantra",
+        "ix35",
+        "Santa FE",
+        "Sonata",
+        "Ioniq",
+        "Ioniq 5",
+        "Ioniq Electric"
+      ],
+      "Lexus": ["GS", "GX", "IS", "LS", "LX", "NX", "RC", "RX", "CT"],
+      "Mazda": ["3", "6", "CX-3", "CX-5", "CX-7", "CX-9", "Mx-30"],
+      "Mercedes-Benz": [
+        "A-Class",
+        "B-Class",
+        "C-Class",
+        "CL-Class",
+        "CLA-Class",
+        "E-Class",
+        "G-Class",
+        "GLA-Class",
+        "GLE-Class",
+        "GLS-Class",
+        "S-Class",
+        "AMG GT"
+      ],
+      "Mitsubishi": ["ASX", "L 200", "Lancer", "Outlender", "Pajero"],
+      "Nissan": ["Leaf", "Qashqai", "X-Trail", "Teana"],
+      "Skoda": ["Kodiaq", "Fabia", "Octivia", "Superb", "Kamiq"],
+      "Toyota": [
+        "CH-R",
+        "Camry",
+        "FJ Cruiser",
+        "Land Cruiser",
+        "RAV 4",
+        "Sequoia",
+        "Tundra",
+        "4Runner",
+        "Corolla",
+        "Highlander"
+      ],
+      "Volkswagen": [
+        "Golf",
+        "Passat",
+        "Passat CC",
+        "Tiguan",
+        "Tuareg",
+        "Beetle",
+        "Golf GT",
+        "ID.4",
+        "ID.6",
+        "Jetta",
+        "Golf Plus"
+      ],
+      "Volvo": ["XC 40", "XC 60", "XC 70", "XC 90", "S60", "S70", "S80"],
+      "Alfa Romeo": ["Guilia", "Giuliette", "GT", "Brera", "Mito", "Stelvio"],
+      "Cadillac": [
+        "CTS",
+        "STS",
+        "SRX",
+        "ATS",
+        "Escalade",
+        "Fleetwood",
+        "DTS",
+        "BLS",
+        "XTS",
+        "XT"
+      ],
+      "Dodge": [
+        "Dart",
+        "Dakota",
+        "RAM 2500",
+        "Challenger",
+        "Journey",
+        "RAM",
+        "Magnum",
+        "Neon"
+      ],
+      "Infiniti": ["FX 35", "FX 37", "G", "Q50", "Q60", "QX", "M", "QX80"],
+      "Jaguar": [
+        "F-Type",
+        "S-Type",
+        "X-Type",
+        "XF",
+        "XJ",
+        "I-Type",
+        "XJ-8",
+        "XJ-6"
+      ],
+      "Jeep": ["Cherokee", "Compass", "Gladiator", "Wrangler", "Patriot"],
+      "Land Rover": [
+        "Defender",
+        "Discovery",
+        "Freelander",
+        "Range Rover",
+        "Range Rover Evoque",
+        "Range Rover Sport",
+        "Range Rover Velar"
+      ],
+      "MINI": [
+        "Cooper",
+        "Countryman",
+        "One",
+        "Paceman",
+        "Cabrio",
+        "Coupe",
+        "Clubman"
+      ],
+      "Porsche": [
+        "Boxter",
+        "911",
+        "Cayman",
+        "Cayenne",
+        "Macan",
+        "Panamera",
+        "Taycan"
+      ]
+    },
+    "colors": [
+      "White",
+      "Black",
+      "Silver",
+      "Gray",
+      "Blue",
+      "Red",
+      "Brown",
+      "Green",
+      "Orange",
+      "Gold",
+      "Navy"
+    ],
+    "bodyType": [
+      "Sedan",
+      "SUV",
+      "Crossover",
+      "Hatchback",
+      "Coupe",
+      "Pickup",
+      "Sportback"
+    ],
+    "year": [
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2022",
+      "2023"
+    ],
+    "drive": [
+      "All-Wheel-Drive",
+      "Four-Wheel-Drive",
+      "Rear-Wheel-Drive",
+      "Front-Wheel-Drive"
+    ],
+    "transmission": ["Automatic", "Manual"],
+    "fuelType": ["Diesel", "Gasoline", "Electric", "Hybrid"],
+    "features": {
+      "Power Steering": false,
+      "AC": false,
+      "Alarm": false,
+      "Bluetooth": false,
+      "Heated Seats": false,
+      "WiFi": false,
+      "Cruise Control": false,
+      "Front Parking Sensor": false,
+      "Rear Parking Sensor": false,
+      "Roof Rack": false,
+      "Power Windows": false,
+      "Sunroof": false,
+      "USB Port": false,
+      "Sound System": false,
+      "Memory Seat": false,
+      "Camera 360": false
+    },
+    "locations": [
+      "Alabama",
+      "Alaska",
+      "Arizona",
+      "Arkansas",
+      "California",
+      "Colorado",
+      "Connecticut",
+      "Delaware",
+      "Florida",
+      "Georgia",
+      "Hawaii",
+      "Idaho",
+      "IllinoisIndiana",
+      "Iowa",
+      "Kansas",
+      "Kentucky",
+      "Louisiana",
+      "Maine",
+      "Maryland",
+      "Massachusetts",
+      "Michigan",
+      "Minnesota",
+      "Mississippi",
+      "Missouri",
+      "MontanaNebraska",
+      "Nevada",
+      "New Hampshire",
+      "New Jersey",
+      "New Mexico",
+      "New York",
+      "North Carolina",
+      "North Dakota",
+      "Ohio",
+      "Oklahoma",
+      "Oregon",
+      "PennsylvaniaRhode Island",
+      "South Carolina",
+      "South Dakota",
+      "Tennessee",
+      "Texas",
+      "Utah",
+      "Vermont",
+      "Virginia",
+      "Washington",
+      "West Virginia",
+      "Wisconsin",
+      "Wyoming"
+    ]
+  },
   "news": [
     {
       "title": "Shelby Centennial Edition",
       "image": "https://drive.google.com/uc?id=1jgjjfM_BPJ7is7XSm3aGK-a-MkbzySwV",
       "text": "Shelby American is commemorating the 100th anniversary of its founder's birth in the most Carroll Shelby way it can. That means a hot-rod version of the 2023 Mustang GT, supercharged to make 750 horsepower, barking exhaust fumes out of the Borla cat-back exhaust system. Fittingly, Shelby American is only planning to make 100 of the centennial edition. Unfortunately they've all sold out in the four days since a prototype was displayed in Gardena, California.The Shelby American team isn't being too strict with this one. Want a fastback? Sure. Convertible? You got it. Manual transmission? Sign here. Automatic transmission? If you say so. What it won't stand for is non-stock Mustang colors, the Mach 1, or the California Special. Basically, as long as the badging reads \"GT\" and the title says 2023, you're in the clear.",
       "id": "news01",
-      "tags": [
-        "Ford",
-        "Mustang"
-      ]
+      "tags": ["Ford", "Mustang"]
     },
     {
       "title": "Tesla Selling Cheaper",
       "image": "https://drive.google.com/uc?id=1VMGrEm52WPT9QJP1Xj9bJ2D_amEFyVSP",
       "text": "Tesla's pulling a page from In-N-Out Burger's playbook and giving Model Y buyers the chance to order a cheaper variant off a proverbial secret menu. Though the automaker's website currently restricts Model Y orders to those of the $54,380 Long Range or $58,380 Performance variants, Tesla's list of online inventory shows that a number of its stores are stocked with salable base Model Y EVs that wear a starting price $2000 less than that of the Long Range model. (As of this writing, however, it seems most of these entry-level Ys in inventory include at least $2000 worth of optional 20-inch wheels and tires, thus effectively negating the base model's cost savings over its Long Range counterpart.) Unlike the prior entry-level rear-drive Model Y, which Tesla stopped producing in 2021, this new base-level Model Y comes standard with a dual-motor all-wheel-drive system. It also packs a greater EPA-rated range relative to its single-motor forebear. With up to 279 miles of driving range on a full charge, the cheapest Model Y variant betters the old Standard Range model's range by 35 miles. That said, it falls short of the Model Y Long Range and Performance's figures by up to 51 and 24 miles, respectively.",
       "id": "news02",
-      "tags": [
-        "Tesla",
-        "Model Y",
-        "Electric",
-        "Sale"
-      ]
+      "tags": ["Tesla", "Model Y", "Electric", "Sale"]
     },
     {
       "title": "Best-selling BMW M",
       "image": "https://drive.google.com/uc?id=16KkT2AlVejKF7aympkITQE2SUi-SnQsQ",
       "text": "BMW M sold a whopping 177,257 cars last year, which was an 8.4 per cent increase over 2021 “despite the continuing challenging conditions in the area of logistics and supply chains”. You will have heard of these CHALLENGING CONDITIONS.However, what might challenge your perception is the car BMW M sold the most. Also known as the most popular BMW M car. Which last year was… drumroll please… the BMW i4 M50. Weren't expecting that, were you? A sure sign then, that customers have fully embraced BMW M’s march into electromobility, or just a sign that the M50 is a really very fast car with a BMW and M badge? Think you know the answer to that. And it is really very fast. There’s a twin-motor setup – one e-motor on the front axle, one on the back – powered by a 83.9kWh battery able to propel the four-door saloon from 0-62mph in just 3.9s. That’s exactly how long it takes the 503bhp BMW M3 to hit 62mph too.",
       "id": "news03",
-      "tags": [
-        "Sale",
-        "BMW",
-        "M2"
-      ]
+      "tags": ["Sale", "BMW", "M2"]
     },
     {
       "title": "A Small Affordable Electric Pickup Truck?",
       "image": "https://drive.google.com/uc?id=1Jyhow7hZrFOQz8j2YdC0bcP32vPiS5YQ",
       "text": "Back in March 2020, General Motors CEO Mary Barra announced an array of all-new, all-electric vehicles were actively in development. Now, nearly two years later, GM has revealed an in-house design studio devoted to the development of next-gen Ultium EVs, one of which might be a compact all-electric pickup that's being actively worked on. A group of media including Automotive News were reportedly invited to a General Motors \"affordable EV design studio\" in Warren, Michigan, where it revealed a \"baby pickup\" said to be smaller than the compact Ford Maverick, among a room full of conceptual clay models. GM did not release any public images or details of the studio nor truck, but Auto News says marketing materials showed the pickup being used for recreational activities, like going to the beach to surf. Michael Pevovar, the director of the affordable EV design studio, told reporters that the vehicles in development, including the new tiny pickup, are \"to get a reaction\" to what does and doesn't work for vehicles being considered for production, according to Auto News. Pevovar further elaborated that the concept could get bigger if it's determined to be too small, given the flexibility of the scalable Ultium battery-based platform.  ",
       "id": "news04",
-      "tags": [
-        "Ford",
-        "Electric",
-        "GM",
-        "Pickup"
-      ]
+      "tags": ["Ford", "Electric", "GM", "Pickup"]
     }
   ],
   "users": [
     {
-      "id": 1,
-      "name": "admin",
-      "login": "admin",
+      "name": "Admin",
       "password": "admin",
-      "isAdmin": true
+      "email": "admin@admin",
+      "phone": "Admin",
+      "isAdmin": true,
+      "id": 1,
+      "photo": "https://drive.google.com/uc?id=1U2njrXHdeVMZ-fMrHD-SvvZu0k4As4ul"
     },
     {
       "name": "Alex",
-      "login": "1234",
       "password": "1234",
+      "email": "alex@alex",
+      "phone": "099-123-124",
       "isAdmin": false,
-      "id": "166ff707-326d-45c9-b98d-3272396a081e"
-    },
-    {
-      "name": "Viki",
-      "login": "2345",
-      "password": "2345",
-      "isAdmin": false,
-      "id": "e512810a-4255-446b-ab33-f9c37fe5b98b"
-    },
-    {
-      "name": "Zipa",
-      "login": "9999",
-      "password": "9999",
-      "isAdmin": false,
-      "id": "513ab3b9-2504-45df-89a7-8dc42a53870c"
+      "id": "6f334483-8740-42fc-8359-9fab55742286",
+      "photo": "https://drive.google.com/uc?id=1nzoSMaX5_1-4HyfuHnrVddIS2PW4pDGy"
     }
   ]
 }

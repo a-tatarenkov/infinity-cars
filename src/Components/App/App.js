@@ -8,7 +8,9 @@ import {
   ProductDetailsPage,
   AboutUsPage,
   ContactsPage,
-  LoginPage
+  LoginPage,
+  AdminPage,
+  SellPage
 } from "../Pages";
 import Footer from "../Footer/Footer";
 import ScrollToTop from "../MainPage/ScrollToTop/ScrollToTop";
@@ -38,7 +40,8 @@ const App = () => {
           <Route path="/contacts" element={<ContactsPage />} />
           <Route path="/about_us" element={<AboutUsPage />} />
           <Route path="/login" element={<LoginPage />} />
-
+          <Route path="/admin" element={<AdminPage />} />
+          <Route path="/sell" element={<SellPage />} />
         </Routes>
         <Footer />
         <ActiveArrowUp />

@@ -1,6 +1,7 @@
 const initialState = {
   data: [],
   compare: [],
+  brandDataInfo: {},
   dataLoadingStatus: "idle",
 };
 
@@ -10,6 +11,24 @@ const data = (state = initialState, action) => {
       return {
         ...state,
         dataLoadingStatus: "loading",
+      };
+
+    case "BRANDS_FETCHING":
+      return {
+        ...state,
+        brandsLoadingStatus: "loading",
+      };
+    case "BRANDS_FETCHED":
+      return {
+        ...state,
+        brands: action.payload,
+        brandsLoadingStatus: "idle",
+      };
+
+    case "CAR_CREATED":
+      return {
+        ...state,
+        data: [...state.data, action.payload],
       };
 
     case "SET_CARS_TO_COMPARE":
