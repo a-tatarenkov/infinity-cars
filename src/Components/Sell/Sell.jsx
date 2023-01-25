@@ -28,7 +28,7 @@ const Sell = () => {
   const onPostCar = (e) => {
     e.preventDefault();
 
-    request("http://localhost:3001/cars", "POST", JSON.stringify(car.brands))
+    request("/cars", "POST", JSON.stringify(car.brands))
       .then((res) => console.log(res, "Car Created"))
       .then(dispatch(carCreated(car.brands)))
       .catch((err) => console.log(err));

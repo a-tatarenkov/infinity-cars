@@ -11,7 +11,7 @@ import {
   termFilter,
   onFilterReset,
   userDeleted,
-  sellCarId
+  sellCarId,
 } from "../../../actions";
 import { fetchFilteredCars } from "../../../actions";
 import { useHttp } from "../../../hooks/http.hook";
@@ -44,13 +44,13 @@ const AdminPanel = (props) => {
 
   useEffect(() => {
     dispatch(fetchFilteredCars(request, usersData.filters));
-    dispatch(sellCarId(user.id))
+    dispatch(sellCarId(user.id));
     // eslint-disable-next-line
   }, [usersData.filters]);
 
   const onDelete = useCallback(
     (id) => {
-      request(`http://localhost:3001/users/${id}`, "DELETE")
+      request(`/users/${id}`, "DELETE")
         .then((data) => console.log(data, "Deleted"))
         .then(dispatch(userDeleted(id)))
         .catch((err) => console.log(err));

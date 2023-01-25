@@ -1,43 +1,33 @@
 export const fetchCars = (request) => (dispatch) => {
   dispatch(carsFetching());
-  request("http://localhost:3001/cars")
+  request("/cars")
     .then((cars) => dispatch(carsFetched(cars)))
     .catch(() => dispatch(carsFetchingError()));
 };
 
 export const fetchComments = (request) => (dispatch) => {
   dispatch(commentsFetching());
-  request("http://localhost:3001/reviews").then((comments) =>
-    dispatch(commentsFetched(comments))
-  );
+  request("/reviews").then((comments) => dispatch(commentsFetched(comments)));
 };
 
 export const fetchUsers = (request) => (dispatch) => {
   dispatch(usersFetching());
-  request("http://localhost:3001/users").then((users) =>
-    dispatch(usersFetched(users))
-  );
+  request("/users").then((users) => dispatch(usersFetched(users)));
 };
 
 export const fetchNews = (request) => (dispatch) => {
   dispatch(newsFetching());
-  request("http://localhost:3001/news").then((news) =>
-    dispatch(newsFetched(news))
-  );
+  request("/news").then((news) => dispatch(newsFetched(news)));
 };
 
 export const fetchCarsData = (request) => (dispatch) => {
   dispatch(carsFetchingData());
-  request("http://localhost:3001/cars").then((data) =>
-    dispatch(carsFetchedData(data))
-  );
+  request("/cars").then((data) => dispatch(carsFetchedData(data)));
 };
 
 export const fetchBrandsData = (request) => (dispatch) => {
   dispatch(brandsFetching());
-  request("http://localhost:3001/sell").then((brand) =>
-    dispatch(brandsFetched(brand))
-  );
+  request("/sell").then((brand) => dispatch(brandsFetched(brand)));
 };
 
 export const fetchFilteredCars = (request, filters) => (dispatch) => {
@@ -76,7 +66,7 @@ export const fetchFilteredCars = (request, filters) => (dispatch) => {
   const sortStr = sortString(onSortChange);
   dispatch(carsFetching());
   request(
-    `http://localhost:3001/cars?${brand ? `&brand=${brand}` : ""}${
+    `/cars?${brand ? `&brand=${brand}` : ""}${
       model.length === 0
         ? ""
         : `${model

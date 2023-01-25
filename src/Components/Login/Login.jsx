@@ -111,7 +111,7 @@ const UserForm = (props) => {
     if (name.length < 3 && password.length < 3) {
       return;
     } else {
-      request("http://localhost:3001/users", "POST", JSON.stringify(newUser))
+      request("/users", "POST", JSON.stringify(newUser))
         .then((res) => console.log(res, "User Created"))
         .then(dispatch(userCreated(newUser)))
         .catch((err) => console.log(err));
