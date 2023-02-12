@@ -44,7 +44,7 @@ ${{\color{Maroon}\Huge{\textsf{Features of app\}}}}\$
 
 ☑️ ${{\color{RedOrange}{\textsf{ Add to Compare, Delete, Compare Page \}}}}\$
 
-<img width="33%" height="250" alt="add to compare" src="https://user-images.githubusercontent.com/112705866/218323139-8e1e556f-3702-41ce-b07a-2f0509d7cd5d.png">&nbsp;<img width="33%" height="250" alt="delete compare" src="https://user-images.githubusercontent.com/112705866/218323140-18f4085f-c6ea-42fe-9cfc-9e6c64c9dd4a.png">&nbsp;<img width="33%" height="250" alt="compare page images" src="https://user-images.githubusercontent.com/112705866/218323143-ca4f0ee5-5eda-4886-a6fb-a7da7e8be673.png">
+<img width="32%" height="200" alt="add to compare" src="https://user-images.githubusercontent.com/112705866/218323139-8e1e556f-3702-41ce-b07a-2f0509d7cd5d.png">&nbsp;<img width="32%" height="200" alt="delete compare" src="https://user-images.githubusercontent.com/112705866/218323140-18f4085f-c6ea-42fe-9cfc-9e6c64c9dd4a.png">&nbsp;<img width="32%" height="200" alt="compare page images" src="https://user-images.githubusercontent.com/112705866/218323143-ca4f0ee5-5eda-4886-a6fb-a7da7e8be673.png">
 
 ☑️ ${{\color{RedOrange}{\textsf{ Car rating,  is based on all reviews for current car, and calculating for each group of rating (Comfort, Design , ets.) \}}}}\$
 
