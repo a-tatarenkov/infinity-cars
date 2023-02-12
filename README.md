@@ -25,14 +25,14 @@ ${{\color{Maroon}\Huge{\textsf{Features of app\}}}}\$
 - [x] ${{\color{JungleGreen}{\textsf{Add car to favourite / delete from favourite\}}}}\$ 
 - [x] ${{\color{JungleGreen}{\textsf{Check number of views on car \}}}}\$ 
 
-☑️ ${{\color{RedOrange}{\textsf{ Your profile \}}}}\$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☑️ ${{\color{RedOrange}{\textsf{ List of favourite cars \}}}}\$
+☑️ ${{\color{RedOrange}{\textsf{ Your profile \}}}}\$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☑️ ${{\color{RedOrange}{\textsf{ List of favourite cars \}}}}\$
 
-<img width="49%" height="300" alt="your profile" src="https://user-images.githubusercontent.com/112705866/218321858-cd6d28aa-5075-4b39-bb59-7cb61d728ec1.png">&nbsp; <img width="49%" height="300" alt="liked" src="https://user-images.githubusercontent.com/112705866/218321938-4f9b24a8-a9d0-4a6a-b132-cb43cec53b9d.png">
+<img width="49%" height="250" alt="your profile" src="https://user-images.githubusercontent.com/112705866/218321858-cd6d28aa-5075-4b39-bb59-7cb61d728ec1.png">&nbsp; <img width="49%" height="250" alt="liked" src="https://user-images.githubusercontent.com/112705866/218321938-4f9b24a8-a9d0-4a6a-b132-cb43cec53b9d.png">
 
 
-☑️ ${{\color{RedOrange}{\textsf{ Edit your profile \}}}}\$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☑️ ${{\color{RedOrange}{\textsf{ Sell a car \}}}}\$
+☑️ ${{\color{RedOrange}{\textsf{ Edit your profile \}}}}\$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☑️ ${{\color{RedOrange}{\textsf{ Sell a car \}}}}\$
 
-<img width="49%" height="300" alt="edit" src="https://user-images.githubusercontent.com/112705866/218322662-9c0f904a-2401-4998-bb68-af8c912b16bb.png">&nbsp;<img width="49%" height="300" alt="sell" src="https://user-images.githubusercontent.com/112705866/218322732-4ef62718-b99b-4e20-a2a9-90451246bf60.png">
+<img width="49%" height="250" alt="edit" src="https://user-images.githubusercontent.com/112705866/218322662-9c0f904a-2401-4998-bb68-af8c912b16bb.png">&nbsp;<img width="49%" height="250" alt="sell" src="https://user-images.githubusercontent.com/112705866/218322732-4ef62718-b99b-4e20-a2a9-90451246bf60.png">
 
 ☑️ ${{\color{RedOrange}{\textsf{ Edit / Delete a car \}}}}\$
 
@@ -40,7 +40,7 @@ ${{\color{Maroon}\Huge{\textsf{Features of app\}}}}\$
 
 ☑️ ${{\color{RedOrange}{\textsf{ Product Details \}}}}\$
 
-<img width="49%" height="300" alt="product1" src="https://user-images.githubusercontent.com/112705866/218323040-fa8d4f23-e0d4-4708-98b9-2070d87cfa2f.png">&nbsp;<img width="49%" height="300" alt="product2" src="https://user-images.githubusercontent.com/112705866/218323042-1db9c09b-5688-48a3-b8d2-c73ed502485e.png">
+<img width="49%" height="250" alt="product1" src="https://user-images.githubusercontent.com/112705866/218323040-fa8d4f23-e0d4-4708-98b9-2070d87cfa2f.png">&nbsp;<img width="49%" height="250" alt="product2" src="https://user-images.githubusercontent.com/112705866/218323042-1db9c09b-5688-48a3-b8d2-c73ed502485e.png">
 
 ☑️ ${{\color{RedOrange}{\textsf{ Add to Compare, Delete, Compare Page \}}}}\$
 
@@ -48,7 +48,7 @@ ${{\color{Maroon}\Huge{\textsf{Features of app\}}}}\$
 
 ☑️ ${{\color{RedOrange}{\textsf{ Car rating,  is based on all reviews for current car, and calculating for each group of rating (Comfort, Design , ets.) \}}}}\$
 
-<img width="49%" height="300" alt="rating" src="https://user-images.githubusercontent.com/112705866/218323255-d09e28fa-12d5-4e57-9458-5772fe879cf3.png">&nbsp;<img width="49%" height="300" alt="add review" src="https://user-images.githubusercontent.com/112705866/218323257-1b3936f5-d2fb-4f70-aad9-62757e29e822.png">
+<img width="49%" height="325000" alt="rating" src="https://user-images.githubusercontent.com/112705866/218323255-d09e28fa-12d5-4e57-9458-5772fe879cf3.png">&nbsp;<img width="49%" height="250" alt="add review" src="https://user-images.githubusercontent.com/112705866/218323257-1b3936f5-d2fb-4f70-aad9-62757e29e822.png">
 
 ☑️ ${{\color{RedOrange}{\textsf{Another feature is Messages in your account. \}}}}\$ 
 
@@ -56,7 +56,7 @@ ${{\color{Maroon}\Huge{\textsf{Features of app\}}}}\$
 
 ☑️ ${{\color{RedOrange}{\textsf{Here you can see a message from, as well a notification about 1 new message. \}}}}\$
 
-<img width="49%" height="300" alt="messages" src="https://user-images.githubusercontent.com/112705866/218323308-d687e967-fda9-412e-ad2d-6a5b987ff6e2.png">&nbsp;<img width="49%" height="300" alt="message 2" src="https://user-images.githubusercontent.com/112705866/218323313-bf66cb76-fd1d-4891-a8ee-8faa773f79ac.png">
+<img width="49%" height="250" alt="messages" src="https://user-images.githubusercontent.com/112705866/218323308-d687e967-fda9-412e-ad2d-6a5b987ff6e2.png">&nbsp;<img width="49%" height="250" alt="message 2" src="https://user-images.githubusercontent.com/112705866/218323313-bf66cb76-fd1d-4891-a8ee-8faa773f79ac.png">
 
 ☑️ ${{\color{RedOrange}{\textsf{Grid layout \}}}}\$
 
@@ -64,6 +64,6 @@ ${{\color{Maroon}\Huge{\textsf{Features of app\}}}}\$
 
 ☑️ ${{\color{RedOrange}{\textsf{Admin is able to see all users and cars for sale as well able to delete \}}}}\$
 
-<img width="49%" height="300" alt="admin1" src="https://user-images.githubusercontent.com/112705866/218323514-6a236820-6bee-4cd8-971f-faf23bba3fec.png">&nbsp;<img width="49%" height="300" alt="admin2" src="https://user-images.githubusercontent.com/112705866/218323516-8ff7d56f-5e75-4086-a26a-42c432c9589d.png">
+<img width="49%" height="250" alt="admin1" src="https://user-images.githubusercontent.com/112705866/218323514-6a236820-6bee-4cd8-971f-faf23bba3fec.png">&nbsp;<img width="49%" height="250" alt="admin2" src="https://user-images.githubusercontent.com/112705866/218323516-8ff7d56f-5e75-4086-a26a-42c432c9589d.png">
 
 
