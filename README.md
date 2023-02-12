@@ -7,6 +7,14 @@ ${{\color{teal}\Huge{\textsf{Welcome\ to\ Autohunt.\ \ \ \ Website\ for\ selling
 ### 🔩 &nbsp; ${\color{RedOrange}\textsf{ Some\ tools\ I\ have\ used }}$  
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" width="30" height="30" />&nbsp; <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="react" width="30" height="30"/>&nbsp; <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="redux" width="30" height="30" />&nbsp; <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html" width="30" height="30" />&nbsp; <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="scss" width="30" height="30" />&nbsp;  <img src="https://user-images.githubusercontent.com/112705866/212576928-1c3ba62d-c95c-4338-8311-e2376bf4176c.svg"  alt="github" />&nbsp;
 
+
+
+###  💻 &nbsp; ${\color{RedOrange}\textsf{ Figma Layout of this project }}$
+
+[![gmail-svgrepo-com](https://user-images.githubusercontent.com/112705866/218335478-a6ec901d-596c-400d-8161-0e0ef15570f2.svg)](https://www.figma.com/file/zH2QnhOsIGBpdrrdj3gA92/AutoHunt-%7C-Car-Selling-Website-(Community)?node-id=2%3A26&t=HfYKRvR9E5lW1Ogf-0)
+
+
+
 ${{\color{Maroon}\Huge{\textsf{Features of app\}}}}\$ 
 
 - [x] ${{\color{JungleGreen}{\textsf{Create your account\}}}}\$ 
