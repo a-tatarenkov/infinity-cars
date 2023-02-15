@@ -43,6 +43,13 @@ const Header = () => {
 
   const navigate = useNavigate();
 
+  if (localStorage.getItem("user")) {
+    const user = localStorage.getItem("user");
+    dispatch(currentUserLogged(user[0]));
+    dispatch(setLogged(true));
+    dispatch(fetchUsers(request))
+  }
+
   const onLogOutUser = () => {
     localStorage.removeItem("user");
     navigate("/");
@@ -52,8 +59,8 @@ const Header = () => {
   };
 
   let messagesLength = 0;
-  if (filteredData.users.login) {
-    messagesLength = filteredData.users.currentUser[0].messages.filter(
+  if (filteredData?.users?.login) {
+    messagesLength = filteredData.users?.currentUser[0]?.messages.filter(
       (item) => item.open !== true
     ).length;
   }
