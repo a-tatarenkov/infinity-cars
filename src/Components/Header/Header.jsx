@@ -40,19 +40,19 @@ const Header = () => {
   const { request } = useHttp();
   const location = useLocation();
   const filteredData = useSelector(filtersData);
-  console.log(filteredData);
 
   const navigate = useNavigate();
 
   useEffect(() => {
     if (localStorage.getItem("user")) {
       const user = JSON.parse(localStorage.getItem("user"));
-      console.log(user);
+      const currentUser = filteredData.users.users.filter(userStore => userStore.id === user[0].id)
+      console.log(currentUser)
       dispatch(currentUserLogged(user));
       dispatch(setLogged(true));
-      dispatch(fetchUsers(request));
+      dispatch(fetchUsers(request)); 
     }
-  }, []);
+  }, [request]);
 
   const onLogOutUser = () => {
     localStorage.removeItem("user");

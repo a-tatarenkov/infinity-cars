@@ -76,7 +76,10 @@ const Messages = (props) => {
       "PUT",
       JSON.stringify(usersData.users.currentUser[0])
     ).catch((err) => console.log(err));
-
+    localStorage.setItem(
+      "user",
+      JSON.stringify(usersData.users.currentUser[0])
+    );
     // message to user from you
 
     dispatch(fetchUsers(request));
@@ -97,7 +100,6 @@ const Messages = (props) => {
       return;
     }
   };
-
 
   return (
     <>
