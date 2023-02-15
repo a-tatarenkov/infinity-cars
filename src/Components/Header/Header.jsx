@@ -14,8 +14,10 @@ import {
   sellCarId,
   setLogged,
   currentUserLogged,
+  fetchUsers,
 } from "../../actions";
 import { createSelector } from "reselect";
+import { useHttp } from "../../hooks/http.hook";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import LoginIcon from "@mui/icons-material/Login";
@@ -35,12 +37,14 @@ const Header = () => {
   );
 
   const dispatch = useDispatch();
+  const { request } = useHttp();
   const location = useLocation();
   const filteredData = useSelector(filtersData);
 
   const navigate = useNavigate();
 
   const onLogOutUser = () => {
+    localStorage.removeItem("user");
     navigate("/");
     dispatch(onFilterReset());
     dispatch(setLogged(false));
@@ -72,6 +76,7 @@ const Header = () => {
                 dispatch(onFilterReset());
                 dispatch(sellCarPosted());
                 dispatch(sellCarId(""));
+                dispatch(fetchUsers(request));
               }}
             ></Link>
           </li>
@@ -159,7 +164,14 @@ const Header = () => {
             >
               {filteredData.users.login ? (
                 <>
-                  <img src={filteredData.users?.currentUser[0].photo} alt="avatar" height={20} width={20} style={{borderRadius: '50%'}} /> {filteredData.users?.currentUser[0]?.name}
+                  <img
+                    src={filteredData.users?.currentUser[0].photo}
+                    alt="avatar"
+                    height={20}
+                    width={20}
+                    style={{ borderRadius: "50%" }}
+                  />{" "}
+                  {filteredData.users?.currentUser[0]?.name}
                 </>
               ) : (
                 <>

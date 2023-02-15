@@ -7,6 +7,9 @@ import ScrollToTop from "../MainPage/ScrollToTop/ScrollToTop";
 import ActiveArrowUp from "../MainPage/ActiveArrowUp/ActiveArrowUp";
 import "./App.scss";
 import Spinner from "../MainPage/Spinner/Spinner";
+import { setLogged, currentUserLogged,fetchUsers } from "../../actions";
+import { useHttp } from "../../hooks/http.hook";
+import { useDispatch } from "react-redux";
 const ErrorPage = lazy(() => import("../Pages/ErrorPage"));
 const CommentAboutUs = lazy(() => import("../Pages/CommentAboutUs"));
 const OurReviewsPage = lazy(() => import("../Pages/OurReviewsPage"));
@@ -32,6 +35,15 @@ const darkTheme = createTheme({
 });
 
 const App = () => {
+  const { request } = useHttp();
+  const dispatch = useDispatch();
+  if (localStorage.getItem("user")) {
+    const user = localStorage.getItem("user");
+    dispatch(currentUserLogged(user[0]));
+    dispatch(setLogged(true));
+    dispatch(fetchUsers(request))
+  }
+
   return (
     <ThemeProvider theme={darkTheme}>
       <BrowserRouter>
