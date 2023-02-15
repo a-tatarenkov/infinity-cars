@@ -49,8 +49,8 @@ const CarGridMain = (props) => {
   );
   const dispatch = useDispatch();
   const { cars, currentCar } = useSelector(carsData);
-  const [image, setImage] = useState(null);
   const { requestViews } = useAddViews();
+  const [loading, setLoading] = useState(true)
   const { addLikedCar, deleteLikedCar } = useAddLikedCars();
   const navigate = useNavigate();
   const setCarToEdit = () => {
@@ -58,16 +58,9 @@ const CarGridMain = (props) => {
   };
   const carToEdit = setCarToEdit();
 
-  useEffect(() => {
-    const picture = new Image();
-    picture.src = src[0];
-    picture.onload = () => {
-      setImage(src[0]);
-    };
-  }, []);
-
   const clazz = engine === "Electric" ? "electric" : "";
   const stars = rating.length !== 0 ? rating.map((item) => item.stared) : [];
+  const spinner = loading ? <Spinner /> : null
 
   return (
     <li className="grid_card_main">
@@ -92,7 +85,8 @@ const CarGridMain = (props) => {
         </button>
       ) : null}
       <div className="grid_card_main-image">
-        {image ? <img src={image || empty} alt="grid layout" /> : <Spinner />}
+        {spinner}
+        <img src={src[0] || empty} alt="grid layout"  onLoad={() => setLoading(false)}/>
 
         {canEdit ? (
           <button
