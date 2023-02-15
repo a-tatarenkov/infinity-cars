@@ -57,12 +57,20 @@
       text-align: right;
     }
     .full_car_rating {
+      position: relative;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+      a {
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
     }
     .compare_cars_button {
+      display: flex;
       button {
         display: flex;
         height: 40px;
@@ -79,13 +87,46 @@
           width: 30px;
         }
       }
+      .green {
+        width: 100%;
+      }
+      .red {
+        width: 50%;
+      }
+      .to_compare_page {
+        width: 0%;
+        font-size: 0;
+        border: none;
+        transition: 0.5s ease;
+        img {
+          height: 0;
+          width: 0;
+        }
+      }
+      .active {
+        position: relative;
+        width: 50%;
+        font-size: inherit;
+        border: 1px solid white;
+        img {
+          height: 30px;
+          width: 30px;
+        }
+        .compare_link {
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 100%;
+        }
+      }
+
       .red:hover {
         background-color: #da4d4d;
-        transition: 0.5s ease-in-out;
+        transition: 0.5s ease;
       }
       .green:hover {
         background-color: #2a5c2b;
-        transition: 0.5s ease-in-out;
+        transition: 0.5s ease;
       }
     }
   }

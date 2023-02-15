@@ -2,20 +2,26 @@
 
 .admin_panel {
   padding-top: 85px;
-  padding-bottom: 50px;
+  padding-bottom: 180px;
   width: 75%;
   margin: 0 auto;
+
   &-log_out {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    button {
-      border: none;
-      padding: 10px 20px;
-      background: $carCardFontColor;
-      cursor: pointer;
-      border-radius: 3px;
-    }
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-style: solid;
+    border-width: 0.1px;
+    border-image: linear-gradient(
+        to left,
+        rgba(196, 196, 196, 0) 0%,
+        rgb(255, 255, 255) 50%,
+        rgba(196, 196, 196, 0) 100%
+      )
+      100% 0 100% 0/0px 0 0.5px 1px stretch;
+
     h2 {
       font-weight: 600;
       font-size: 48px;
@@ -25,56 +31,102 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    margin-top: 5px;
     padding: 20px 0;
     button {
-      border: none;
-      padding: 10px 20px;
-      height: 55px;
       background: $carCardFontColor;
-      cursor: pointer;
+      border: none;
       border-radius: 3px;
+      color: rgba(255, 255, 255, 0.55);
       transition: 0.5s ease;
+      height: 45px;
+      &:hover {
+        background: #00a2ff;
+        color: rgb(255, 255, 255);
+      }
     }
   }
   .admin_panel-links {
-    display: flex;
-    gap: 10px;
     button {
       background: $carCardFontColor;
       border: none;
       border-radius: 3px;
-      a{
+      color: rgba(255, 255, 255, 0.55);
+      transition: 0.5s ease;
+      &:hover {
+        background: #00a2ff;
+        color: rgb(255, 255, 255);
+      }
+      a {
         display: block;
-      padding: 10px 20px;
-
         height: 100%;
         width: 100%;
       }
     }
   }
+  .admin_panel-sort {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0 0 0;
+    width: 100%;
+    text-align: center;
+    .set_view {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    button {
+      cursor: pointer;
+      background: $carCardFontColor;
+      border: none;
+      border-radius: 3px;
+      opacity: 0.5;
+      transition: 0.5s ease;
+    }
+  }
+
   &-info_items {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
+
     &-search {
       width: 45%;
       margin: 0px auto;
       background: $searchPanelBG;
-      height: 55px;
+      height: 44px;
       border: none;
       border-radius: 3px;
       padding-left: 10px;
       font-size: 20px;
     }
+    .users_info {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 300px repeat(3, 1fr);
+      grid-template-rows: 50px auto;
+      h3 {
+        text-align: center;
+        grid-column: 2/5;
+        grid-row: 1/2;
+      }
+      .users_profile {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        justify-self: center;
+      }
+    }
     &-list {
+      grid-column: 2/5;
+      grid-row: 2/3;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      gap: 20px;
+      gap: 40px;
       &-no_car {
         font-size: 20px;
       }

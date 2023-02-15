@@ -2,6 +2,7 @@ const initialState = {
   users: [],
   login: false,
   currentUser: null,
+  currentUserCars: [],
   usersLoadingStatus: "idle",
 };
 
@@ -26,6 +27,18 @@ const users = (state = initialState, action) => {
       return {
         ...state,
         users: [...state.users, action.payload],
+      };
+
+    case "USER_DATA_CHANGED":
+      return {
+        ...state,
+        currentUser: action.payload,
+      };
+
+    case "USERS_CARS_FETCHED":
+      return {
+        ...state,
+        currentUserCars: action.payload,
       };
 
     case "USER_DELETED":

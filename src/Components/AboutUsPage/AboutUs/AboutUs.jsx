@@ -1,6 +1,7 @@
 import { createSelector } from "reselect";
 import { useSelector } from "react-redux";
 import staticData from "../../../data/staticData";
+import { useObserver } from "../../../hooks/useObserver";
 import "./aboutUs.scss";
 
 const AboutUs = () => {
@@ -10,10 +11,11 @@ const AboutUs = () => {
   );
 
   const totalCars = useSelector(cars);
+  const {visible, refContainer} = useObserver();
   const { info, image } = staticData.aboutUs;
 
   return (
-    <div className="about_us">
+    <div className={visible ? "about_us" : 'about_us fade'} ref={refContainer}>
       <h2>About Us</h2>
       <div className="about_us-info">
         <div className="about_us-info-left">

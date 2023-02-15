@@ -1,0 +1,93 @@
+@import "../../../../styles/variables.scss";
+
+.news_search {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  gap: 20px;
+  position: sticky;
+  top: 30px;
+  z-index: 10;
+  height: max-content;
+  h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    width: 100%;
+    border-bottom: 2px solid white;
+    border-radius: 2px;
+    padding: 10px 0;
+  }
+  .popular_news {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    gap: 20px;
+    background-color: $carCardBorder;
+    border-radius: 3px;
+    position: relative;
+    a {
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+    img {
+      width: 30%;
+      object-fit: cover;
+      border-radius: 3px 0 0 3px;
+    }
+    &-info {
+      span {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+      }
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      justify-content: center;
+      gap: 10px;
+      width: 70%;
+      .expert_popular {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        img {
+          height: 40px;
+          width: 40px;
+          border-radius: 50px;
+        }
+        span {
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 14px;
+          color: #004a77;
+        }
+      }
+    }
+  }
+
+  .tags_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    .tag {
+      display: inline-block;
+      padding: 7px;
+      border-radius: 3px;
+      border: 1px solid $carCardFontColor;
+      cursor: pointer;
+      background-color: transparent;
+      transition: 0.5s ease;
+    }
+    .tag:hover {
+      background-color: #3695d1;
+    }
+    .active {
+      background-color: #3695d1;
+    }
+  }
+}

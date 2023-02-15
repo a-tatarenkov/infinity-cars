@@ -1,30 +1,59 @@
 import "./header.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import Badge from "@mui/material/Badge";
+import MailIcon from "@mui/icons-material/Mail";
+import LogoutIcon from "@mui/icons-material/Logout";
 import { useDispatch, useSelector } from "react-redux";
-import { conditionFilter, onFilterReset } from "../../actions";
+import {
+  conditionFilter,
+  onFilterReset,
+  onPaginationChange,
+  sellCarPosted,
+  sellCarId,
+  setLogged,
+  currentUserLogged,
+} from "../../actions";
 import { createSelector } from "reselect";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
+import LoginIcon from "@mui/icons-material/Login";
 import Select from "@mui/material/Select";
+import Tooltip from "@mui/material/Tooltip";
 
 const Header = () => {
   const filtersData = createSelector(
     (state) => state.filters,
-    state => state.users,
+    (state) => state.users,
     (filters, users) => {
       return {
         filters: filters,
-        users
+        users,
       };
     }
   );
 
   const dispatch = useDispatch();
+  const location = useLocation();
   const filteredData = useSelector(filtersData);
 
-  console.log(filteredData.users);
+  const navigate = useNavigate();
+
+  const onLogOutUser = () => {
+    navigate("/");
+    dispatch(onFilterReset());
+    dispatch(setLogged(false));
+    dispatch(currentUserLogged(null));
+  };
+
+  let messagesLength = 0;
+  if (filteredData.users.login) {
+    messagesLength = filteredData.users.currentUser[0].messages.filter(
+      (item) => item.open !== true
+    ).length;
+  }
+
   const style = {
     backgroundColor: "transparent",
     position: "absolute",
@@ -32,27 +61,35 @@ const Header = () => {
   };
 
   return (
-    <header
-      style={window.location.pathname === "/" || "/compare" ? style : null}
-    >
+    <header style={location.pathname === "/" || "/compare" ? style : null}>
       <nav>
         <ul className="header-links">
           <li>
             <Link
               to="/"
               className="header-logo"
-              onClick={() => dispatch(onFilterReset())}
+              onClick={() => {
+                dispatch(onFilterReset());
+                dispatch(sellCarPosted());
+                dispatch(sellCarId(""));
+              }}
             ></Link>
           </li>
           <li>
             <Link
               style={
-                filteredData.filters.condition === true
+                filteredData.filters.condition === true &&
+                location.pathname === "/car_search_results"
                   ? { color: "#007cc7" }
                   : { color: "inherit" }
               }
               to="/car_search_results"
-              onClick={() => dispatch(conditionFilter(true))}
+              onClick={() => {
+                dispatch(onFilterReset());
+                dispatch(onPaginationChange(10));
+                dispatch(conditionFilter(true));
+                dispatch(sellCarId(""));
+              }}
             >
               New Cars
             </Link>
@@ -61,31 +98,49 @@ const Header = () => {
           <li>
             <Link
               style={
-                filteredData.filters.condition === false && window.location.pathname === '/car_search_results'
+                filteredData.filters.condition === false &&
+                location.pathname === "/car_search_results"
                   ? { color: "#007cc7" }
                   : { color: "inherit" }
               }
               to="/car_search_results"
-              onClick={() => dispatch(conditionFilter(false))}
+              onClick={() => {
+                dispatch(onFilterReset());
+                dispatch(onPaginationChange(10));
+                dispatch(conditionFilter(false));
+                dispatch(sellCarId(""));
+              }}
             >
               Used Cars
             </Link>
           </li>
           <li>
             <NavLink
-              style={({ isActive }) => ({
-                color: isActive  ? "#007cc7" : "inherit",
-              })}
+              style={({ isActive }) => (isActive ? { color: "#007cc7" } : {})}
               to="/compare"
-              onClick={() => dispatch(onFilterReset())}
+              onClick={() => {
+                dispatch(sellCarId(""));
+                dispatch(onFilterReset());
+              }}
             >
               Compare
             </NavLink>
           </li>
           <li>
-            <NavLink to="/sell"  style={({ isActive }) => ({
-                color: isActive  ? "#007cc7" : "inherit",
-              })}>Sell</NavLink>
+            <NavLink
+              to="/sell"
+              style={({ isActive }) => ({
+                color: isActive ? "#007cc7" : "inherit",
+              })}
+              onClick={() => {
+                dispatch(onFilterReset());
+                return filteredData?.users?.login
+                  ? dispatch(sellCarId(filteredData.users.currentUser[0].id))
+                  : null;
+              }}
+            >
+              Sell
+            </NavLink>
           </li>
           <li>
             <ArticleSelect />
@@ -94,15 +149,50 @@ const Header = () => {
       </nav>
       <ul className="active-header">
         <li>
-          <button className="login-button"><Link to={filteredData.users.login ? '/admin' : '/login'}>
-              {filteredData.users.login ? filteredData.users.currentUser[0].name: "Sing In"}
-            </Link></button>
+          <button
+            className="login-button"
+            onClick={() => dispatch(onFilterReset())}
+          >
+            <Link
+              to={filteredData.users.login ? "/admin" : "/login"}
+              onClick={() => dispatch(onFilterReset())}
+            >
+              {filteredData.users.login ? (
+                <>
+                  <img src={filteredData.users?.currentUser[0].photo} alt="avatar" height={20} width={20} style={{borderRadius: '50%'}} /> {filteredData.users?.currentUser[0]?.name}
+                </>
+              ) : (
+                <>
+                  <LoginIcon /> Sing In
+                </>
+              )}
+            </Link>
+          </button>
         </li>
-        <li className="lang-selection-icon">
-          <select name="lang" id="language" className="lang-selection">
-            <option value="uk">ENG</option>
-            <option value="ua">UA</option>
-          </select>
+        <li className="messages_icon">
+          {filteredData.users.login ? (
+            <Link to={"/admin"}>
+              <Tooltip title="Messages" arrow>
+                <Badge badgeContent={messagesLength} color="primary">
+                  <MailIcon color="lightBlue" />
+                </Badge>
+              </Tooltip>
+            </Link>
+          ) : null}
+        </li>
+        <li>
+          {filteredData.users.login ? (
+            <Tooltip title="Logout" arrow>
+              <button
+                className="logout_button"
+                onClick={() => {
+                  onLogOutUser();
+                }}
+              >
+                <LogoutIcon />
+              </button>
+            </Tooltip>
+          ) : null}
         </li>
       </ul>
     </header>
@@ -111,7 +201,7 @@ const Header = () => {
 
 const ArticleSelect = () => {
   const [article, setArticle] = useState("");
-
+  const dispatch = useDispatch();
   const handleChange = (event) => {
     setArticle(event.target.value);
   };
@@ -120,7 +210,7 @@ const ArticleSelect = () => {
     <FormControl
       sx={{
         m: 1,
-        width: 'max-content',
+        width: "max-content",
         border: "none",
         fontFamily: "inherit",
         fontWeight: "inherit",
@@ -150,22 +240,40 @@ const ArticleSelect = () => {
             fontSize: "inherit",
           }}
         >
-          <span>Article</span>
+          <em>Article</em>
         </MenuItem>
         <MenuItem value={"news"}>
-          <Link>News</Link>
+          <button className="article_select">
+            <Link to="/news">News</Link>
+          </button>
         </MenuItem>
         <MenuItem value={"reviews"}>
-          <Link>Car Review</Link>
+          <button
+            className="article_select"
+            onClick={() => dispatch(onFilterReset())}
+          >
+            <Link to="/car_review">Car Review</Link>
+          </button>
         </MenuItem>
         <MenuItem value={"faq"}>
-          <Link>FAQ</Link>
+          <button className="article_select">
+            <Link to="/faq">FAQ</Link>
+          </button>
         </MenuItem>
         <MenuItem value={"about"}>
-          <Link to={'/about_us'}>About Us</Link>
+          <button className="article_select">
+            <Link to={"/about_us"}>About Us</Link>
+          </button>
         </MenuItem>
         <MenuItem value={"contacts"}>
-          <Link to={"/contacts"}>Contacts</Link>
+          <button className="article_select">
+            <Link to={"/contacts"}>Contacts</Link>
+          </button>
+        </MenuItem>
+        <MenuItem value={"customer service"}>
+          <button className="article_select">
+            <Link to={"/comment_about_us"}>Customer Service</Link>
+          </button>
         </MenuItem>
       </Select>
     </FormControl>

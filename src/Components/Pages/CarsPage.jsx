@@ -16,7 +16,9 @@ const CarPage = () => {
             <CarList />
           </div>
         </div>
-        <PaginationBox />
+        <PaginationBox
+          style={{ justifyContent: "flex-end", paddingRight: 350 }}
+        />
       </main>
     </>
   );

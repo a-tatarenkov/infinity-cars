@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "./mainSlide.scss";
-import staticData from '../../../data/staticData'
+import staticData from "../../../data/staticData";
 
 const Slideshow = () => {
   const { mainSlide } = staticData;
@@ -16,22 +16,26 @@ const Slideshow = () => {
     }
   };
 
-  useEffect(() => {
-    resetTimeout();
-    timeoutRef.current = setTimeout(
-      () =>
-        setIndex((prevIndex) =>
-          prevIndex === mainSlide.length - 1 ? 0 : prevIndex + 1
-        ),
-      delay
-    );
-    return () => {
+  useEffect(
+    () => {
       resetTimeout();
-    };
-  }, [index]);
+      timeoutRef.current = setTimeout(
+        () =>
+          setIndex((prevIndex) =>
+            prevIndex === mainSlide.length - 1 ? 0 : prevIndex + 1
+          ),
+        delay
+      );
+      return () => {
+        resetTimeout();
+      };
+    },
+    // eslint-disable-next-line
+    [index]
+  );
 
   return (
-    <div className="slideshow">
+    <div className="slideshow" id="slideshow">
       <div
         className="slideshowSlider"
         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}

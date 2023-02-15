@@ -11,30 +11,39 @@ const CarList = () => {
   const filterData = createSelector(
     (state) => state.cars.cars,
     (state) => state.filters,
-    (cars, filters) => {
+    (state) => state.users,
+    (cars, filters, users) => {
       return {
         cars,
         filters: filters,
+        users,
       };
     }
   );
 
   const dispatch = useDispatch();
   const { request } = useHttp();
-  const { cars, filters } = useSelector(filterData);
+  const { cars, filters, users } = useSelector(filterData);
   useEffect(() => {
     dispatch(fetchFilteredCars(request, filters));
     // eslint-disable-next-line
   }, [filters]);
+
+  let currentUser = null;
+
+  if (users.currentUser) {
+    currentUser = users.currentUser[0];
+  }
 
   const elements = cars
     .slice(filters.pagination - 10, filters.pagination)
     .map((item) => {
       const { id, ...rest } = item;
 
-      if (filters.onViewChange === "flex") return <FlexCar {...rest} id={id} key={id} />;
+      if (filters.onViewChange === "flex")
+        return <FlexCar {...rest} id={id} key={id} user={currentUser} />;
 
-      return <CardGrid {...rest} id={id} key={id} />;
+      return <CardGrid {...rest} id={id} key={id} user={currentUser} />;
     });
 
   return <ul className="car_list">{elements}</ul>;

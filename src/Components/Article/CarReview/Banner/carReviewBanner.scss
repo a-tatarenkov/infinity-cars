@@ -1,0 +1,10 @@
+@import "../../../../styles/variables.scss";
+
+.car_review_banner {
+  width: 100%;
+  padding: 105px 0 50px 100px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  border-bottom: 1px solid $carCardBorder;
+}

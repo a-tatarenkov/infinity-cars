@@ -23,6 +23,12 @@ const cars = (state = initialState, action) => {
         cars: [...state.cars, action.payload],
       };
 
+    case "CAR_DELETED":
+      return {
+        ...state,
+        cars: state.cars.filter((item) => item.id !== action.payload),
+      };
+
     case "CARS_FETCHING_ERROR":
       return {
         ...state,

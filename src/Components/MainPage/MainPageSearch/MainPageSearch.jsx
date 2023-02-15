@@ -16,11 +16,12 @@ import {
   fetchCars,
   conditionFilter,
   brandFilter,
-  modelFilter,
+  modelFilter, 
   priceFilter,
   locationFilter,
   termFilter,
-  fetchBrandsData
+  fetchBrandsData,
+  fetchUsers,
 } from "../../../actions";
 import { useHttp } from "../../../hooks/http.hook";
 import "./mainPageSearch.scss";
@@ -29,12 +30,14 @@ const MainPageSearch = () => {
   const filteredBransLocationSelector = createSelector(
     (state) => state.cars.cars,
     (state) => state.filters,
-    (cars, filters) => {
+    (state) => state.data,
+    (cars, filters, data) => {
       return {
         cars,
         brand: cars.map((item) => item.brand),
         location: cars.map((item) => item.location),
         filters: filters,
+        data,
       };
     }
   );
@@ -46,17 +49,17 @@ const MainPageSearch = () => {
   useEffect(() => {
     dispatch(fetchCars(request));
     dispatch(fetchBrandsData(request));
-
+    dispatch(fetchUsers(request));
     // eslint-disable-next-line
   }, []);
 
-  const brands = Array.from(new Set(filteredData.brand));
-  const locations = Array.from(new Set(filteredData.location));
+  const brands = Array.from(new Set(filteredData.brand)).sort();
+  const locations = Array.from(new Set(filteredData.location)).sort();
   const models = filteredData.cars
     .filter((item) => item.brand === filteredData.filters.brand)
     .map((item) => {
       return item.model;
-    });
+    }).sort();
 
   const [priceRange, setPriceRange] = useState([0, 300000]);
 
@@ -127,7 +130,9 @@ const MainPageSearch = () => {
           value={filteredData.filters.brand}
           options={brands}
           onChange={(e, v) => {
-            dispatch(brandFilter(v));
+            dispatch(brandFilter(v))
+            dispatch(modelFilter(""));
+            ;
           }}
           renderInput={(params) => <TextField {...params} label={"Brands"} />}
         />

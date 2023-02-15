@@ -1,4 +1,4 @@
-@import '../../../styles/variables.scss';
+@import "../../../styles/variables.scss";
 .grid_card_main {
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@
   cursor: pointer;
   color: $carCardFontColor;
 
-  a {
+  .active_link_car {
     position: absolute;
     display: block;
     height: 100%;
@@ -21,21 +21,92 @@
     top: 0;
     left: 0;
   }
+  .active_link_review{
+    position: absolute;
+    display: block;
+    z-index: 3;
+    height: 8%;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+  }
 
   &:hover {
     background-color: rgba(131, 131, 131, 0.19);
     border: 1px solid rgba(255, 255, 255, 0.5);
   }
+  &:hover button {
+    opacity: 1;
+  }
+
+  .like_btn, .fade_btn{
+    position: absolute;
+    background-color: transparent;
+    right: 15px;
+    bottom: 6px;
+    border: none;
+    z-index: 5;
+    cursor: pointer;
+    img{
+      transition: .5s ease;
+    }
+  }  
+  .fade_btn{
+    opacity: 0; 
+  }
 
   &-image {
     width: 100%;
     height: 170px;
+    position: relative;
     img {
       height: 100%;
       width: 100%;
       border-radius: 4px;
       object-fit: cover;
     }
+
+
+    button {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      height: 50px;
+      width: 120px;
+      background-color: #1b71e1;
+      border-radius: 3px;
+      border: none;
+      top: 50%;
+      left: 50%;
+
+      transition: 0.8s ease-in-out;
+      z-index: 3;
+      opacity: 0;
+      cursor: pointer;
+      img {
+        height: 30px;
+        width: 30px;
+      }
+      span {
+        color: white;
+      }
+    }
+    button:hover{
+      background: #2f8be0;
+    }
+.edit_button{
+  transform: translate(-50%, -0%);
+}
+.delete_button{
+  transform: translate(-50%, -110%);
+  background-color: #da4d4d;
+  color: white;
+}
+.delete_button:hover{
+  background-color: #df2929;
+}
   }
 
   &-info {
@@ -76,20 +147,36 @@
       padding-top: 5px;
     }
     &-block {
+      width: 100%;
+
       &-list {
         text-align: left;
         margin-top: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         li {
-          width: 50%;
           margin: 10px 0;
           font-weight: 500;
           font-size: 15px;
           list-style: none;
           padding-left: 23px;
+        }
+        .year-grid {
+          grid-column: 1/2;
+          grid-row: 1/2;
+        }
+        .fuel-type-grid {
+          grid-column: 1/2;
+          grid-row: 2/3;
+        }
+        .wheel-config-grid {
+          grid-column: 2/4;
+          grid-row: 1/2;
+        }
+        .seats-grid {
+          grid-column: 2/4;
+          grid-row: 2/3;
         }
         .year-grid,
         .wheel-config-grid,

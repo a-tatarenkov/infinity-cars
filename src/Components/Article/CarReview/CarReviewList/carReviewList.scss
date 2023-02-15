@@ -1,0 +1,99 @@
+@import "../../../../styles/variables.scss";
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+  gap: 50px;
+  margin-top: 50px;
+
+  &-sort {
+    width: 100%;
+    display: flex;
+  }
+
+  .reviews_list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    gap: 0.5px;
+    background-color: rgba(255, 255, 255, 0.501);
+    .single_review {
+      background-color: $bodyColor;
+      display: flex;
+      width: 100%;
+      padding: 10px;
+      &-image {
+        width: 10%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        img {
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      &-review_items {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        gap: 8px;
+        width: 80%;
+        .rev_date {
+          font-size: 14px;
+          line-height: 17px;
+        }
+        .rev_name {
+          font-size: 20px;
+          line-height: 24px;
+          color: #d7d7d7;
+        }
+        .rev_text {
+          font-size: 14px;
+          line-height: 17px;
+        }
+        .rev_rating {
+          margin-top: 10px;
+        }
+      }
+      &:hover .delete_post {
+        opacity: 1;
+      
+      }
+      .delete_post:hover{
+        background-color: #cf2727;
+        img {
+          rotate: 180deg;
+        }
+      }
+      .delete_post {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        opacity: 0;
+        transition: 0.5s ease;
+        gap: 20px;
+        height: 100%;
+        top: 0;
+        right: -80px;
+        background-color: #c54343;
+        width: 60px;
+        img {
+          height: 30px;
+          width: 30px;
+          transition: 0.5s ease;
+        }
+      }
+    }
+  }
+}

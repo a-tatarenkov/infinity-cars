@@ -1,15 +1,26 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Spinner from "../../MainPage/Spinner/Spinner";
 import CarRating from "../CarRating/CarRating";
 import remove from "../../../assets/delete.png";
 import add from "../../../assets/add.png";
+import compareArrow from "../../../assets/compare_arrow.png";
 import { useDispatch, useSelector } from "react-redux";
 import { createSelector } from "reselect";
-import { setCarsToCompare, deleteCarToCompare } from "../../../actions";
+import {
+  setCarsToCompare,
+  sellCarId,
+  deleteCarToCompare,
+  onFilterReset,
+} from "../../../actions";
+import useAddViews from "../../../hooks/addViews";
+import useAddLikedCars from "../../../hooks/likedCar";
 import { DialogPopup } from "../../MainPage/DialogWindow/DialogWindow";
 import RibbonFlag from "../RibbonFlag/RibbonFlag";
 import "./carGrid.scss";
+import empty from "../../../assets/empty-car.png";
+import like from "../../../assets/like.png";
+import like_fade from "../../../assets/like-fade.png";
 
 const CardGrid = (props) => {
   const {
@@ -27,25 +38,43 @@ const CardGrid = (props) => {
     driveUnit,
     rating,
     id,
+    to,
+    user,
   } = props;
   const [open, setOpen] = useState(false);
 
   const compareCars = createSelector(
     (state) => state.data.compare,
     (state) => state.data.data,
-    (compare, data) => {
+    (state) => state.cars.cars,
+    (compare, data, cars) => {
       return {
         compare,
         data,
+        cars: cars.filter((car) => car.id === id)[0],
       };
     }
   );
 
+  const dispatch = useDispatch();
+  const { compare, data, cars } = useSelector(compareCars);
+  const { requestViews } = useAddViews();
+  const { addLikedCar, deleteLikedCar } = useAddLikedCars();
+  const [image, setImage] = useState(null);
+  const stars = rating.length !== 0 ? rating.map((item) => item.stared) : [];
+
   const deleteItem = (id) => {
     const filtered = compare.filter((item) => item.id !== id);
     dispatch(deleteCarToCompare(filtered));
-    console.log(filtered);
   };
+
+  useEffect(() => {
+    const picture = new Image();
+    picture.src = src[0];
+    picture.onload = () => {
+      setImage(src[0]);
+    };
+  }, []);
 
   const addItem = (id) => {
     const filtered = data.filter((item) => item.id === id);
@@ -56,27 +85,46 @@ const CardGrid = (props) => {
     }
   };
 
-  const dispatch = useDispatch();
-  const { compare, data } = useSelector(compareCars);
-
-  const [load, setLoad] = useState(true);
-
-  const spinner = load ? <Spinner /> : null;
   const clazz = engine === "Electric" ? "electric" : "";
   return (
     <li
       className="grid_card"
-      style={window.location.pathname === "/" ? { width: "max-content" } : null}
+      style={
+        window.location.pathname === "/"
+          ? { width: 375 }
+          : window.location.pathname === "/car_review"
+          ? { width: 500, background: "#12232E" }
+          : null
+      }
     >
+      {user && user !== null ? (
+        <button
+          className={
+            user.likedCars.some((item) => item === id) ? "like_btn" : "fade_btn"
+          }
+          onClick={() => {
+            return user.likedCars.some((item) => item === id)
+              ? deleteLikedCar(id, user)
+              : addLikedCar(id, user);
+          }}
+        >
+          <img
+            src={user.likedCars.includes(id) ? like : like_fade}
+            alt="like"
+            height={20}
+            width={20}
+          />
+        </button>
+      ) : null}
       <DialogPopup
         title={"Compare Cars"}
         message={"Not more than 3 cars"}
         onClose={() => setOpen(false)}
         open={open}
+        link1={"Close"}
       />
       {top ? <RibbonFlag label={label} /> : null}
       <div className="grid_card-image">
-        {spinner}
         {window.location.pathname === "/compare" ? (
           <button onClick={() => deleteItem(id)}>
             <img src={remove} alt="delete" />
@@ -84,23 +132,42 @@ const CardGrid = (props) => {
           </button>
         ) : null}
         {window.location.pathname === "/car_search_results" ? (
-          <button
-            className={
-              compare.some((item) => item.id === id) ? "delete_car" : "add_car"
-            }
-            onClick={
-              compare.some((item) => item.id === id)
-                ? () => deleteItem(id)
-                : () => addItem(id)
-            }
-          >
-            <img src={add} alt="add" />
-            <span>
-              {compare.some((item) => item.id === id) ? "Remove" : "Compare"}
-            </span>
-          </button>
+          <>
+            <button
+              className={
+                compare.some((item) => item.id === id)
+                  ? "delete_car"
+                  : "add_car"
+              }
+              onClick={
+                compare.some((item) => item.id === id)
+                  ? () => deleteItem(id)
+                  : () => addItem(id)
+              }
+            >
+              <img src={add} alt="add" />
+              <span>
+                {compare.some((item) => item.id === id) ? "Remove" : "Compare"}
+              </span>
+            </button>
+
+            <button
+              className={
+                compare.some((item) => item.id === id)
+                  ? `link_to_compare down`
+                  : "link_to_compare"
+              }
+            >
+              <img src={compareArrow} alt="arrow" />
+              <span>Compare Page</span>
+              <Link
+                to="/compare"
+                onClick={() => dispatch(onFilterReset())}
+              ></Link>
+            </button>
+          </>
         ) : null}
-        <img src={src[0]} alt="grid layout" onLoad={() => setLoad(false)} />
+        {image ? <img src={image || empty} alt="grid layout" /> : <Spinner />}
       </div>
       <div className="grid_card-info">
         <span className="grid_card-info-condition">
@@ -109,7 +176,9 @@ const CardGrid = (props) => {
         <h3 className="car-name-grid">
           {brand} {model}
         </h3>
-        <span className="grid_card-info-price">{price} $</span>
+        <span className="grid_card-info-price">
+          {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} $
+        </span>
         <span className="grid_card-info-location">{location}</span>
         <div className="grid_card-info-block">
           <ul className="grid_card-info-block-list">
@@ -120,10 +189,28 @@ const CardGrid = (props) => {
           </ul>
         </div>
         <div className="grid_card-info-rating">
-          <CarRating rating={rating} />
-          <span>({rating.length} Reviews)</span>
+          <CarRating rating={stars} />
+          <span>({stars.length} Reviews)</span>
         </div>
-        <Link to={`/productdetail/${id}`}></Link>
+        {window.location.pathname !== "/car_review" ? (
+          <Link
+            to={`/productdetail/${id}`}
+            className="active_link_car"
+            onClick={() => requestViews(id, cars)}
+          ></Link>
+        ) : (
+          <Link
+            to={to ? to : `/productdetail/${id}`}
+            className="active_link_car"
+          ></Link>
+        )}
+        <Link
+          to={`/car_review_details/${id}`}
+          className="active_link_review"
+          onClick={() => {
+            dispatch(sellCarId(""));
+          }}
+        ></Link>
       </div>
     </li>
   );

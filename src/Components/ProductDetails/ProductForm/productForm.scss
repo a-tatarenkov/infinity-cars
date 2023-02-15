@@ -19,18 +19,14 @@
       margin-bottom: 8px;
       width: 100%;
       .input_box_left {
-        width: 48%;
+        width: 49%;
         display: flex;
         flex-direction: column;
-        gap: 7px;
+        gap: 15px;
 
         input {
-          height: 40px;
           background-color: $searchPanelBG;
           color: $tableFontColorTD;
-          border: none;
-          border-radius: 3px;
-          padding-left: 10px;
         }
         label {
           font-weight: 500;
@@ -38,46 +34,40 @@
         }
       }
       .input_box_right {
-        width: 48%;
+        width: 49%;
         display: flex;
         flex-direction: column;
-        gap: 7px;
+        gap: 15px;
         input {
-          height: 40px;
           background-color: $searchPanelBG;
           color: $tableFontColorTD;
-          border: none;
-          border-radius: 3px;
-          padding-left: 10px;
         }
         label {
           font-weight: 500;
           font-size: 16px;
         }
-        select {
-          height: 40px;
-          background-color: $searchPanelBG;
-          border: none;
-        }
       }
     }
-    label:last-of-type {
-      margin-bottom: 7px;
-    }
-    textarea {
-      padding: 10px;
-      font-family: "Lato";
-      background-color: $searchPanelBG;
-      border: none;
-      resize: none;
-      border-radius: 3px;
-    }
+
     .submit_input {
       height: 40px;
       border: none;
       border-radius: 3px;
       background-color: $carCardFontColor;
-      margin-top: 30px;
+      margin-top: 15px;
+      transition: 0.5s ease;
+      cursor: pointer;
+    }
+    .submit_input_fade {
+      cursor: not-allowed;
+      background-color: rgb(119, 119, 119);
+    }
+
+    .submit_input:hover {
+      background-color: rgb(0, 112, 225);
+    }
+    .submit_input_fade:hover {
+      background-color: rgb(119, 119, 119);
     }
   }
 }

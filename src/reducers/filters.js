@@ -1,5 +1,6 @@
 const initialState = {
   term: "",
+  newsTerm: "",
   condition: "",
   brand: null,
   model: "",
@@ -13,10 +14,11 @@ const initialState = {
   color: "",
   driveTrain: "",
   recommendedCondition: true,
-  onViewChange: "flex",
+  onViewChange: "grid",
   onSortChange: "",
   pagination: 10,
 };
+
 
 const filters = (state = initialState, action) => {
   switch (action.type) {
@@ -33,7 +35,7 @@ const filters = (state = initialState, action) => {
     case "BRAND_FILTER_CHANGED":
       return {
         ...state,
-        brand: (state.brand = action.payload),
+        brand: action.payload,
       };
     case "VIEW_FILTER_CHANGED":
       return {
@@ -43,88 +45,79 @@ const filters = (state = initialState, action) => {
     case "MODEL_FILTER_CHANGED":
       return {
         ...state,
-        model: (state.model = action.payload),
+        model: action.payload,
       };
     case "PRICE_FILTER_CHANGED":
       return {
         ...state,
-        price: (state.price = action.payload),
+        price: action.payload,
       };
     case "LOCATION_FILTER_CHANGED":
       return {
         ...state,
-        location: (state.location = action.payload),
+        location: action.payload,
       };
     case "YEAR_FILTER_CHANGED":
       return {
         ...state,
-        year: (state.year = action.payload),
+        year: action.payload,
       };
     case "BODY_FILTER_CHANGED":
       return {
         ...state,
-        bodyType: (state.bodyType = action.payload),
+        bodyType: action.payload,
       };
     case "TRANSMISSION_FILTER_CHANGED":
       return {
         ...state,
-        transmission: (state.transmission = action.payload),
+        transmission: action.payload,
       };
     case "FUEL_FILTER_CHANGED":
       return {
         ...state,
-        fuelType: (state.fuelType = action.payload),
+        fuelType: action.payload,
       };
     case "DRIVE_TRAIN_FILTER_CHANGED":
       return {
         ...state,
-        driveTrain: (state.driveTrain = action.payload),
+        driveTrain: action.payload,
       };
     case "PASSENGERS_FILTER_CHANGED":
       return {
         ...state,
-        passengers: (state.passengers = action.payload),
+        passengers: action.payload,
       };
     case "COLOR_FILTER_CHANGED":
       return {
         ...state,
-        color: (state.color = action.payload),
+        color: action.payload,
       };
 
     case "TERM_FILTER_CHANGED":
       return {
         ...state,
-        term: (state.term = action.payload),
+        term: action.payload,
+      };
+    case "ON_SET_NEWS_TERM":
+      return {
+        ...state,
+        newsTerm: action.payload,
       };
     case "FILTER_RESET":
       return {
-        ...state,
-        term: (state.term = ""),
-        color: (state.location = ""),
-        passengers: (state.passengers = ""),
-        driveTrain: (state.driveTrain = ""),
-        fuelType: (state.fuelType = ""),
-        year: (state.year = ""),
-        location: (state.location = ""),
-        price: (state.price = [0, 300000]),
-        bodyType: (state.bodyType = ""),
-        model: (state.model = ""),
-        brand: (state.brand = null),
-        condition: (state.condition = ""),
-        pagination: (state.pagination = 10),
-        transmission: (state.transmission = ""),
+        ...initialState,
       };
 
     case "ON_SORT_FILTER":
       return {
         ...state,
-        onSortChange: (state.onSortChange = action.payload),
+        onSortChange: action.payload,
       };
 
     case "ON_PAGINATION_CHANGE":
       return {
         ...state,
-        pagination: (state.pagination = action.payload),
+        pagination: action.payload,
       };
     default:
       return state;

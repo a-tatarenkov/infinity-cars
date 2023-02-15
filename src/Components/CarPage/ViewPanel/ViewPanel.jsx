@@ -7,7 +7,8 @@ import { createSelector } from "reselect";
 import { Paper } from "@mui/material";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
-
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { onViewFilterState, onSortFilter, termFilter } from "../../../actions";
 import "./viewPanel.scss";
 
@@ -25,17 +26,36 @@ const ViewPanel = () => {
 
   const dispatch = useDispatch();
   const { filters, cars } = useSelector(filterData);
-console.log(filters);
   const buttonsData = [
     { name: "grid", clazz: "grid-button" },
     { name: "flex", clazz: "flex-button" },
   ];
 
   const optionData = [
-    { name: "yearHight", value: "yearHight", label: "Year ↓" },
-    { name: "yearLow", value: "yearLow", label: "Year ↑" },
-    { name: "priceHight", value: "priceHight", label: "Price ↓" },
-    { name: "priceLow", value: "priceLow", label: "Price ↑" },
+    {
+      name: "yearHight",
+      value: "yearHight",
+      label: "Year",
+      icon: <ArrowDownwardIcon />,
+    },
+    {
+      name: "yearLow",
+      value: "yearLow",
+      label: "Year",
+      icon: <ArrowUpwardIcon />,
+    },
+    {
+      name: "priceHight",
+      value: "priceHight",
+      label: "Price",
+      icon: <ArrowDownwardIcon />,
+    },
+    {
+      name: "priceLow",
+      value: "priceLow",
+      label: "Price",
+      icon: <ArrowUpwardIcon />,
+    },
   ];
 
   const buttons = buttonsData.map(({ name, clazz }) => {
@@ -84,8 +104,14 @@ console.log(filters);
         >
           {optionData.map((item) => {
             return (
-              <MenuItem key={item.name} value={item.value}>
-                {item.label}
+              <MenuItem
+                key={item.name}
+                value={item.value}
+                sx={{ display: "flex", justifyContent: "space-between" }}
+              >
+                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                  {item.label} {item.icon}
+                </div>
               </MenuItem>
             );
           })}

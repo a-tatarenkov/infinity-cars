@@ -32,7 +32,6 @@ const CarDetails = () => {
   );
 
   const { brands, brandDataInfo } = useSelector(brandsData);
-
   const dispatch = useDispatch();
 
   const brandsList = Object.keys(brandDataInfo.brands.brands);
@@ -100,7 +99,7 @@ const CarDetails = () => {
         id="outlined-basic"
         label="Passenger Capacity"
         required
-        value={brands.seats}
+        value={brands.seats.slice(0, -7)}
         onChange={(e) => dispatch(sellPax(e.target.value))}
         variant="outlined"
         type={"number"}
@@ -109,20 +108,17 @@ const CarDetails = () => {
 
       <div className="condition-select">
         <FormLabel id="condition">Condition</FormLabel>
-        <RadioGroup required={true}  row>
-          
-          <FormControlLabel
-            value={true}
-            onChange={() => dispatch(sellCondition(true))}
-            control={<Radio />}
-            label="New"
-          />
-          <FormControlLabel
-            value={false}
-            onChange={() => dispatch(sellCondition(false))}
-            control={<Radio />}
-            label="Used"
-          />
+        <RadioGroup
+          value={brands.condition}
+          onChange={(e) => {
+            e.target.value === "true"
+              ? dispatch(sellCondition(true))
+              : dispatch(sellCondition(false));
+          }}
+          row
+        >
+          <FormControlLabel value={true} control={<Radio />} label="New" />
+          <FormControlLabel value={false} control={<Radio />} label="Used" />
         </RadioGroup>
       </div>
 

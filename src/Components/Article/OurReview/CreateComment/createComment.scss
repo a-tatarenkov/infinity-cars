@@ -1,0 +1,53 @@
+@import "../../../../styles/variables.scss";
+
+.comments_post_reviews {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  &-sign {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 7px;
+  }
+  &-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    textarea {
+      resize: none;
+      background-color: $searchPanelBG;
+      border: none;
+      border-radius: 3px;
+      padding: 10px;
+      font-family: "Lato";
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      color: #a9a9a9;
+    }
+    button {
+      width: max-content;
+      padding: 15px 50px;
+      border: none;
+      border-radius: 3px;
+      background-color: $carCardFontColor;
+      cursor: pointer;
+      transition: 0.5s ease;
+      &:hover {
+        background-color: rgb(68, 166, 251);
+      }
+    }
+    .disabled{
+        background-color: rgb(168, 168, 168); 
+        color: black;
+        cursor: not-allowed;
+        &:hover{
+            background-color: rgb(140, 140, 140);   
+        }
+    }
+  }
+}

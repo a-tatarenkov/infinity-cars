@@ -36,51 +36,51 @@ nav {
   background-repeat: no-repeat;
 }
 .active-header {
-  width: 20%;
+  width: 15%;
   display: flex;
+  transition: 0.5s ease;
+  li {
+    transition: 0.5s ease;
+  }
 }
 .login-button {
   border: none;
-  position: relative;
   cursor: pointer;
   background-color: inherit;
+  a {
+    display: flex;
+    align-items: end;
+    gap: 7px;
+  }
 }
-.login-button:before {
-  position: absolute;
-  left: -23px;
-  bottom: 0px;
-  content: "";
-  height: 20px;
-  width: 20px;
-  background-image: url(../../assets/userLogin.png);
-  background-position: center;
-  background-size: contain;
+.messages_icon {
+  cursor: pointer;
 }
-
-.lang-selection {
+.logout_button {
+  background-color: transparent;
   border: none;
-  outline: none;
-  background-color: inherit;
-}
-.lang-selection-icon {
-  position: relative;
-}
-.lang-selection-icon:before {
-  position: absolute;
-  left: -23px;
-  bottom: 1px;
-  content: "";
-
-  height: 20px;
-  width: 20px;
-  background-image: url(../../assets//globe.png);
-  background-position: center;
-  background-size: contain;
+  cursor: pointer;
 }
 
-.css-k70774-MuiInputBase-root-MuiInput-root-MuiSelect-root:before{
-  border-bottom: none!important;
+.article_select {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  a{
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
 }
-.css-1pzy4w8-MuiInputBase-root-MuiInput-root-MuiSelect-root:before{
-  border-bottom: none!important;
+
+.css-k70774-MuiInputBase-root-MuiInput-root-MuiSelect-root:before {
+  border-bottom: none !important;
+}
+.css-1pzy4w8-MuiInputBase-root-MuiInput-root-MuiSelect-root:before {
+  border-bottom: none !important;
 }

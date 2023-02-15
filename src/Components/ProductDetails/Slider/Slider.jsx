@@ -1,9 +1,11 @@
 import "./slider.scss";
 import { useState, Fragment } from "react";
 import Spinner from "../../MainPage/Spinner/Spinner";
+import VisibilityIcon from '@mui/icons-material/Visibility';
 
-const Slider = ({ data }) => {
-  const images = data[0].src;
+
+const Slider = ({ data, view }) => {
+  const images = data;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [load, setLoad] = useState(true);
 
@@ -34,6 +36,9 @@ const Slider = ({ data }) => {
     <div className="full_car_slider">
       <div className="full_car_slider-right" onClick={goNext}></div>
       <div className="full_car_slider-left" onClick={goPrev}></div>
+      <div className="full_car_slider-views">
+         <VisibilityIcon /> &nbsp;&nbsp;   {view} views
+      </div>
       <div
         className="full_car_slider-slider"
         style={{ transform: `translate3d(${-currentIndex * 100}%, 0, 0)` }}

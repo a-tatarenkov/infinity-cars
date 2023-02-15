@@ -1,6 +1,5 @@
 import { createSelector } from "reselect";
 import { useSelector } from "react-redux";
-
 import "./banner.scss";
 
 const Banner = () => {

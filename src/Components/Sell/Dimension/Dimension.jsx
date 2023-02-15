@@ -21,7 +21,7 @@ const Dimension = () => {
       <h3>Dimension</h3>
 
       <TextField
-        value={brands.details.Dimension.Length}
+        value={brands.details.Dimension.Length.slice(0,-3)}
         onInput={(e) => dispatch(sellLength(e.target.value))}
         className="length-select"
         required
@@ -33,7 +33,7 @@ const Dimension = () => {
       />
 
       <TextField
-        value={brands.details.Dimension.Width}
+        value={brands.details.Dimension.Width.slice(0,-3)}
         onInput={(e) => dispatch(sellWidth(e.target.value))}
         className="width-select"
         required
@@ -45,7 +45,7 @@ const Dimension = () => {
       />
 
       <TextField
-        value={brands.details.Dimension.Height}
+        value={brands.details.Dimension.Height.slice(0,-3)}
         onInput={(e) => dispatch(sellHeight(e.target.value))}
         className="height-select"
         required
@@ -56,7 +56,7 @@ const Dimension = () => {
       />
 
       <TextField
-        value={brands.details.Dimension["Cargo Volume"]}
+        value={brands.details.Dimension["Cargo Volume"].slice(0,-2)}
         onInput={(e) => dispatch(sellCargo(e.target.value))}
         className="volume-select"
         required

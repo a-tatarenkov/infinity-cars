@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import { createSelector } from "reselect";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useHttp } from "../../../hooks/http.hook";
 import { fetchComments } from "../../../actions";
+import { useObserver } from "../../../hooks/useObserver";
 import "./testimonial.scss";
 
 const Testimonial = () => {
@@ -16,10 +16,36 @@ const Testimonial = () => {
     }
   );
 
-  const [currentIndex, setCurrentIndex] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const dispatch = useDispatch();
   const { request } = useHttp();
+  const { visible, refContainer } = useObserver();
   const { comments } = useSelector(commentsData);
+  const timeoutRef = useRef(null);
+  const delay = 4500;
+
+  const resetTimeout = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  };
+  useEffect(
+    () => {
+      resetTimeout();
+      timeoutRef.current = setTimeout(
+        () =>
+          setCurrentIndex((prevIndex) =>
+            prevIndex === comments.length - 1 ? 0 : prevIndex + 1
+          ),
+        delay
+      );
+      return () => {
+        resetTimeout();
+      };
+    },
+    // eslint-disable-next-line
+    [currentIndex]
+  );
 
   useEffect(() => {
     dispatch(fetchComments(request));
@@ -27,7 +53,7 @@ const Testimonial = () => {
   }, []);
 
   return (
-    <div className="comments">
+    <div className={visible ? "comments" : "comments fade"} ref={refContainer}>
       <h2>Testimonial</h2>
       <ul
         className="comments-slider"

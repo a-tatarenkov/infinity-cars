@@ -19,4 +19,8 @@
         width: 25%;
     }
   }
+  &-locations{
+    display: flex;
+    justify-content: space-between;
+  }
 }

@@ -1,0 +1,73 @@
+@import "../../../../styles/variables.scss";
+
+.review_search {
+  padding: 80px 100px 50px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  input {
+    width: 50%;
+    height: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #a9a9a9;
+    padding-left: 10px;
+    background-color: $searchPanelBG;
+    border-radius: 3px;
+    border: none;
+  }
+  &-list {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    .review_h3 {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 43px;
+      color: #d7d7d7;
+      margin-top: 50px;
+      margin-bottom: 50px;
+
+    }
+    &-items {
+        padding: 20px;
+      &-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.our_reviews_slider{
+  width: 100%;
+  &-title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    color: #d7d7d7;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    // text-align: left;
+  }
+  &-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+  }
+  .show_more_list{
+    cursor: pointer;
+    margin: 10px 0;
+    background-color: transparent;
+    color: $carCardFontColor;
+    border: none;
+    font-size: 18px;
+  }
+}

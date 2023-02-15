@@ -7,27 +7,62 @@ export const fetchCars = (request) => (dispatch) => {
 
 export const fetchComments = (request) => (dispatch) => {
   dispatch(commentsFetching());
-  request("/reviews").then((comments) => dispatch(commentsFetched(comments)));
+  request("/reviews").then((comments) =>
+    dispatch(commentsFetched(comments))
+  );
 };
 
 export const fetchUsers = (request) => (dispatch) => {
   dispatch(usersFetching());
-  request("/users").then((users) => dispatch(usersFetched(users)));
+  request("/users").then((users) =>
+    dispatch(usersFetched(users))
+  );
 };
 
 export const fetchNews = (request) => (dispatch) => {
   dispatch(newsFetching());
-  request("/news").then((news) => dispatch(newsFetched(news)));
+  request("/news").then((news) =>
+    dispatch(newsFetched(news))
+  );
 };
 
 export const fetchCarsData = (request) => (dispatch) => {
   dispatch(carsFetchingData());
-  request("/cars").then((data) => dispatch(carsFetchedData(data)));
+  request("/cars").then((data) =>
+    dispatch(carsFetchedData(data))
+  );
 };
 
 export const fetchBrandsData = (request) => (dispatch) => {
   dispatch(brandsFetching());
-  request("/sell").then((brand) => dispatch(brandsFetched(brand)));
+  request("/sell").then((brand) =>
+    dispatch(brandsFetched(brand))
+  );
+};
+
+export const fetchNewsFiltered = (request, filters) => (dispatch) => {
+  const { newsTerm } = filters;
+  dispatch(newsFetching());
+  request(`/news?${newsTerm ? `q=${newsTerm}` : ""}`).then(
+    (news) => dispatch(newsFetchedFilters(news))
+  );
+};
+
+export const fetchCurrentUserCar = (request, filters) => (dispatch) => {
+  if (filters.length !== 0) {
+    request(
+      `/cars?${
+        filters.length !== 0
+          ? `${filters
+              .map((item) => `&id=${item}&`)
+              .join("")
+              .slice(0, -1)}`
+          : ""
+      }`
+    ).then((cars) => dispatch(userCarsFetched(cars)));
+  } else {
+    dispatch(userCarsFetched([]))
+  }
 };
 
 export const fetchFilteredCars = (request, filters) => (dispatch) => {
@@ -154,9 +189,23 @@ export const usersFetched = (users) => {
   };
 };
 
+export const userCarsFetched = (cars) => {
+  return {
+    type: "USERS_CARS_FETCHED",
+    payload: cars,
+  };
+};
+
 export const userCreated = (user) => {
   return {
     type: "USER_CREATED",
+    payload: user,
+  };
+};
+
+export const userDataChanged = (user) => {
+  return {
+    type: "USER_DATA_CHANGED",
     payload: user,
   };
 };
@@ -165,6 +214,13 @@ export const carCreated = (car) => {
   return {
     type: "CAR_CREATED",
     payload: car,
+  };
+};
+
+export const carDeleted = (id) => {
+  return {
+    type: "CAR_DELETED",
+    payload: id,
   };
 };
 
@@ -216,6 +272,12 @@ export const newsFetching = () => {
 export const newsFetched = (news) => {
   return {
     type: "NEWS_FETCHED",
+    payload: news,
+  };
+};
+export const newsFetchedFilters = (news) => {
+  return {
+    type: "NEWS_FETCHED_FILTERED",
     payload: news,
   };
 };
@@ -464,6 +526,10 @@ export const sellLocation = (e) => ({
   type: "SELL_LOCATION_SELECTED",
   payload: e,
 });
+export const sellCity = (e) => ({
+  type: "SELL_CITY_SELECTED",
+  payload: e,
+});
 
 export const sellSetPrice = (e) => ({
   type: "SELL_SET_PRICE_SELECTED",
@@ -477,5 +543,25 @@ export const sellImages = (e) => ({
 
 export const sellCarId = (e) => ({
   type: "SELL_ID_SELECTED",
+  payload: e,
+});
+
+export const sellCarPosted = (e) => ({
+  type: "SELL_CAR_POSTED",
+  payload: e,
+});
+
+export const onCarEdit = (e) => ({
+  type: "ON_CAR_EDIT",
+  payload: e,
+});
+
+export const onSetCarReviews = (e) => ({
+  type: "ON_SET_CAR_REVIEWS",
+  payload: e,
+});
+
+export const onSetNewsTerm = (e) => ({
+  type: "ON_SET_NEWS_TERM",
   payload: e,
 });

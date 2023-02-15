@@ -1,0 +1,59 @@
+@import "../../../styles/variables.scss";
+.credit_simulation {
+  background-color: $carDetailsDealerBG;
+  width: 80%;
+  border-radius: 3px;
+  margin: 0px auto 70px;
+  padding: 25px;
+  display: flex;
+  &-left {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-right {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $carCardBorder;
+    margin-left: 25px;
+    border-radius: 3px;
+    gap: 10px;
+    border: 1px solid $carCardFontColor;
+    h4 {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      position: relative;
+    }
+    h4::before{
+        position: absolute;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        bottom: -4px;
+        background-color: $listLineColor;
+        border-radius: 2px;
+    }
+    h4::after{
+        position: absolute;
+        content: '';
+        display: block;
+        width: 50%;
+        height: 2px;
+        bottom: -8px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-color: $listLineColor;
+        border-radius: 2px;
+
+    }
+  }
+}

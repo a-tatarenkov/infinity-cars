@@ -1,23 +1,36 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { DialogPopup } from "../../MainPage/DialogWindow/DialogWindow";
-import staticData from '../../../data/staticData'
+import staticData from "../../../data/staticData";
+import { useObserver } from "../../../hooks/useObserver";
+import maplibregl from "maplibre-gl";
 import "./map.scss";
 
 const AboutUsMap = () => {
+  const { lat, lng, zoom } = staticData.aboutUs.location;
   const [open, setOpen] = useState(false);
+  const { visible, refContainer } = useObserver();
+  const mapContainerRef = useRef();
+  const map = useRef(null);
+  const [API_KEY] = useState("ikAqi1XMHQHDEkoG9cUC");
 
-  const { lat, lng, key, zoom } = staticData.aboutUs.location;
+  useEffect(() => {
+    if (map.current) return;
+    map.current = new maplibregl.Map({
+      container: mapContainerRef.current,
+      style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${API_KEY}`,
+      center: [lng, lat],
+      zoom: zoom,
+      
+    });
+  });
+
   return (
-    <div className="about_us_map">
-      <div className="about_us_map-map">
-        <iframe
-          width="600"
-          height="600"
-          style={{ border: "none", borderRadius: 3 }}
-          title="out location"
-          src={`https://api.maptiler.com/maps/streets-v2/?key=${key}#${zoom}/${lat}/-${lng}`}
-        ></iframe>
-      </div>
+    <div
+      id="about_us_map"
+      className={visible ? "about_us_map" : "about_us_map fade"}
+      ref={refContainer}
+    >
+      <div ref={mapContainerRef} className="mainMap" />
       <div className="about_us_map-contact">
         <h2>Contact</h2>
         <form
@@ -63,6 +76,10 @@ const AboutUsMap = () => {
         <DialogPopup
           title={"Contact Us"}
           message={"Your request well received"}
+          link1={"Close"}
+          link2={"Continue"}
+          link1To={"/"}
+          link2To={"/"}
           open={open}
           onClose={() => setOpen(false)}
         />

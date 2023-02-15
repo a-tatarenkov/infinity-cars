@@ -1,0 +1,59 @@
+@import "../../../../styles/variables.scss";
+
+.our_review_expert {
+  padding-top: 70px;
+  width: 60%;
+  margin: 0 auto;
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    background-color: $carDetailsDealerBG;
+    border-radius: 3px;
+    padding: 16px;
+    &-photo {
+      grid-column: 1/2;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+      }
+      div {
+        i {
+          font-size: 14px;
+          display: block;
+          margin-top: 5px;
+        }
+      }
+    }
+    &-phone {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-column: 2/3;
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+      a{
+        display: flex;
+        align-items: center; 
+        gap: 5px;
+      }
+    }
+    &-email {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-column: 3/4;
+      a{
+        display: flex;
+        align-items: center; 
+        gap: 5px;
+      }
+    }
+  }
+}

@@ -1,6 +1,12 @@
-@import '../../../styles/variables.scss';
+@import "../../../styles/variables.scss";
+
+.news_section.fade{
+  opacity: 0;
+}
 
 .news_section {
+  opacity: 1;
+  transition: .8s ease-in;
   width: 75%;
   margin: 0 auto;
   padding: 50px 0;
@@ -20,6 +26,7 @@
       line-height: 24px;
       border-bottom: 2px solid transparent;
       transition: all 0.7s ease;
+      cursor: pointer;
     }
     .button_active {
       opacity: 1;
@@ -38,6 +45,24 @@
       flex-direction: column;
       background-color: $carCardBorder;
       border-radius: 3px;
+      position: relative;
+
+      a {
+        position: absolute;
+        height: 100%;
+        display: block;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transition: 0.3s ease;
+        border: 1px solid transparent;
+
+        &:hover {
+          border-radius: 3px;
+          border: 1px solid $carCardFontColor;
+        }
+      }
 
       .news_text_box {
         .news_box-title {
@@ -45,11 +70,26 @@
           font-size: 28px;
           line-height: 34px;
           color: $carCardFontColor;
+          width: max-content;
         }
         .news_box-text {
           font-weight: 600;
           font-size: 18px;
           line-height: 22px;
+        }
+        .expert_info {
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-start;
+          gap: 10px;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 17px;
+          img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+          }
         }
       }
       img {

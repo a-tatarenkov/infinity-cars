@@ -2,15 +2,17 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { conditionFilter } from "../../../actions";
 import "./ourServices.scss";
+import { useObserver } from "../../../hooks/useObserver";
 import used_car from "../../../assets/used_car.png";
 import new_car from "../../../assets/new_car.png";
 import label from "../../../assets/label.png";
 
 const OurServices = () => {
   const dispatch = useDispatch();
+  const { visible, refContainer } = useObserver();
 
   return (
-    <div>
+    <div className={visible ? 'services_wrapper' : 'services_wrapper fade'} ref={refContainer}>
       <div className="services">
         <h4>Out Service</h4>
         <div className="services-wrapper">
@@ -34,7 +36,7 @@ const OurServices = () => {
           <div className="services-wrapper-item">
             <img src={label} alt="services" />
             <h6>Sell my car</h6>
-            <Link to={""}></Link>
+            <Link to={"/sell"}></Link>
           </div>
         </div>
       </div>

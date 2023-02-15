@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { TransitionGroup } from "react-transition-group";
 import { createSelector } from "reselect";
-import { recommendedFilter } from "../../../actions";
-import Spinner from "../Spinner/Spinner";
+import { recommendedFilter, conditionFilter } from "../../../actions";
+import { useObserver } from "../../../hooks/useObserver";
 import CarGridMain from "../../CarPage/CarGridMain/CarGridMain";
 import "./recommendedCars.scss";
+import arrow from "../../../assets/arrow-main.png";
 
 const RecommendedCars = () => {
   const filteredCarsSelector = createSelector(
@@ -28,18 +28,10 @@ const RecommendedCars = () => {
   const activeFilter = useSelector(
     (state) => state.filters.recommendedCondition
   );
-  const carsLoadingStatus = useSelector(
-    (state) => state.cars.carsLoadingStatus
-  );
+  const { visible, refContainer } = useObserver();
   const filteredCars = useSelector(filteredCarsSelector);
-
   const dispatch = useDispatch();
 
-  if (carsLoadingStatus === "loading") {
-    return <Spinner />;
-  } else if (carsLoadingStatus === "error") {
-    return <h5>Error</h5>;
-  }
 
   const renderCarList = (arr) => {
     return (
@@ -52,28 +44,37 @@ const RecommendedCars = () => {
   };
 
   return (
-    <section className="recommended">
+    <section
+      className={visible ? "recommended" : "recommended fade"}
+      ref={refContainer}
+    >
       <h2>Recommended Cars</h2>
       <div className="recommended-selection">
         <div className="recommended-selection-buttons">
           <button
             className={activeFilter === true ? "active-select-button" : null}
-            onClick={() => dispatch(recommendedFilter(true))}
+            onClick={() => {
+              dispatch(recommendedFilter(true));
+              dispatch(conditionFilter(true));
+            }}
           >
             New
           </button>
           <button
             className={activeFilter === false ? "active-select-button" : null}
-            onClick={() => dispatch(recommendedFilter(false))}
+            onClick={() => {
+              dispatch(recommendedFilter(false));
+              dispatch(conditionFilter(false));
+            }}
           >
             Used
           </button>
         </div>
-        <Link to="/newcars">See more</Link>
+        <Link to="/car_search_results">
+          <span>See more</span> <img src={arrow} alt="" />
+        </Link>
       </div>
-      <TransitionGroup component={"ul"} className="recommended-list">
-        {renderCarList(filteredCars)}
-      </TransitionGroup>
+      <ul className="recommended-list">{renderCarList(filteredCars)}</ul>
     </section>
   );
 };

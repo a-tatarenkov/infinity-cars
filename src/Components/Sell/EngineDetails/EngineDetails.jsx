@@ -42,7 +42,7 @@ const EngineDetails = () => {
 
       <Autocomplete
         className="drive-select"
-        value={brands.driveTrain}
+        value={brands.driveUnit}
         disablePortal
         onChange={(e, v) => dispatch(sellDriveTrain(v))}
         id="drive-select"
@@ -54,8 +54,8 @@ const EngineDetails = () => {
       />
 
       <TextField
-        value={brands.details.Engine.Milage}
-        onInput={(e) => dispatch(sellMilage(e.target.value))}
+        value={brands.details.Engine.Mileage.slice(0,-3)}
+        onChange={(e) => dispatch(sellMilage(e.target.value))}
         sx={{ background: "#152836" }}
         id="milage-select"
         label="Mileage (km)"
@@ -67,8 +67,8 @@ const EngineDetails = () => {
 
       <TextField
         sx={{ background: "#152836" }}
-        value={brands.details.Engine["Engine Capacity"]}
-        onInput={(e) => dispatch(sellEngineCapacity(e.target.value))}
+        value={brands.details.Engine["Engine Capacity"].slice(0,-3)}
+        onChange={(e) => dispatch(sellEngineCapacity(e.target.value))}
         className="engine-select"
         id="engine-select"
         type={"number"}
@@ -79,7 +79,7 @@ const EngineDetails = () => {
 
       <Autocomplete
         className="transmission-select"
-        value={brands.details.transmission}
+        value={brands.details.Engine.Transmission}
         onChange={(e, v) => dispatch(sellTransmission(v))}
         disablePortal
         id="transmission-select"
@@ -92,8 +92,8 @@ const EngineDetails = () => {
 
       <TextField
         sx={{ background: "#152836" }}
-        value={brands.details.Engine.Power}
-        onInput={(e) => dispatch(sellEnginePower(e.target.value))}
+        value={brands.details.Engine.Power.slice(0,-3)}
+        onChange={(e) => dispatch(sellEnginePower(e.target.value)) || ""}
         className="power-select"
         id="power-select"
         type={"number"}

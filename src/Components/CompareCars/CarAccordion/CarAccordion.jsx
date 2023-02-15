@@ -5,9 +5,15 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useSelector } from "react-redux";
 import { createSelector } from "reselect";
+import { useState } from "react";
+import ImageViewer from "react-simple-image-viewer";
+import { v4 } from "uuid";
 import "./carAccordion.scss";
 
 const CarAccordion = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+  const [isViewerOpen, setIsViewerOpen] = useState(false);
+  const [arrIndex, setArrIndex] = useState(null);
   const compareCars = createSelector(
     (state) => state.data.compare,
     (compare) => {
@@ -25,14 +31,23 @@ const CarAccordion = () => {
       keyObj.push(key);
     }
   }
+  const openImageViewer = (index) => {
+    setCurrentImage(index);
+    setIsViewerOpen(true);
+  };
+
+  const closeImageViewer = () => {
+    setCurrentImage(0);
+    setIsViewerOpen(false);
+  };
 
   return (
-    <>
+    <div className="compare_accordion">
       {compare.length !== 0 ? (
-        <div className="compare_accordion">
+        <div>
           {keyObj.map((item) => {
             return (
-              <Accordion key={item} sx={{ background: "#071620" }}>
+              <Accordion key={v4()} sx={{ background: "#071620" }}>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
                   aria-controls="panel1a-content"
@@ -50,7 +65,59 @@ const CarAccordion = () => {
           })}
         </div>
       ) : null}
-    </>
+      {compare.length !== 0 ? (
+        <Accordion sx={{ background: "#071620" }}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography className="accordion_list">
+              <span className="tabs_name">Images</span>
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails className="list_items">
+            <div className="compare_images">
+              {compare.map((items, index) => (
+                <div className="compare_images-images" key={v4()}>
+                  {items.src.map((item, i) => {
+                    return (
+                      <div key={v4()}>
+                        <img
+                          src={item}
+                          width={170}
+                          height={170}
+                          style={{
+                            objectFit: "cover",
+                            borderRadius: 3,
+                            cursor: "zoom-in",
+                          }}
+                          alt="cars"
+                          onClick={() => {
+                            setArrIndex(index);
+                            openImageViewer(i);
+                          }}
+                        />
+                        {isViewerOpen && (
+                          <ImageViewer
+                            src={compare[arrIndex].src}
+                            currentIndex={currentImage}
+                            onClose={closeImageViewer}
+                            backgroundStyle={{
+                              backgroundColor: "rgba(0,0,0,0.9)",
+                            }}
+                          />
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              ))}
+            </div>
+          </AccordionDetails>
+        </Accordion>
+      ) : null}
+    </div>
   );
 };
 
@@ -67,7 +134,7 @@ const ListOfData = (props) => {
       {keysArr.map((el, i) => {
         return (
           <Typography
-            key={i * 0.33}
+            key={v4()}
             component={"span"}
             sx={{
               display: "flex",
@@ -79,10 +146,7 @@ const ListOfData = (props) => {
             <span className="compared_items">
               {compare.map((item, i) => {
                 return (
-                  <i
-                    key={compare.map((item) => item.id * i)}
-                    className={"compared_info"}
-                  >
+                  <i key={v4()} className={"compared_info"}>
                     {item.details[data][el] === true
                       ? "yes"
                       : item.details[data][el] === false

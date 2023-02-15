@@ -13,12 +13,14 @@ import { v4 as uuidv4 } from "uuid";
 import { createSelector } from "reselect";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import { DialogPopup } from "../MainPage/DialogWindow/DialogWindow";
 
 import "./login.scss";
 import logo from "../../assets/logo.png";
-import face from "../../assets/facebook.png";
-import yout from "../../assets/youtube.png";
-import inst from "../../assets/instagram.png";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+
 import {
   fetchUsers,
   userCreated,
@@ -55,6 +57,7 @@ const Login = () => {
         <UserForm
           onClick={setHasAccount}
           hasAccount={hasAccount}
+          setAccount={setHasAccount}
           user={usersData.users.users}
           navigate={navigate}
         />
@@ -66,13 +69,13 @@ const Login = () => {
           <span>Welcome to Autohunt</span>
           <ul>
             <li>
-              <img src={face} alt="facebook" />
+              <YouTubeIcon fontSize="large" />
             </li>
             <li>
-              <img src={inst} alt="instagram" />
+              <FacebookIcon fontSize="large" />
             </li>
             <li>
-              <img src={yout} alt="youtube" />
+              <InstagramIcon fontSize="large" />
             </li>
           </ul>
         </div>
@@ -87,6 +90,9 @@ const UserForm = (props) => {
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
+
+  const [open, setOpen] = useState(false);
+  const [onError, setOnError] = useState(false);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -104,11 +110,14 @@ const UserForm = (props) => {
       email,
       isAdmin: false,
       phone,
+      messages: [],
+      likedCars: [],
       id: uuidv4(),
-      photo: "https://drive.google.com/uc?id=1a0cLkSWfrV9_hgv6YZfSL0VrIvtYn1Df",
+      photo: "https://drive.google.com/uc?id=1OokGGOOxafDr0dgyf9CSx-VQ4rn7bzSK",
     };
 
     if (name.length < 3 && password.length < 3) {
+      setOnError(true);
       return;
     } else {
       request("/users", "POST", JSON.stringify(newUser))
@@ -116,6 +125,8 @@ const UserForm = (props) => {
         .then(dispatch(userCreated(newUser)))
         .catch((err) => console.log(err));
 
+      props.setAccount(true);
+      setOpen(true);
       setName("");
       setPassword("");
       setEmail("");
@@ -129,15 +140,15 @@ const UserForm = (props) => {
     const loginUser = props.user.filter(
       (item) => item.email === email && item.password === password
     );
-    dispatch(currentUserLogged(loginUser));
 
+    dispatch(currentUserLogged(loginUser));
+    localStorage.setItem("user", JSON.stringify(loginUser));
     if (loginUser.length !== 0) {
       dispatch(setLogged(true));
-
-      //
       props.navigate("/admin");
     } else {
       dispatch(setLogged(false));
+      setOnError(true);
     }
 
     setEmail("");
@@ -151,7 +162,7 @@ const UserForm = (props) => {
           display: "flex",
           flexDirection: "column",
           width: 200,
-          gap: 15,
+          gap: 25,
         }}
         onSubmit={(e) => {
           props.hasAccount ? onLogin(e) : onCreateUser(e);
@@ -159,7 +170,6 @@ const UserForm = (props) => {
       >
         {props.hasAccount ? null : (
           <>
-            Name
             <TextField
               sx={{ width: 500, background: "#152836" }}
               id="outlined-name"
@@ -169,18 +179,17 @@ const UserForm = (props) => {
             />
           </>
         )}
-        Email
         <TextField
           sx={{ width: 500, background: "#152836" }}
           id="outlined-email"
           label="Email"
+          error={onError ? true : false}
           value={email}
           type="email"
           onChange={(e) => setEmail(e.target.value)}
         />
         {props.hasAccount ? null : (
           <>
-            Phone
             <TextField
               sx={{ width: 500, background: "#152836" }}
               id="outlined-phone"
@@ -191,7 +200,6 @@ const UserForm = (props) => {
             />
           </>
         )}
-        Password
         <FormControl
           variant="outlined"
           sx={{ width: 500, background: "#152836" }}
@@ -200,6 +208,7 @@ const UserForm = (props) => {
           <OutlinedInput
             id="password"
             value={password}
+            error={onError ? true : false}
             onChange={(e) => setPassword(e.target.value)}
             type={showPassword ? "text" : "password"}
             endAdornment={
@@ -247,6 +256,17 @@ const UserForm = (props) => {
           </>
         )}
       </div>
+
+      <DialogPopup
+        title={"Your account"}
+        message={"Your account created"}
+        link1={"Login"}
+        link2={"Home Page"}
+        link1To={"/login"}
+        link2To={"/"}
+        open={open}
+        onClose={() => setOpen(false)}
+      />
     </>
   );
 };

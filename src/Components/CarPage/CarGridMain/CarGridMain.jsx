@@ -1,9 +1,20 @@
 import "./carGridMain.scss";
 import Spinner from "../../MainPage/Spinner/Spinner";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import RibbonFlag from "../RibbonFlag/RibbonFlag";
 import CarRating from "../CarRating/CarRating";
+import { useDispatch, useSelector } from "react-redux";
+import { createSelector } from "reselect";
 import { Link } from "react-router-dom";
+import edit from "../../../assets/edit.png";
+import { onCarEdit, sellCarId } from "../../../actions";
+import useAddLikedCars from "../../../hooks/likedCar";
+import useAddViews from "../../../hooks/addViews";
+import empty from "../../../assets/empty-car.png";
+import deleteImg from "../../../assets/delete.png";
+import like from "../../../assets/like.png";
+import like_fade from "../../../assets/like-fade.png";
 
 const CarGridMain = (props) => {
   const {
@@ -21,19 +32,86 @@ const CarGridMain = (props) => {
     driveUnit,
     rating,
     id,
+    canEdit,
+    carDelete,
+    to,
+    user,
   } = props;
 
-  const [load, setLoad] = useState(true);
+  const carsData = createSelector(
+    (state) => state.cars.cars,
+    (cars) => {
+      return {
+        cars,
+        currentCar: cars.filter((car) => car.id === id)[0],
+      };
+    }
+  );
+  const dispatch = useDispatch();
+  const { cars, currentCar } = useSelector(carsData);
+  const [image, setImage] = useState(null);
+  const { requestViews } = useAddViews();
+  const { addLikedCar, deleteLikedCar } = useAddLikedCars();
+  const navigate = useNavigate();
+  const setCarToEdit = () => {
+    return cars.filter((item) => item.id === id);
+  };
+  const carToEdit = setCarToEdit();
 
-  const spinner = load ? <Spinner /> : null;
+  useEffect(() => {
+    const picture = new Image();
+    picture.src = src[0];
+    picture.onload = () => {
+      setImage(src[0]);
+    };
+  }, []);
+
   const clazz = engine === "Electric" ? "electric" : "";
+  const stars = rating.length !== 0 ? rating.map((item) => item.stared) : [];
 
   return (
     <li className="grid_card_main">
       {top ? <RibbonFlag label={label} /> : null}
+      {user && user !== null ? (
+        <button
+          className={
+            user.likedCars.some((item) => item === id) ? "like_btn" : "fade_btn"
+          }
+          onClick={() => {
+            return user.likedCars.some((item) => item === id)
+              ? deleteLikedCar(id, user)
+              : addLikedCar(id, user);
+          }}
+        >
+          <img
+            src={user.likedCars.includes(id) ? like : like_fade}
+            alt="like"
+            height={20}
+            width={20}
+          />
+        </button>
+      ) : null}
       <div className="grid_card_main-image">
-        {spinner}
-        <img src={src[0]} alt="grid layout" onLoad={() => setLoad(false)} />
+        {image ? <img src={image || empty} alt="grid layout" /> : <Spinner />}
+
+        {canEdit ? (
+          <button
+            onClick={() => {
+              dispatch(onCarEdit(carToEdit[0]));
+              navigate("/sell");
+            }}
+            className="edit_button"
+          >
+            <img src={edit} alt="edit" />
+            <span>Edit</span>
+          </button>
+        ) : null}
+        {carDelete ? (
+          <button className="delete_button" onClick={() => carDelete(id)}>
+            <img src={deleteImg} alt="delete" />
+            <span>Delete</span>
+          </button>
+        ) : null}
       </div>
       <div className="grid_card_main-info">
         <span className="grid_card_main-info-condition">
@@ -42,7 +120,9 @@ const CarGridMain = (props) => {
         <h3 className="car-name-grid">
           {brand} {model}
         </h3>
-        <span className="grid_card_main-info-price">{price} $</span>
+        <span className="grid_card_main-info-price">
+          {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} $
+        </span>
         <span className="grid_card_main-info-location">{location}</span>
         <div className="grid_card_main-info-block">
           <ul className="grid_card_main-info-block-list">
@@ -53,10 +133,21 @@ const CarGridMain = (props) => {
           </ul>
         </div>
         <div className="grid_card_main-info-rating">
-          <CarRating rating={rating} size="small" />
-          <span>({rating.length} Reviews)</span>
+          <CarRating rating={stars} size="small" />
+          <span>({stars.length} Reviews)</span>
         </div>
-        <Link to={`/productdetail/${id}`}></Link>
+        <Link
+          to={to ? to : `/productdetail/${id}`}
+          onClick={() => requestViews(id, currentCar)}
+          className="active_link_car"
+        ></Link>
+        <Link
+          to={`/car_review_details/${id}`}
+          className="active_link_review"
+          onClick={() => {
+            dispatch(sellCarId(""));
+          }}
+        ></Link>
       </div>
     </li>
   );

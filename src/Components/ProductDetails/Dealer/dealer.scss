@@ -28,45 +28,22 @@
       }
     }
     &-phone {
-      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       grid-column: 2/3;
+      gap: 5px;
       border-left: 1px solid white;
       border-right: 1px solid white;
-      &::before {
-        position: absolute;
-        content: "";
-        display: block;
-        height: 20px;
-        width: 20px;
-        background-image: url(../../../assets/phone.png);
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        left: 11px;
-      }
     }
     &-email {
-      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       grid-column: 3/4;
+      gap: 5px;
+
       padding-left: 20px;
-      &::before {
-        position: absolute;
-        content: "";
-        display: block;
-        height: 20px;
-        width: 20px;
-        background-image: url(../../../assets/email.png);
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        left: 11px;
-      }
     }
   }
 }

@@ -26,6 +26,20 @@
       left: 0;
       rotate: 180deg;
     }
+
+    &-views{
+      position: absolute;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      border-radius: 3px;
+      top: 5px;
+
+      right: 85px;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
   
     :hover &-left {
       background-color: rgba(0, 0, 0, 0.2);

@@ -5,7 +5,7 @@ import { createSelector } from "reselect";
 import { onPaginationChange } from "../../../actions";
 import "./pagination.scss";
 
-const PaginationBox = () => {
+const PaginationBox = (props) => {
   const filterData = createSelector(
     (state) => state.cars.cars,
     (state) => state.filters,
@@ -19,11 +19,12 @@ const PaginationBox = () => {
   const dispatch = useDispatch();
   const { cars, filters } = useSelector(filterData);
   return (
-    <div className="pagination">
+    <div className="pagination" style={props.style}>
       <Stack spacing={2} className="pagination-inner">
         <Pagination
           page={Math.ceil(filters.pagination / 10)}
           size="large"
+          onClick={() => window.scrollTo(0,0)}
           onChange={(event, value) => dispatch(onPaginationChange(value * 10))}
           count={Math.ceil(cars.length / 10)}
           variant="outlined"

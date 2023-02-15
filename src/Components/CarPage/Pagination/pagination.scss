@@ -1,16 +1,15 @@
-
-.pagination{
-    width: 700px;
-    display: flex;
-    margin-right: 100px ;
-    justify-self: flex-end;
-    justify-content: center;
-    nav{
-        
-        width: 100%;
-        ul{
-            width: 100%;
-            justify-self: flex-end;
-        }
+.pagination {
+margin-bottom: 50px;
+width: 100%;
+  display: flex;
+  justify-self: flex-end;
+  justify-content: center;
+  nav {
+    width: 100%;
+    ul {
+      width: 100%;
+      justify-self: flex-end;
     }
+  }
 }
+ 

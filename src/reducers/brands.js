@@ -6,14 +6,16 @@ const initialState = {
   label: "",
   price: "",
   location: null,
+  city: null,
   year: null,
+  views: 0,
   engine: null,
   seats: "",
   color: null,
   body: null,
-  logo: "",
+  logo: "https://drive.google.com/uc?id=12mbNI1__pRBJNuvvtAtdnXGf2ZC92TfO",
   transmission: null,
-  rating: [0, 0, 0],
+  rating: [],
   driveUnit: null,
   dealer: {
     dealerPhoto:
@@ -53,7 +55,24 @@ const initialState = {
       Height: "",
       "Cargo Volume": "",
     },
-    Futures: {},
+    Futures: {
+      "Power Steering": false,
+      AC: false,
+      Alarm: false,
+      Bluetooth: false,
+      "Heated Seats": false,
+      WiFi: false,
+      "Cruise Control": false,
+      "Front Parking Sensor": false,
+      "Rear Parking Sensor": false,
+      "Roof Rack": false,
+      "Power Windows": false,
+      Sunroof: false,
+      "USB Port": false,
+      "Sound System": false,
+      "Memory Seat": false,
+      "Camera 360": false,
+    },
   },
   id: "",
   saleId: "",
@@ -66,141 +85,259 @@ const brands = (state = initialState, action) => {
     case "SELL_BRAND_SELECTED":
       return {
         ...state,
-        brand: (state.brand = action.payload),
-        state: (state.details["Car Details"].Brand = action.payload),
+        brand: action.payload,
+        details: {
+          ...state.details,
+          "Car Details": {
+            ...state.details["Car Details"],
+            Brand: action.payload,
+          },
+        },
       };
 
     case "SELL_MODEL_SELECTED":
       return {
         ...state,
-        model: (state.model = action.payload),
-        state: (state.details["Car Details"].Model = action.payload),
+        model: action.payload,
+        details: {
+          ...state.details,
+          "Car Details": {
+            ...state.details["Car Details"],
+            Model: action.payload,
+          },
+        },
       };
 
     case "SELL_BODY_SELECTED":
       return {
         ...state,
-        body: (state.body = action.payload),
-        state: (state.details["Car Details"]["Body Type"] = action.payload),
+        body: action.payload,
+        details: {
+          ...state.details,
+          "Car Details": {
+            ...state.details["Car Details"],
+            "Body Type": action.payload,
+          },
+        },
       };
     case "SELL_TITLE_SELECTED":
       return {
         ...state,
-        label: (state.label = action.payload),
+        label: action.payload,
       };
 
     case "SELL_YEAR_SELECTED":
       return {
         ...state,
-        year: (state.year = +action.payload),
-        state: (state.details["Car Details"].Year = action.payload),
+        year: +action.payload,
+        details: {
+          ...state.details,
+          "Car Details": {
+            ...state.details["Car Details"],
+            Year: action.payload,
+          },
+        },
       };
 
     case "SELL_PAX_SELECTED":
       return {
         ...state,
-        seats: (state.seats = action.payload),
-        state: (state.details["Car Details"].Seats = action.payload),
+        seats: `${action.payload} people`,
+        details: {
+          ...state.details,
+          "Car Details": {
+            ...state.details["Car Details"],
+            Seats: `${action.payload} people`,
+          },
+        },
       };
     case "SELL_COLOR_SELECTED":
       return {
         ...state,
-        color: (state.color = action.payload),
-        state: (state.details["Car Details"]["Exterior Color"] =
-          action.payload),
+        color: action.payload,
+        details: {
+          ...state.details,
+          "Car Details": {
+            ...state.details["Car Details"],
+            "Exterior Color": action.payload,
+          },
+        },
       };
     case "SELL_CONDITION_SELECTED":
       return {
         ...state,
-        condition: (state.condition = action.payload),
-        state: (state.details["Car Details"].Condition =
-          action.payload === true ? "New" : "Used"),
+        condition: action.payload,
+        details: {
+          ...state.details,
+          "Car Details": {
+            ...state.details["Car Details"],
+            Condition: action.payload === true ? "New" : "Used",
+          },
+        },
       };
     case "SELL_DESCRIPTION_SELECTED":
       return {
         ...state,
-        description: (state.description = action.payload),
+        description: action.payload,
       };
     case "SELL_FUEL_SELECTED":
       return {
         ...state,
-        engine: (state.engine = action.payload),
-        state: (state.details.Engine["Fuel Type"] = action.payload),
+        engine: action.payload,
+        details: {
+          ...state.details,
+          Engine: {
+            ...state.details.Engine,
+            "Fuel Type": action.payload,
+          },
+        },
       };
     case "SELL_DRIVETRAIN_SELECTED":
       return {
         ...state,
-        driveUnit: (state.driveUnit = action.payload),
-        state: (state.details.Engine.Drivetrain = action.payload),
+        driveUnit: action.payload,
+        details: {
+          ...state.details,
+          Engine: {
+            ...state.details.Engine,
+            Drivetrain: action.payload,
+          },
+        },
       };
 
     case "SELL_MILAGE_SELECTED":
       return {
         ...state,
-        state: (state.details.Engine.Mileage = action.payload),
+        details: {
+          ...state.details,
+          Engine: {
+            ...state.details.Engine,
+            Mileage: `${action.payload} km`,
+          },
+        },
       };
     case "SELL_ENGINE_CAPACITY_SELECTED":
       return {
         ...state,
-        state: (state.details.Engine["Engine Capacity"] = action.payload),
+        details: {
+          ...state.details,
+          Engine: {
+            ...state.details.Engine,
+            "Engine Capacity": `${action.payload} cc`,
+          },
+        },
       };
 
     case "SELL_TRANSMISSION_SELECTED":
       return {
         ...state,
-        transmission: (state.transmission = action.payload),
-        state: (state.details.Engine.Transmission = action.payload),
+        transmission: action.payload,
+        details: {
+          ...state.details,
+          Engine: {
+            ...state.details.Engine,
+            Transmission: action.payload,
+          },
+        },
       };
     case "SELL_ENGINE_POWER_SELECTED":
       return {
         ...state,
-        state: (state.details.Engine.Power = action.payload),
+        details: {
+          ...state.details,
+          Engine: {
+            ...state.details.Engine,
+            Power: `${action.payload} hp`,
+          },
+        },
       };
     case "SELL_LENGTH_SELECTED":
+      state.details.Dimension.Length = `${action.payload} mm`;
+
       return {
         ...state,
-        state: (state.details.Dimension.Length = action.payload),
       };
     case "SELL_WIDTH_SELECTED":
       return {
         ...state,
-        state: (state.details.Dimension.Width = action.payload),
+        details: {
+          ...state.details,
+          Dimension: {
+            ...state.details.Dimension,
+            Width: `${action.payload} mm`,
+          },
+        },
       };
     case "SELL_HEIGHT_SELECTED":
       return {
         ...state,
-        state: (state.details.Dimension.Height = action.payload),
+        details: {
+          ...state.details,
+          Dimension: {
+            ...state.details.Dimension,
+            Height: `${action.payload} mm`,
+          },
+        },
       };
     case "SELL_CARGO_SELECTED":
       return {
         ...state,
-        state: (state.details.Dimension["Cargo Volume"] = action.payload),
+        details: {
+          ...state.details,
+          Dimension: {
+            ...state.details.Dimension,
+            "Cargo Volume": `${action.payload} l`,
+          },
+        },
       };
     case "SELL_FUTURES_SELECTED":
       return {
         ...state,
-        state: (state.details.Futures = action.payload),
+        details: {
+          ...state.details,
+          Futures: action.payload,
+        },
       };
     case "SELL_LOCATION_SELECTED":
       return {
         ...state,
-        location: (state.location = action.payload),
+        location: action.payload,
+      };
+    case "SELL_CITY_SELECTED":
+      return {
+        ...state,
+        city: action.payload,
       };
     case "SELL_SET_PRICE_SELECTED":
       return {
         ...state,
-        price: (state.price = +action.payload),
+        price: +action.payload,
       };
     case "SELL_IMAGES_SELECTED":
       return {
         ...state,
-        src: (state.src = action.payload),
+        src: action.payload,
       };
     case "SELL_ID_SELECTED":
       return {
         ...state,
-        saleId: (state.saleId = action.payload),
+        saleId: action.payload,
       };
+    case "SELL_CAR_POSTED":
+      return {
+        ...initialState,
+      };
+    case "ON_CAR_EDIT":
+      return {
+        ...state,
+        ...(state = action.payload),
+      };
+    case "ON_SET_CAR_REVIEWS":
+      return {
+        ...state,
+        ...(state = action.payload),
+      };
+
     default:
       return state;
   }

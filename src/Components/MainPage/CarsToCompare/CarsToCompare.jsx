@@ -4,6 +4,7 @@ import { createSelector } from "reselect";
 import { useEffect } from "react";
 import { fetchCarsData,setCarsToCompare } from "../../../actions";
 import { useHttp } from "../../../hooks/http.hook";
+import { useObserver } from "../../../hooks/useObserver";
 import CardGrid from "../../CarPage/CarGrid/CarGrid";
 import "./carsToCompare.scss";
 
@@ -22,6 +23,7 @@ const CarsToCompare = () => {
   const dispatch = useDispatch();
   const { data, compare } = useSelector(compareCars);
   const { request } = useHttp();
+  const { visible, refContainer } = useObserver();
 
   useEffect(() => {
     dispatch(fetchCarsData(request));
@@ -39,7 +41,7 @@ const CarsToCompare = () => {
   };
 
   return (
-    <div className="cars_to_compare">
+    <div className={visible ? "cars_to_compare" : 'cars_to_compare fade'} ref={refContainer}>
       <h2>Compare Cars</h2>
       <ul className="cars_to_compare-list">
         {compare.length > 1 ? renderCarList(compare) : renderCarList(data)}

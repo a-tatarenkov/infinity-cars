@@ -1,0 +1,70 @@
+@import "../../../../../styles/variables.scss";
+
+.car_review_image {
+  height: 500px;
+  padding: 0 100px;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.car_rating_info {
+  width: 60%;
+  margin: 50px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &-rating {
+    display: flex;
+    background: $carDetailsDealerBG;
+    width: 100%;
+    padding: 20px;
+    border-radius: 3px;
+    &-star {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      &-span {
+        font-weight: 600;
+        color: $carCardFontColor;
+        font-size: 24px;
+        line-height: 29px;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &-values {
+      width: 55%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+
+      margin: 0 auto;
+      .single_rating {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        padding-bottom: 3px;
+        &-span {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+.car_rev_price{
+        color: $carCardFontColor;
+}

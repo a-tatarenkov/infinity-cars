@@ -1,0 +1,63 @@
+@import "../../styles/variables.scss";
+
+.page404 {
+  padding: 50px 0 0;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  height: 100%;
+
+  width: 100%;
+  &-inner {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    img {
+      filter: drop-shadow(0px 4px 22px rgba(255, 255, 255, 0.8));
+      height: 100%;
+      width: 100%;
+    }
+    .first{
+        position: absolute;
+        font-size: 300px;
+        font-weight: 700;
+        z-index: 1;
+        left: 150px;
+        bottom: -50px;
+        transform: skewY(-20deg);
+    }
+    .second{
+        position: absolute;
+        font-size: 300px;
+        font-weight: 700;
+        z-index: 1;
+        right: -20px;
+        bottom: 50px;
+        transform: skew(-3deg, -17deg);
+    }
+  }
+
+  &-links{
+    width: 30%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    button{
+        background-color: $carCardFontColor;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        gap: 5px;
+        &:hover{
+        background-color: $listLineColor;
+
+        }
+    }
+  }
+}

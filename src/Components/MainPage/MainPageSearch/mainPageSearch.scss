@@ -3,9 +3,8 @@
 .main_search_panel {
   position: relative;
   z-index: 2;
-  background-color: $carDetailsDealerBG;
-  width: 1000px;
-  height: 200px;
+  background-color: #071620d1;
+  width: 70%;
   height: max-content;
   margin: 0 auto;
   color: white;
@@ -24,7 +23,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // gap: 20px;
     font-weight: 900;
     font-size: 20px;
     line-height: 24px;
@@ -35,6 +33,7 @@
       text-align: center;
       padding: 5px;
       transition: all 0.7s ease;
+      cursor: pointer;
       border-bottom: 2px solid transparent;
     }
     .active-label {
@@ -64,7 +63,6 @@
       width: 100%;
       border-radius: 4px;
       background: $searchPanelBG;
-      // height: 50px;
     }
   }
   &-model {
@@ -74,7 +72,6 @@
       width: 100%;
       border-radius: 4px;
       background: $searchPanelBG;
-      // height: 50px;
     }
   }
   &-location {
@@ -84,7 +81,6 @@
       width: 100%;
       border-radius: 4px;
       background: $searchPanelBG;
-      // height: 50px;
     }
   }
   &-range {
@@ -123,6 +119,10 @@
       border: none;
       border-radius: 3px;
       cursor: pointer;
+      transition: .5s ease;
+      &:hover{
+        background: rgb(66, 176, 255);
+      }
     }
   }
 }

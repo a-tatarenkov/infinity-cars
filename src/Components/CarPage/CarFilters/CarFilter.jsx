@@ -4,6 +4,8 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
+import { fetchCarsData } from "../../../actions";
+import { useHttp } from "../../../hooks/http.hook";
 import { useDispatch, useSelector } from "react-redux";
 import { createSelector } from "reselect";
 import {
@@ -38,36 +40,41 @@ const FullCarFilter = () => {
   );
 
   const dispatch = useDispatch();
+  const { request } = useHttp();
+  useEffect(() => {
+    dispatch(fetchCarsData(request));
+    // eslint-disable-next-line
+  }, []);
   const { filters, data } = useSelector(filterData);
-  console.log(data);
 
-  const brands = Array.from(new Set(data.map((item) => item.brand)));
+  const uniqueValue = (value) => {
+    return Array.from(new Set(data.map((item) => item[value]))).sort();
+  };
+
+  const setData = uniqueValue;
+
   const models = data
     .filter((item) => item.brand === filters.brand)
     .map((item) => {
       return item.model;
-    });
+    }).sort();
+
   const years = Array.from(new Set(data.map((item) => item.year + "")));
-  const body = Array.from(new Set(data.map((item) => item.body)));
-  const transmission = Array.from(
-    new Set(data.map((item) => item.transmission))
-  );
-  const fuel = Array.from(new Set(data.map((item) => item.engine)));
-  const driveTrain = Array.from(new Set(data.map((item) => item.driveUnit)));
-  const pax = Array.from(new Set(data.map((item) => item.seats)));
-  const color = Array.from(new Set(data.map((item) => item.color)));
-  const location = Array.from(new Set(data.map((item) => item.location)));
 
   return (
-    <aside className="filters">
+    <div className="filters">
       <h2>Filters</h2>
 
       <div className="filters-brand">
-        <RadioSelect brands={brands} value={filters.brand} label="Brand" />
+        <RadioSelect
+          brands={setData("brand")}
+          value={filters.brand}
+          label="Brand"
+        />
       </div>
       <div className="filters-model">
         <CheckBoxSelect
-          data={models}
+          data={Array.from(new Set(models))}
           setData={(_, v) => {
             dispatch(modelFilter(v));
             dispatch(onPaginationChange(10));
@@ -91,7 +98,7 @@ const FullCarFilter = () => {
       </div>
       <div className="filters-bodyType">
         <CheckBoxSelect
-          data={body}
+          data={setData("body")}
           setData={(_, v) => {
             dispatch(bodyFilter(v));
             dispatch(onPaginationChange(10));
@@ -103,7 +110,7 @@ const FullCarFilter = () => {
       </div>
       <div className="filters-transmission">
         <CheckBoxSelect
-          data={transmission}
+          data={setData("transmission")}
           setData={(_, v) => {
             dispatch(transmissionFilter(v));
             dispatch(onPaginationChange(10));
@@ -115,7 +122,7 @@ const FullCarFilter = () => {
       </div>
       <div className="filters-fuel">
         <CheckBoxSelect
-          data={fuel}
+          data={setData("engine")}
           setData={(_, v) => {
             dispatch(fuelFilter(v));
             dispatch(onPaginationChange(10));
@@ -127,7 +134,7 @@ const FullCarFilter = () => {
       </div>
       <div className="filters-driveTrain">
         <CheckBoxSelect
-          data={driveTrain}
+          data={setData("driveUnit")}
           setData={(_, v) => {
             dispatch(driveTrainFilter(v));
             dispatch(onPaginationChange(10));
@@ -139,7 +146,7 @@ const FullCarFilter = () => {
       </div>
       <div className="filters-pax">
         <CheckBoxSelect
-          data={pax}
+          data={setData("seats")}
           setData={(_, v) => {
             dispatch(passengersFilter(v));
             dispatch(onPaginationChange(10));
@@ -151,7 +158,7 @@ const FullCarFilter = () => {
       </div>
       <div className="filters-color">
         <CheckBoxSelect
-          data={color}
+          data={setData("color")}
           setData={(_, v) => {
             dispatch(colorFilter(v));
             dispatch(onPaginationChange(10));
@@ -163,7 +170,7 @@ const FullCarFilter = () => {
       </div>
       <div className="filters-color">
         <CheckBoxSelect
-          data={location}
+          data={setData("location")}
           setData={(_, v) => {
             dispatch(locationFilter(v));
             dispatch(onPaginationChange(10));
@@ -183,7 +190,7 @@ const FullCarFilter = () => {
       >
         Reset Filter
       </button>
-    </aside>
+    </div>
   );
 };
 

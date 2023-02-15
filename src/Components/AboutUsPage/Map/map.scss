@@ -1,11 +1,22 @@
 @import "../../../styles/variables.scss";
 
+
+.about_us_map.fade{
+  opacity: 0;
+}
 .about_us_map {
+  opacity: 1;
+  transition: .8s ease;
   padding: 100px 60px;
   background-image: url(../../../assets/bg-image-touch.png);
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  .mainMap{
+    height: 600px;
+    width: 600px;
+  }
 
   &-contact {
     width: 50%;

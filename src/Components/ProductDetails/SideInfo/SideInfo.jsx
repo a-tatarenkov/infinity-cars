@@ -5,8 +5,9 @@ import { createSelector } from "reselect";
 import { setCarsToCompare, deleteCarToCompare } from "../../../actions";
 import { useState } from "react";
 import "./sideInfo.scss";
+import { Link } from "react-router-dom";
 
-const FullCarSide = ({ info }) => {
+const FullCarSide = (props) => {
   const compareCars = createSelector(
     (state) => state.data.compare,
     (state) => state.data.data,
@@ -17,12 +18,11 @@ const FullCarSide = ({ info }) => {
       };
     }
   );
-  const [open, setOpen] = useState(false);
+  const [_, setOpen] = useState(false);
 
   const deleteItem = (id) => {
     const filtered = compare.filter((item) => item.id !== id);
     dispatch(deleteCarToCompare(filtered));
-    console.log(filtered);
   };
 
   const addItem = (id) => {
@@ -42,13 +42,15 @@ const FullCarSide = ({ info }) => {
     Engine,
     "Battery and Charging": battery,
     Dimension,
-  } = info[0].details;
-  const { rating } = info[0];
-  console.log(info);
+  } = props.details;
+
+  const rating = props.rating;
+
+  const stars = rating.length !== 0 ? rating.map((item) => item.stared) : [];
 
   return (
     <div className="side_info_wrapper">
-      <h2 className="side_info_wrapper-price">{info[0].price} $</h2>
+      <h2 className="side_info_wrapper-price">{props.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} $</h2>
       <div className="side_info_wrapper-info">
         <table className="side_info_wrapper-info-details">
           <thead>
@@ -82,7 +84,9 @@ const FullCarSide = ({ info }) => {
           </tbody>
         </table>
 
-        {battery ? <Table battery={battery} /> : null}
+        {Engine["Fuel Type"] === "Electric" ? (
+          <Table battery={battery} />
+        ) : null}
 
         <table className="car-dimension side_info_wrapper-info-dimension">
           <thead>
@@ -100,24 +104,36 @@ const FullCarSide = ({ info }) => {
           </tbody>
         </table>
         <div className="full_car_rating">
-          <CarRating rating={rating} />
+          <CarRating rating={stars} />
           <span>({rating.length}Reviews)</span>
+          <Link to={`/car_review_details/${props.id}`}></Link>
         </div>
         <div className="compare_cars_button">
           <button
             className={
-              compare.some((item) => item.id === info[0].id) ? "red" : "green"
+              compare.some((item) => item.id === props.id) ? "red" : "green"
             }
             onClick={
-              compare.some((item) => item.id === info[0].id)
-                ? () => deleteItem(info[0].id)
-                : () => addItem(info[0].id)
+              compare.some((item) => item.id === props.id)
+                ? () => deleteItem(props.id)
+                : () => addItem(props.id)
             }
           >
             <img src={compareArrow} alt="compare" />
-            {compare.some((item) => item.id === info[0].id)
+            {compare.some((item) => item.id === props.id)
               ? "Remove Car"
               : "Compare Car"}
+          </button>
+          <button
+            className={
+              compare.some((item) => item.id === props.id)
+                ? "to_compare_page active"
+                : "to_compare_page"
+            }
+          >
+            <img src={compareArrow} alt="compare" />
+            <Link to={"/compare"} className="compare_link"></Link>
+            <span>Compare Page</span>
           </button>
         </div>
       </div>

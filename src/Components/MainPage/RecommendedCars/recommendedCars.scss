@@ -1,6 +1,14 @@
 @import "../../../styles/variables.scss";
 
+
+.recommended.fade{
+  opacity: 0;
+}
+
+
 .recommended {
+  opacity: 1;
+  transition: .8s ease;
   padding-bottom: 50px;
   display: flex;
   flex-direction: column;
@@ -29,6 +37,7 @@
         line-height: 24px;
         border-bottom: 2px solid transparent;
         transition: all 0.7s ease;
+        cursor: pointer;
       }
       .active-select-button {
         opacity: 1;
@@ -40,6 +49,21 @@
       font-size: 14px;
       line-height: 17px;
       color: $carCardFontColor;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      &:hover span {
+        border-bottom: 1px solid $carCardFontColor;
+      }
+      span {
+        border-bottom: 1px solid transparent;
+      transition: 0.5s ease;
+
+      }
+      img {
+        height: 20px;
+        width: 20px;
+      }
     }
   }
   &-list {

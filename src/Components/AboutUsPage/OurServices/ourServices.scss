@@ -1,5 +1,14 @@
 @import "../../../styles/variables.scss";
 
+
+.services_wrapper{
+  opacity: 1;
+  transition: .8s ease;
+}
+.services_wrapper.fade{
+  opacity: 0;
+}
+
 .services {
   padding: 70px 220px;
   background-color: $bodyColor;

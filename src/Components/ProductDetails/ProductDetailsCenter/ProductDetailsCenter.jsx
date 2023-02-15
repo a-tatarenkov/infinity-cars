@@ -1,28 +1,42 @@
 import Dealer from "../Dealer/Dealer";
 import { useState } from "react";
 import FullCarForm from "../ProductForm/ProductForm";
-
+import { useSelector } from "react-redux";
+import { createSelector } from "reselect";
+import CarMap from "../CarMap/CarMap";
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import "./productDetailsCenter.scss";
 
-const FullCarCenter = ({ data }) => {
-  const { description, dealer, details } = data[0];
+const FullCarCenter = (props) => {
   const [showMore, setShowMore] = useState(false);
   const [itemsToShow, setShowMoreList] = useState(7);
+  const data = createSelector(
+    (state) => state.data,
+    (data) => {
+      return {
+        data: data.brands.locations,
+      };
+    }
+  );
 
-  const showMoreListItems = () => {
-    setShowMoreList(Object.keys(details.Futures).length);
-  };
 
-  const showLess = () => {
-    setShowMoreList(7);
-  };
+  const locationData = useSelector(data);
+  const cityIndex = locationData.data[props.location]
+    .map((item) => Object.entries(item))
+    .flat(2)
+    .indexOf(props.city);
+  const gps = locationData.data[props.location]
+    .map((item) => Object.entries(item))
+    .flat(2)[cityIndex + 1];
+
+  const [lat, lng] = gps.split(",");
 
   return (
     <div className="full_car_center">
       <h3>Description</h3>
       <div className="full_car_center-description">
-        {description}
-        {showMore ? description : `${description.slice(0, 10)}...`}
+        {props.description}
+        {showMore ? props.description : `${props.description.slice(0, 10)}...`}
       </div>
       <div>
         <button
@@ -35,30 +49,44 @@ const FullCarCenter = ({ data }) => {
       <div className="full_car_center-futures">
         <h3>Features</h3>
         <ul className="full_car_center-futures-list">
-          {Object.keys(details.Futures)
+          {Object.keys(props.details.Futures)
             .slice(0, itemsToShow)
             .map((item, i) => {
               return (
                 <li key={i} className="full_car_center-futures-list-item">
-                  {item}
+                  <CheckBoxIcon /> {item}
                 </li>
               );
             })}
         </ul>
         <div>
           {itemsToShow === 7 ? (
-            <button className="show-more-btn" onClick={showMoreListItems}>
+            <button
+              className="show-more-btn"
+              onClick={() =>
+                setShowMoreList(Object.keys(props.details.Futures).length)
+              }
+            >
               Show More
             </button>
           ) : (
-            <button className="show-more-btn" onClick={showLess}>
+            <button
+              className="show-more-btn"
+              onClick={() => setShowMoreList(7)}
+            >
               Show Less
             </button>
           )}
         </div>
       </div>
-      <Dealer data={dealer} />
-      <FullCarForm />
+      <Dealer data={props.dealer} user={props.user} sellerId={props.sellerId}/>
+      <FullCarForm
+        sellerId={props.sellerId}
+        brand={props.brand}
+        id={props.id}
+        model={props.model}
+      />
+      <CarMap lat={lat} lng={lng} location={props.location} city={props.city} />
     </div>
   );
 };

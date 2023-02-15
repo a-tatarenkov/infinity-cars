@@ -1,19 +1,19 @@
-import './contactForm.scss';
+import "./contactForm.scss";
 
 const ContactForm = () => {
   return (
     <>
       <div className="text-info">Get In Touch</div>
       <div className="form-container">
-        <form action="" name="get-in-touch">
+        <form onSubmit={(e) => e.preventDefault()} name="get-in-touch">
           <label htmlFor="fullName">Name</label>
-          <input type="text" id="fullName" placeholder="Full Name" />
+          <input type="text" id="fullName" required placeholder="Full Name" />
 
           <label htmlFor="fullEmail">Email</label>
-          <input type="email" id="fullEmail" placeholder="email@email.com" />
+          <input type="email" id="fullEmail" required placeholder="email@email.com" />
 
           <label htmlFor="fullPhone">Phone</label>
-          <input type="number" id="fullPhone" placeholder="000-000-000" />
+          <input type="number" id="fullPhone" required placeholder="000-000-000" />
 
           <label htmlFor="fullComment">Comment</label>
           <textarea
@@ -21,6 +21,7 @@ const ContactForm = () => {
             id="fullComment"
             cols="30"
             rows="10"
+            required
             placeholder="Leave a message here"
           ></textarea>
 

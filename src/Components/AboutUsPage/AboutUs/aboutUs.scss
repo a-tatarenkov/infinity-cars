@@ -1,7 +1,11 @@
 @import '../../../styles/variables.scss';
 
-
+.about_us.fade{
+  opacity: 0;
+}
 .about_us {
+  opacity: 1;
+  transition: .8s ease;
   display: flex;
   flex-direction: column;
   color: $textColor;
@@ -82,7 +86,7 @@
       img {
         height: 100%;
         width: 100%;
-        object-fit: fill;
+        object-fit: contain;
       }
     }
   }

@@ -1,29 +1,58 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import Paper from "@mui/material/Paper";
+import Backdrop from "@mui/material/Backdrop";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+import Fade from "@mui/material/Fade";
+import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom";
 
-const PaperComponent = (props) => {
-  return <Paper {...props} />;
-};
+import "./dialogWindow.scss";
 
 export const DialogPopup = (props) => {
-  const {title, message} = props
+
+  const { title, message } = props;
   return (
-    <div style={{ position: "absolute" }}>
-      <Dialog open={props.open} PaperComponent={PaperComponent}>
-        <DialogTitle>{title}</DialogTitle>
-        <DialogContent>
-          <DialogContentText>{message}</DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={props.onClose}>Close</Button>
-        </DialogActions>
-      </Dialog>
+    <div>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={props.open}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={props.open}>
+          <Box className={"modal_box"}>
+            <Typography id="transition-modal-title" variant="h6" component="h2">
+              {title}
+            </Typography>
+            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
+              {message}
+            </Typography>
+            <div className="buttons_group">
+              <Button
+                variant="outlined"
+                onClick={props.onClose}
+                sx={{ background: "#007cc7" }}
+              >
+                <Link to={props.link1To}>{props.link1}</Link>
+              </Button>
+              {props.link2 ? (
+                <Button
+                  variant="outlined"
+                  onClick={props.onClose}
+                  sx={{ background: "#007cc7" }}
+                >
+                  <Link to={props.link2To}>{props.link2}</Link>
+                </Button>
+              ) : null}
+            </div>
+          </Box>
+        </Fade>
+      </Modal>
     </div>
   );
 };
