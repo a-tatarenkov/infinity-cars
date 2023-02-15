@@ -1,7 +1,7 @@
 import "./header.scss";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Badge from "@mui/material/Badge";
 import MailIcon from "@mui/icons-material/Mail";
 import LogoutIcon from "@mui/icons-material/Logout";
@@ -40,15 +40,19 @@ const Header = () => {
   const { request } = useHttp();
   const location = useLocation();
   const filteredData = useSelector(filtersData);
+  console.log(filteredData);
 
   const navigate = useNavigate();
 
-  if (localStorage.getItem("user")) {
-    const user = localStorage.getItem("user");
-    dispatch(currentUserLogged(user[0]));
-    dispatch(setLogged(true));
-    dispatch(fetchUsers(request))
-  }
+  useEffect(() => {
+    if (localStorage.getItem("user")) {
+      const user = JSON.parse(localStorage.getItem("user"));
+      console.log(user);
+      dispatch(currentUserLogged(user));
+      dispatch(setLogged(true));
+      dispatch(fetchUsers(request));
+    }
+  }, []);
 
   const onLogOutUser = () => {
     localStorage.removeItem("user");
@@ -57,6 +61,8 @@ const Header = () => {
     dispatch(setLogged(false));
     dispatch(currentUserLogged(null));
   };
+
+  console.log();
 
   let messagesLength = 0;
   if (filteredData?.users?.login) {
@@ -172,12 +178,12 @@ const Header = () => {
               {filteredData.users.login ? (
                 <>
                   <img
-                    src={filteredData.users?.currentUser[0].photo}
+                    src={filteredData.users?.currentUser[0]?.photo}
                     alt="avatar"
                     height={20}
                     width={20}
                     style={{ borderRadius: "50%" }}
-                  />{" "}
+                  />
                   {filteredData.users?.currentUser[0]?.name}
                 </>
               ) : (

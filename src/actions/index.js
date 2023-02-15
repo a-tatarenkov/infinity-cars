@@ -7,44 +7,34 @@ export const fetchCars = (request) => (dispatch) => {
 
 export const fetchComments = (request) => (dispatch) => {
   dispatch(commentsFetching());
-  request("/reviews").then((comments) =>
-    dispatch(commentsFetched(comments))
-  );
+  request("/reviews").then((comments) => dispatch(commentsFetched(comments)));
 };
 
 export const fetchUsers = (request) => (dispatch) => {
   dispatch(usersFetching());
-  request("/users").then((users) =>
-    dispatch(usersFetched(users))
-  );
+  request("/users").then((users) => dispatch(usersFetched(users)));
 };
 
 export const fetchNews = (request) => (dispatch) => {
   dispatch(newsFetching());
-  request("/news").then((news) =>
-    dispatch(newsFetched(news))
-  );
+  request("/news").then((news) => dispatch(newsFetched(news)));
 };
 
 export const fetchCarsData = (request) => (dispatch) => {
   dispatch(carsFetchingData());
-  request("/cars").then((data) =>
-    dispatch(carsFetchedData(data))
-  );
+  request("/cars").then((data) => dispatch(carsFetchedData(data)));
 };
 
 export const fetchBrandsData = (request) => (dispatch) => {
   dispatch(brandsFetching());
-  request("/sell").then((brand) =>
-    dispatch(brandsFetched(brand))
-  );
+  request("/sell").then((brand) => dispatch(brandsFetched(brand)));
 };
 
 export const fetchNewsFiltered = (request, filters) => (dispatch) => {
   const { newsTerm } = filters;
   dispatch(newsFetching());
-  request(`/news?${newsTerm ? `q=${newsTerm}` : ""}`).then(
-    (news) => dispatch(newsFetchedFilters(news))
+  request(`/news?${newsTerm ? `q=${newsTerm}` : ""}`).then((news) =>
+    dispatch(newsFetchedFilters(news))
   );
 };
 
@@ -61,7 +51,7 @@ export const fetchCurrentUserCar = (request, filters) => (dispatch) => {
       }`
     ).then((cars) => dispatch(userCarsFetched(cars)));
   } else {
-    dispatch(userCarsFetched([]))
+    dispatch(userCarsFetched([]));
   }
 };
 
