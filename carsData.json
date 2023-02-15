@@ -9078,32 +9078,11 @@
   ],
   "sell": {
     "brands": {
-      "Aston Martin": [
-        "Vantage",
-        "DB11",
-        "DBS",
-        "DBS Superleggera"
-      ],
-      "Ferrari": [
-        "458 Italia",
-        "360",
-        "550",
-        "California"
-      ],
-      "Lincoln": [
-        "Aviator",
-        "Navigator"
-      ],
-      "Bentley": [
-        "Bentayga",
-        "Continental",
-        "Flying Spur"
-      ],
-      "KIA": [
-        "Stinger",
-        "Sportage",
-        "Rio"
-      ],
+      "Aston Martin": ["Vantage", "DB11", "DBS", "DBS Superleggera"],
+      "Ferrari": ["458 Italia", "360", "550", "California"],
+      "Lincoln": ["Aviator", "Navigator"],
+      "Bentley": ["Bentayga", "Continental", "Flying Spur"],
+      "KIA": ["Stinger", "Sportage", "Rio"],
       "Audi": [
         "A3",
         "A4",
@@ -9118,12 +9097,8 @@
         "e-tron GT",
         "e-tron S Sportback"
       ],
-      "Lamborghini": [
-        "Urus"
-      ],
-      "Rivian": [
-        "R1T"
-      ],
+      "Lamborghini": ["Urus"],
+      "Rivian": ["R1T"],
       "BMW": [
         "M3",
         "M4",
@@ -9174,28 +9149,8 @@
         "Ioniq 5",
         "Ioniq Electric"
       ],
-      "Lexus": [
-        "GS",
-        "GX",
-        "IS",
-        "LS",
-        "LX",
-        "NX",
-        "RC",
-        "RX",
-        "CT",
-        "UX"
-      ],
-      "Mazda": [
-        "3",
-        "6",
-        "CX-3",
-        "CX-5",
-        "CX-7",
-        "CX-9",
-        "MX-30",
-        "CX-50"
-      ],
+      "Lexus": ["GS", "GX", "IS", "LS", "LX", "NX", "RC", "RX", "CT", "UX"],
+      "Mazda": ["3", "6", "CX-3", "CX-5", "CX-7", "CX-9", "MX-30", "CX-50"],
       "Mercedes-Benz": [
         "A-Class",
         "B-Class",
@@ -9219,26 +9174,9 @@
         "Pajero",
         "Eclipse Cross"
       ],
-      "Maserati": [
-        "Ghibli",
-        "Levante",
-        "MC20",
-        "Quattroporte"
-      ],
-      "Nissan": [
-        "Leaf",
-        "Qashqai",
-        "X-Trail",
-        "Teana",
-        "GT-R"
-      ],
-      "Skoda": [
-        "Kodiaq",
-        "Fabia",
-        "Octivia",
-        "Superb",
-        "Kamiq"
-      ],
+      "Maserati": ["Ghibli", "Levante", "MC20", "Quattroporte"],
+      "Nissan": ["Leaf", "Qashqai", "X-Trail", "Teana", "GT-R"],
+      "Skoda": ["Kodiaq", "Fabia", "Octivia", "Superb", "Kamiq"],
       "Toyota": [
         "CH-R",
         "Camry",
@@ -9266,23 +9204,8 @@
         "Jetta",
         "Golf Plus"
       ],
-      "Volvo": [
-        "XC 40",
-        "XC 60",
-        "XC 70",
-        "XC 90",
-        "S60",
-        "S70",
-        "S80"
-      ],
-      "Alfa Romeo": [
-        "Guilia",
-        "Giuliette",
-        "GT",
-        "Brera",
-        "Mito",
-        "Stelvio"
-      ],
+      "Volvo": ["XC 40", "XC 60", "XC 70", "XC 90", "S60", "S70", "S80"],
+      "Alfa Romeo": ["Guilia", "Giuliette", "GT", "Brera", "Mito", "Stelvio"],
       "Cadillac": [
         "CTS",
         "STS",
@@ -9305,16 +9228,7 @@
         "Magnum",
         "Neon"
       ],
-      "Infiniti": [
-        "FX 35",
-        "FX 37",
-        "G",
-        "Q50",
-        "Q60",
-        "QX",
-        "M",
-        "QX80"
-      ],
+      "Infiniti": ["FX 35", "FX 37", "G", "Q50", "Q60", "QX", "M", "QX80"],
       "Jaguar": [
         "F-TYPE",
         "S-PACE",
@@ -9325,13 +9239,7 @@
         "XJ-8",
         "XJ-6"
       ],
-      "Jeep": [
-        "Cherokee",
-        "Compass",
-        "Gladiator",
-        "Wrangler",
-        "Patriot"
-      ],
+      "Jeep": ["Cherokee", "Compass", "Gladiator", "Wrangler", "Patriot"],
       "Land Rover": [
         "Defender",
         "Discovery",
@@ -9359,12 +9267,7 @@
         "Panamera",
         "Taycan"
       ],
-      "Tesla": [
-        "Model 3",
-        "Model S",
-        "Model X",
-        "Model Y"
-      ]
+      "Tesla": ["Model 3", "Model S", "Model X", "Model Y"]
     },
     "colors": [
       "White",
@@ -9410,16 +9313,8 @@
       "Rear-Wheel-Drive",
       "Front-Wheel-Drive"
     ],
-    "transmission": [
-      "Automatic",
-      "Manual"
-    ],
-    "fuelType": [
-      "Diesel",
-      "Gasoline",
-      "Electric",
-      "Hybrid"
-    ],
+    "transmission": ["Automatic", "Manual"],
+    "fuelType": ["Diesel", "Gasoline", "Electric", "Hybrid"],
     "features": {
       "Power Steering": false,
       "AC": false,
@@ -12379,9 +12274,7 @@
       "text": "Shelby American is commemorating the 100th anniversary of its founder's birth in the most Carroll Shelby way it can. That means a hot-rod version of the 2023 Mustang GT, supercharged to make 750 horsepower, barking exhaust fumes out of the Borla cat-back exhaust system. Fittingly, Shelby American is only planning to make 100 of the centennial edition. Unfortunately they've all sold out in the four days since a prototype was displayed in Gardena, California.",
       "text2": "The Shelby American team isn't being too strict with this one. Want a fastback? Sure. Convertible? You got it. Manual transmission? Sign here. Automatic transmission? If you say so. What it won't stand for is non-stock Mustang colors, the Mach 1, or the California Special. Basically, as long as the badging reads \"GT\" and the title says 2023, you're in the clear.",
       "id": "news01",
-      "tags": [
-        "Mustang"
-      ],
+      "tags": ["Mustang"],
       "expert": {
         "name": "Carla Baptista",
         "photo": "https://drive.google.com/uc?id=1LaMGOzljGNL67Ev8SFiuqzCGWSXjyF_0",
@@ -12427,9 +12320,7 @@
         }
       ],
       "id": "news02",
-      "tags": [
-        "Tesla"
-      ]
+      "tags": ["Tesla"]
     },
     {
       "time": 1673443037000,
@@ -12453,9 +12344,7 @@
           "photo": "https://drive.google.com/uc?id=1LaMGOzljGNL67Ev8SFiuqzCGWSXjyF_0"
         }
       ],
-      "tags": [
-        "BMW"
-      ]
+      "tags": ["BMW"]
     },
     {
       "time": 1675343837000,
@@ -12480,9 +12369,7 @@
           "photo": "https://drive.google.com/uc?id=1bFB1zcvi5rnpj_QnEOGQ0X4CP0fWwpQO"
         }
       ],
-      "tags": [
-        "Ford"
-      ]
+      "tags": ["Ford"]
     }
   ],
   "users": [
@@ -12542,34 +12429,6 @@
             },
             {
               "text": "Ok, no problem at all, you can message me at any time.",
-              "id": 1
-            }
-          ],
-          "car": "Jaguar  F-PACE",
-          "carId": 1026,
-          "from": {
-            "id": 1
-          },
-          "to": "493c9d21-b3d0-4650-b43d-62ecc3371299"
-        },
-        {
-          "id": "3070e297-cd2e-4b76-9fb6-c2c93d676c9d",
-          "name": "Alex",
-          "email": "we@we",
-          "phone": "43343434",
-          "subject": "Price",
-          "open": true,
-          "text": [
-            {
-              "text": "Hi, can we discuss price at about 62? ",
-              "id": 1
-            },
-            {
-              "text": "Hi, Done, well, its too low for start",
-              "id": "493c9d21-b3d0-4650-b43d-62ecc3371299"
-            },
-            {
-              "text": "Ok, can we take a look and than start to discuss? ",
               "id": 1
             }
           ],
@@ -12644,46 +12503,9 @@
             "id": 1
           },
           "to": "493c9d21-b3d0-4650-b43d-62ecc3371299"
-        },
-        {
-          "id": "3070e297-cd2e-4b76-9fb6-c2c93d676c9d",
-          "name": "Done",
-          "email": "we@we",
-          "phone": "43343434",
-          "subject": "Price",
-          "open": false,
-          "text": [
-            {
-              "text": "Hi, can we discuss price at about 62? ",
-              "id": 1
-            },
-            {
-              "text": "Hi, Done, well, its too low for start",
-              "id": "493c9d21-b3d0-4650-b43d-62ecc3371299"
-            },
-            {
-              "text": "Ok, can we take a look and than start to discuss? ",
-              "id": 1
-            }
-          ],
-          "car": "Jaguar  F-PACE",
-          "carId": 1026,
-          "from": {
-            "id": 1
-          },
-          "to": "493c9d21-b3d0-4650-b43d-62ecc3371299"
         }
       ],
-      "likedCars": [
-        1024,
-        1041,
-        1045,
-        1051,
-        1057,
-        1031,
-        1053,
-        1054
-      ],
+      "likedCars": [1024, 1041, 1045, 1051, 1057, 1031, 1053, 1054],
       "id": "493c9d21-b3d0-4650-b43d-62ecc3371299",
       "photo": "https://drive.google.com/uc?id=1zEqTOYfiapGju_UAJhMNYo9R243d2yFr"
     }
