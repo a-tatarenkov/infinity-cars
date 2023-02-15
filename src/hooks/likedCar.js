@@ -11,14 +11,11 @@ const useAddLikedCars = () => {
     (id, user) => {
       const currentUser = user;
       currentUser.likedCars = [...currentUser.likedCars, id];
-      request(
-        `/users/${currentUser.id}`,
-        "PUT",
-        JSON.stringify(currentUser)
-      )
+      request(`/users/${currentUser.id}`, "PUT", JSON.stringify(currentUser))
         .then((res) => console.log(res, "User Modified"))
         .then(dispatch(fetchUsers(request)))
         .catch((err) => console.log(err));
+      localStorage.setItem("user", JSON.stringify([currentUser]));
     },
     [request, dispatch]
   );
@@ -29,14 +26,12 @@ const useAddLikedCars = () => {
       const filteredCars = currentUser.likedCars.filter((car) => car !== id);
       currentUser.likedCars = filteredCars;
 
-      request(
-        `/users/${currentUser.id}`,
-        "PUT",
-        JSON.stringify(currentUser)
-      )
+      request(`/users/${currentUser.id}`, "PUT", JSON.stringify(currentUser))
         .then((res) => console.log(res, "User Modified"))
         .then(dispatch(fetchUsers(request)))
         .catch((err) => console.log(err));
+
+      localStorage.setItem("user", JSON.stringify([currentUser]));
     },
     [request, dispatch]
   );

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./messages.scss";
 import { createSelector } from "reselect";
 import { useDispatch, useSelector } from "react-redux";
@@ -76,10 +76,7 @@ const Messages = (props) => {
       "PUT",
       JSON.stringify(usersData.users.currentUser[0])
     ).catch((err) => console.log(err));
-    localStorage.setItem(
-      "user",
-      JSON.stringify(usersData.users.currentUser[0])
-    );
+    localStorage.setItem("user", JSON.stringify(usersData.users.currentUser));
     // message to user from you
 
     dispatch(fetchUsers(request));
@@ -95,6 +92,7 @@ const Messages = (props) => {
         "PUT",
         JSON.stringify(usersData.users.currentUser[0])
       ).catch((err) => console.log(err));
+      localStorage.setItem("user", JSON.stringify(usersData.users.currentUser));
       dispatch(fetchUsers(request));
     } else {
       return;
